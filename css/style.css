@@ -503,10 +503,12 @@ textarea.input {
 }
 
 .select__value:after {
-  content: "";
+  content: "\e905";
   -ms-flex-item-align: stretch;
       -ms-grid-row-align: stretch;
       align-self: stretch;
+  font-family: "icons";
+  font-size: 0.75rem;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 10px;
           flex: 0 0 10px;
@@ -522,13 +524,15 @@ textarea.input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: url("img/svg/arrow.svg") center no-repeat;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 ._select-open .select__value:after {
-  -webkit-transform: rotate(-180deg);
-      -ms-transform: rotate(-180deg);
-          transform: rotate(-180deg);
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
 .select__text {
@@ -602,10 +606,6 @@ textarea.input {
   padding: 0px 0px 0px 0px;
 }
 
-.select_control .select__value::after {
-  background: url("img/svg/gray-arrow.svg") center no-repeat;
-}
-
 .select_control .select__options {
   left: -0.9375rem;
   top: 1.875rem;
@@ -638,10 +638,6 @@ textarea.input {
 
 .select_ordering-sel .select__value {
   padding: 0px 0px 0px 0px;
-}
-
-.select_ordering-sel .select__value::after {
-  background: url("img/svg/gray-arrow.svg") center no-repeat;
 }
 
 .select_ordering-sel .select__options {
@@ -677,10 +673,6 @@ textarea.input {
 
 .select_delivery-time .select__value {
   padding: 0px 0px 0px 0px;
-}
-
-.select_delivery-time .select__value::after {
-  background: url("img/svg/gray-arrow.svg") center no-repeat;
 }
 
 .select_delivery-time .select__options {
@@ -746,10 +738,6 @@ textarea.input {
 
 .select_city .select__value {
   padding: 0px 0px 0px 0px;
-}
-
-.select_city .select__value::after {
-  background: url("img/svg/gray-arrow.svg") center no-repeat;
 }
 
 ._select-tag {

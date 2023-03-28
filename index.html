@@ -73,16 +73,16 @@
 				</ol>
 			</div>
 			<div class="rootpage__block">
-				<div class="rootpage__tnx">
+				<!-- <div class="rootpage__tnx">
 					<h2>Спасибо за заказ!</h2>
-					<!-- <p>Буду рад хорошему отзыву.</p> -->
+					<p>Буду рад хорошему отзыву.</p>
 					<p>Обращайтесь еще!</p>
-				</div>
+				</div> -->
 				<div class="rootpage__contacts">
 					<h2>Мои контакты:</h2>
 					<p>Почта: <a href="mailto:kit.vitalevich@yandex.ru">kit.vitalevich@yandex.ru</a></p>
 					<p>Телефон: <a href="tel:89231432772">8 (923) 143-27-72</a></p>
-					<p>Соц. сеть: <a href="">ссылка на соц. сеть</a></p>
+					<!-- <p>Соц. сеть: <a href="">ссылка на соц. сеть</a></p> -->
 				</div>
 			</div>
 		</div>
@@ -175,6 +175,25 @@
 		padding: 0px 0px 0px 40px;
 	}
 
+	@media (max-width: 1336px) {
+		.rootpage__block:last-child {
+			padding: 0;
+		}
+	}
+
+	@media (max-width: 1336px) {
+		.rootpage__block {
+			flex: 0 0 50%;
+			padding: 0;
+		}
+	}
+
+	@media (max-width: 600px) {
+		.rootpage__block {
+			flex: 0 0 100%;
+		}
+	}
+
 	@media (max-width: 767px) {
 		.rootpage {
 			padding: 30px 15px;
@@ -232,7 +251,7 @@
 		.rootpage__contacts,
 		.rootpage__tnx {
 			border-radius: 40px;
-			padding: 20px;
+			padding: 18px;
 		}
 	}
 

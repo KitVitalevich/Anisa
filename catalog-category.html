@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-	<title>Аниса - Условия возврата</title>
+	<title>Аниса - категория продуктов</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -14,7 +14,7 @@
 </head>
 
 <body>
-	<div data-sticky class="wrapper">
+	<div class="wrapper">
 		<header data-scroll="120" data-scroll-show class="header">
 			<div class="header__top top-header">
 				<div class="top-header__container">
@@ -696,183 +696,1091 @@
 					<nav class="page-breadcrumbs breadcrumbs">
 						<ul class="breadcrumbs__list">
 							<li class="breadcrumbs__item"><a href="home.html" class="breadcrumbs__link">Главная</a></li>
-							</li>
-							<span class="breadcrumbs__current">Условия возврата</span>
+							<li class="breadcrumbs__item"><a href="catalog.html" class="breadcrumbs__link">Колбасные
+									изделия</a></li>
+							<span class="breadcrumbs__current">Вареная колбаса</span>
 						</ul>
 					</nav>
-					<h1 class="page__title title">Условия возврата</h1>
+					<h1 class="page__title title">Вареная колбаса</h1>
 				</div>
 			</div>
 
-			<div class="return">
-				<div class="return__container">
-					<div class="return__wrapper">
-						<div class="return__text">
-							<p>Вы получите денежные средства обратно в кратчайшие сроки. В случае, если заказ не был доставлен,
-								мы
-								также вернем полную стоимость товара с учетом доставки.
-							</p>
-							<p>К сожалению, мы ограничены законодательством по некоторым категориям товаров и не можем их
-								принять
-								к возврату. Пожалуйста, ознакомьтесь с правилами возврата по различным категориям товаров.</p>
-						</div>
+			<div class="catalog-category">
+				<div class="catalog-category__container">
+					<div data-spollers class="catalog__filter filter-catalog">
+						<div class="filter-catalog__content">
+							<button type="button" data-spoller class="filter-catalog__title">Фильтр
+								<span class="left-filter-bar"></span>
+								<span class="right-filter-bar"></span>
+								<div class="filter-catalog__body">
+									<div class="filter-catalog__items">
+							</button>
+							<div class="filter-catalog__body">
+								<div class="filter-catalog__items">
+									<div data-spollers class="filter-catalog__item item-filter-catalog">
+										<div class="item-filter-catalog__content">
+											<button type="button" data-spoller class="price-filter__title filter-title _icon-arrow">Цена</button>
+											<div class="price-filter__body">
+												<div id="range" class="price-filter__range"></div>
+												<div class="price-filter__inputs">
+													<input id="min" autocomplete="off" type="text" name="form[]" class="price-filter__input">
+													<input id="max" autocomplete="off" type="text" name="form[]" class="price-filter__input">
+												</div>
+											</div>
+										</div>
+									</div>
 
-						<div class="return__rules rules-return">
-							<div class="rules-return__title">Правила возврата продовольственных товаров:</div>
-							<div class="rules-return__block">
-								<ol class="rules-return__list">
-									<span>Все ситуации с возвратами можно свести к трем случаям:</span>
-									<li>Брак или несоответствие обнаружилось непосредственно при приемке, вы просто не принимаете
-										у
-										поставщика некачественный товар</li>
-									<li>Основания для возврата выявлены сразу, но вы все равно вынуждены принять продукцию
-										ненадлежащего качества, чтобы позднее вернуть ее поставщику</li>
-									<li>Плановые обратные поставки, например, по условиям договора поставщик может регулярно
-										забирать у вас обратно товары, которые вы не успели реализовать до истечения срока их
-										годности</li>
-								</ol>
-								<div class="rules-return__image">
-									<picture><source srcset="img/return/return.webp" type="image/webp"><img src="img/return/return.png" alt="return"></picture>
+									<div data-spollers class="filter-catalog__item item-filter-catalog">
+										<div class="item-filter-catalog__content">
+											<button type="button" data-spoller class="item-filter-catalog__title filter-title _icon-arrow">Бренд</button>
+											<div class="item-filter-catalog__body">
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="sibagro" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="sibagro" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">СибАгро</span></label>
+												</div>
+
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="omskibekon" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="omskibekon" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Омский
+															Бекон</span></label>
+												</div>
+
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="atyashevo" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="atyashevo" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Атяшево</span></label>
+												</div>
+
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="ishim" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="ishim" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Ишимский
+															мясокомбинат</span></label>
+												</div>
+
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="starodvorie" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="starodvorie" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Стародворские колбасы</span></label>
+												</div>
+
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="verbickie" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="verbickie" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Вербицкие
+															колбасы</span></label>
+												</div>
+
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="ivko" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="ivko" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">ИвКо</span></label>
+												</div>
+
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="orsk" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="orsk" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Орские
+															колбасы</span></label>
+												</div>
+
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="bars" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="bars" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Барский
+															продукт</span></label>
+												</div>
+
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="svejeli" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="svejeli" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Свежели</span></label>
+												</div>
+
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="ariant" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="ariant" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Ариант</span></label>
+												</div>
+
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="bravo" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="bravo" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Браво</span></label>
+												</div>
+
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="sava" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="sava" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Сава</span></label>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div data-spollers class="filter-catalog__item item-filter-catalog">
+										<div class="item-filter-catalog__content">
+											<button type="button" data-spoller class="item-filter-catalog__title filter-title _icon-arrow">Производитель</button>
+											<div class="item-filter-catalog__body">
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="ao_sibagro" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="ao_sibagro" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text"> АО
+															"СибАгро"</span></label>
+												</div>
+
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="ao_omskibekon" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="ao_omskibekon" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">АО "Омский
+															Бекон"</span></label>
+												</div>
+
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="mpk_atyashevo" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="mpk_atyashevo" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">МПК
+															"Атяшевский"</span></label>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div data-spollers class="filter-catalog__item item-filter-catalog">
+										<div class="item-filter-catalog__content">
+											<button type="button" data-spoller class="item-filter-catalog__title filter-title _icon-arrow">Вид мяса</button>
+											<div class="item-filter-catalog__body">
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="beef" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="beef" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Говядина</span></label>
+												</div>
+
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="pork" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="pork" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Свинина</span></label>
+												</div>
+
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="chicken" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="chicken" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Курица</span></label>
+												</div>
+
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="turkey" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="turkey" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Индейка</span></label>
+												</div>
+
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="mixed" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="mixed" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Смешанный</span></label>
+												</div>
+
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="byproduct" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="byproduct" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Субпродукты</span></label>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div data-spollers class="filter-catalog__item item-filter-catalog">
+										<div class="item-filter-catalog__content">
+											<button type="button" data-spoller class="item-filter-catalog__title filter-title _icon-arrow">Форма выпуска</button>
+											<div class="item-filter-catalog__body">
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="piece" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="piece" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Кусок</span></label>
+												</div>
+
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="balyk" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="balyk" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Балык</span></label>
+												</div>
+
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="baton" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="baton" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Батон</span></label>
+												</div>
+
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="carbonate" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="carbonate" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Карбонат</span></label>
+												</div>
+
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="ham" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="ham" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Окорок</span></label>
+												</div>
+
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="roll" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="roll" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Рулет</span></label>
+												</div>
+
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="ribs" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="ribs" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Ребрышки</span></label>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div data-spollers class="filter-catalog__item item-filter-catalog">
+										<div class="item-filter-catalog__content">
+											<button type="button" data-spoller class="item-filter-catalog__title filter-title _icon-arrow">Вес</button>
+											<div class="item-filter-catalog__body">
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="150г" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="150г" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">150г</span></label>
+												</div>
+
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="160г" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="160г" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">160г</span></label>
+												</div>
+
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="200г" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="200г" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">200г</span></label>
+												</div>
+
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="235г" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="235г" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">235г</span></label>
+												</div>
+
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="250г" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="250г" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">250г</span></label>
+												</div>
+
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="300г" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="300г" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">300г</span></label>
+												</div>
+
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="330г" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="330г" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">330г</span></label>
+												</div>
+
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="350г" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="350г" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">350г</span></label>
+												</div>
+
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="400г" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="400г" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">400г</span></label>
+												</div>
+
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="450г" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="450г" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">450г</span></label>
+												</div>
+
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="470г" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="470г" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">470г</span></label>
+												</div>
+
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="500г" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="500г" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">500г</span></label>
+												</div>
+
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="600г" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="600г" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">600г</span></label>
+												</div>
+
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="840г" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="840г" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">840г</span></label>
+												</div>
+
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="1000г" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="1000г" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">1000г</span></label>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div data-spollers class="filter-catalog__item item-filter-catalog">
+										<div class="item-filter-catalog__content">
+											<button type="button" data-spoller class="item-filter-catalog__title filter-title _icon-arrow">Страна
+												производитель</button>
+											<div class="item-filter-catalog__body">
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="russia" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="russia" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Россия</span></label>
+												</div>
+
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="belarus" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="belarus" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Белоруссия</span></label>
+												</div>
+
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="kazakhstan" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="kazakhstan" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Казахстан</span></label>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div data-spollers class="filter-catalog__item item-filter-catalog">
+										<div class="item-filter-catalog__content">
+											<button type="button" data-spoller class="item-filter-catalog__title filter-title _icon-arrow">Скидка</button>
+											<div class="item-filter-catalog__body">
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="sale" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="sale" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Со скидкой</span></label>
+												</div>
+
+												<div class="item-filter-catalog__checkbox checkbox">
+													<input id="nosale" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="nosale" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Без скидки</span></label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="filter-catalog__btn btn-filter">
+									<button class="btn-filter__apply button">Применить</button>
+									<button class="btn-filter__clear button">Очистить фильтр</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="catalog-category__sorting sorting-category">
+						<div class="sorting-category__label">
+							Сортировать:
+						</div>
+						<div class="sorting-category__control">
+							<select data-class-modif="control" name="form[]" class="control">
+								<option value="1" selected>По популярности</option>
+								<option value="2">По цене</option>
+								<option value="3">По рейтингу</option>
+								<option value="4">По скидке</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="catalog-category__cards">
+						<ul data-showmore-content="1" class="products-catalog__body">
+							<li class="product-card">
+								<a href="description-goods.html" class="product-card__image">
+									<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
+										<picture><source srcset="img/products/sibAgro/doctorskaya_SA.webp" type="image/webp"><img src="img/products/sibAgro/doctorskaya_SA.png" alt="doctorskaya_SA"></picture>
+									</span>
+									<span class="icon-card-lt icon-card-span"></span>
+									<span class="icon-card-lb icon-card-span"></span>
+									<span class="icon-card-rt icon-card-span"></span>
+									<span class="icon-card-rb icon-card-span"></span>
+								</a>
+								<div class="product-card__body">
+									<div class="product-card__title">
+										<a href="description-product.html" class="product-card__link-title">Колбаса
+											вареная “СибАгро” Докторская 450г</a>
+									</div>
+									<div class="product-card__article">
+										<span class="product-card__info-article">00001</span>
+										<span class="_icon-info"></span>
+									</div>
+									<div class="product-card__price">
+										<div class="product-card__value value-card">
+											<div class="value-card__price">
+												<span class="value-card__price-span">271.00<span class="_icon-rub"></span><span class="value-card__price-sub">/шт</span>
+												</span>
+											</div>
+											<div class="value-card__old-price">
+												<span class="value-card__old-price-span">293.00<span class="_icon-rub"></span>
+												</span>
+											</div>
+										</div>
+										<a href="" class="product-card__favorite _icon-favorite"></a>
+									</div>
+									<div class="product-card__info">
+										<!-- <div class="product-card__offer-new product-card__offer-none"></div> -->
+										<div class="product-card__offer-new product-card__offer">New</div>
+										<!-- <div class="product-card__offer-sale product-card__offer">Sale</div> -->
+										<div class="product-card__rating rating rating_set">
+											<div class="rating__body">
+												<div class="rating__active"></div>
+												<div class="rating__items">
+													<input type="radio" class="rating__item" value="1" name="rating">
+													<input type="radio" class="rating__item" value="2" name="rating">
+													<input type="radio" class="rating__item" value="3" name="rating">
+													<input type="radio" class="rating__item" value="4" name="rating">
+													<input type="radio" class="rating__item" value="5" name="rating">
+												</div>
+											</div>
+											<div class="rating__value">4.3</div>
+										</div>
+									</div>
+								</div>
+								<button class="product-card__button button">Добавить в корзину</button>
+							</li>
+							<li class="product-card">
+								<a href="" class="product-card__image">
+									<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
+										<picture><source srcset="img/products/sibAgro/molochnaya_SA.webp" type="image/webp"><img src="img/products/sibAgro/molochnaya_SA.png" alt="molochnaya_SA"></picture>
+									</span>
+									<span class="icon-card-lt icon-card-span"></span>
+									<span class="icon-card-lb icon-card-span"></span>
+									<span class="icon-card-rt icon-card-span"></span>
+									<span class="icon-card-rb icon-card-span"></span>
+								</a>
+								<div class="product-card__body">
+									<div class="product-card__title">
+										<a href="" class="product-card__link-title">Колбаса вареная “СибАгро” Молочная
+											450г</a>
+									</div>
+									<div class="product-card__article">
+										<span class="product-card__info-article">00002</span>
+										<span class="_icon-info"></span>
+									</div>
+									<div class="product-card__price">
+										<div class="product-card__value value-card">
+											<div class="value-card__price">
+												<span class="value-card__price-span">180.00<span class="_icon-rub"></span><span class="value-card__price-sub">/шт</span>
+												</span>
+											</div>
+											<!-- <div class="value-card__old-price">
+												<span class="value-card__old-price-span">180.00<span
+														class="_icon-rub"></span>
+												</span>
+											</div> -->
+										</div>
+										<a href="" class="product-card__favorite _icon-favorite"></a>
+									</div>
+									<div class="product-card__info">
+										<!-- <div class="product-card__offer-new product-card__offer-none"></div> -->
+										<div class="product-card__offer-new product-card__offer">New</div>
+										<!-- <div class="product-card__offer-sale product-card__offer">Sale</div> -->
+										<div class="product-card__rating rating rating_set">
+											<div class="rating__body">
+												<div class="rating__active"></div>
+												<div class="rating__items">
+													<input type="radio" class="rating__item" value="1" name="rating">
+													<input type="radio" class="rating__item" value="2" name="rating">
+													<input type="radio" class="rating__item" value="3" name="rating">
+													<input type="radio" class="rating__item" value="4" name="rating">
+													<input type="radio" class="rating__item" value="5" name="rating">
+												</div>
+											</div>
+											<div class="rating__value">4.3</div>
+										</div>
+									</div>
+								</div>
+								<button class="product-card__button button">Добавить в корзину</button>
+							</li>
+							<li class="product-card">
+								<a href="" class="product-card__image">
+									<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
+										<picture><source srcset="img/products/sibAgro/slivochnaya_SA.webp" type="image/webp"><img src="img/products/sibAgro/slivochnaya_SA.png" alt="slivochnaya_SA"></picture>
+									</span>
+									<span class="icon-card-lt icon-card-span"></span>
+									<span class="icon-card-lb icon-card-span"></span>
+									<span class="icon-card-rt icon-card-span"></span>
+									<span class="icon-card-rb icon-card-span"></span>
+								</a>
+								<div class="product-card__body">
+									<div class="product-card__title">
+										<a href="" class="product-card__link-title">Колбаса вареная “СибАгро”
+											Сливочная
+											450г</a>
+									</div>
+									<div class="product-card__article">
+										<span class="product-card__info-article">00004</span>
+										<span class="_icon-info"></span>
+									</div>
+									<div class="product-card__price">
+										<div class="product-card__value value-card">
+											<div class="value-card__price">
+												<span class="value-card__price-span">180.00<span class="_icon-rub"></span><span class="value-card__price-sub">/шт</span>
+												</span>
+											</div>
+											<div class="value-card__old-price">
+												<span class="value-card__old-price-span">180.00<span class="_icon-rub"></span>
+												</span>
+											</div>
+										</div>
+										<a href="" class="product-card__favorite _icon-favorite"></a>
+									</div>
+									<div class="product-card__info">
+										<!-- <div class="product-card__offer-new product-card__offer-none"></div> -->
+										<div class="product-card__offer-new product-card__offer">New</div>
+										<!-- <div class="product-card__offer-sale product-card__offer">Sale</div> -->
+										<div class="product-card__rating rating rating_set">
+											<div class="rating__body">
+												<div class="rating__active"></div>
+												<div class="rating__items">
+													<input type="radio" class="rating__item" value="1" name="rating">
+													<input type="radio" class="rating__item" value="2" name="rating">
+													<input type="radio" class="rating__item" value="3" name="rating">
+													<input type="radio" class="rating__item" value="4" name="rating">
+													<input type="radio" class="rating__item" value="5" name="rating">
+												</div>
+											</div>
+											<div class="rating__value">4.3</div>
+										</div>
+									</div>
+								</div>
+								<button class="product-card__button button">Добавить в корзину</button>
+							</li>
+							<li class="product-card">
+								<a href="" class="product-card__image">
+									<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
+										<picture><source srcset="img/products/sibAgro/molochnaya_SA.webp" type="image/webp"><img src="img/products/sibAgro/molochnaya_SA.png" alt="molochnaya_SA"></picture>
+									</span>
+									<span class="icon-card-lt icon-card-span"></span>
+									<span class="icon-card-lb icon-card-span"></span>
+									<span class="icon-card-rt icon-card-span"></span>
+									<span class="icon-card-rb icon-card-span"></span>
+								</a>
+								<div class="product-card__body">
+									<div class="product-card__title">
+										<a href="" class="product-card__link-title">Колбаса вареная “СибАгро” Молочная
+											450г</a>
+									</div>
+									<div class="product-card__article">
+										<span class="product-card__info-article">00002</span>
+										<span class="_icon-info"></span>
+									</div>
+									<div class="product-card__price">
+										<div class="product-card__value value-card">
+											<div class="value-card__price">
+												<span class="value-card__price-span">180.00<span class="_icon-rub"></span><span class="value-card__price-sub">/шт</span>
+												</span>
+											</div>
+											<!-- <div class="value-card__old-price">
+												<span class="value-card__old-price-span">180.00<span
+														class="_icon-rub"></span>
+												</span>
+											</div> -->
+										</div>
+										<a href="" class="product-card__favorite _icon-favorite"></a>
+									</div>
+									<div class="product-card__info">
+										<!-- <div class="product-card__offer-new product-card__offer-none"></div> -->
+										<div class="product-card__offer-new product-card__offer">New</div>
+										<!-- <div class="product-card__offer-sale product-card__offer">Sale</div> -->
+										<div class="product-card__rating rating rating_set">
+											<div class="rating__body">
+												<div class="rating__active"></div>
+												<div class="rating__items">
+													<input type="radio" class="rating__item" value="1" name="rating">
+													<input type="radio" class="rating__item" value="2" name="rating">
+													<input type="radio" class="rating__item" value="3" name="rating">
+													<input type="radio" class="rating__item" value="4" name="rating">
+													<input type="radio" class="rating__item" value="5" name="rating">
+												</div>
+											</div>
+											<div class="rating__value">4.3</div>
+										</div>
+									</div>
+								</div>
+								<button class="product-card__button button">Добавить в корзину</button>
+							</li>
+							<li class="product-card">
+								<a href="" class="product-card__image">
+									<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
+										<picture><source srcset="img/products/sibAgro/doctorskaya_SA.webp" type="image/webp"><img src="img/products/sibAgro/doctorskaya_SA.png" alt="doctorskaya_SA"></picture>
+									</span>
+									<span class="icon-card-lt icon-card-span"></span>
+									<span class="icon-card-lb icon-card-span"></span>
+									<span class="icon-card-rt icon-card-span"></span>
+									<span class="icon-card-rb icon-card-span"></span>
+								</a>
+								<div class="product-card__body">
+									<div class="product-card__title">
+										<a href="" class="product-card__link-title">Колбаса вареная “СибАгро”
+											Докторская 450г</a>
+									</div>
+									<div class="product-card__article">
+										<span class="product-card__info-article">00001</span>
+										<span class="_icon-info"></span>
+									</div>
+									<div class="product-card__price">
+										<div class="product-card__value value-card">
+											<div class="value-card__price">
+												<span class="value-card__price-span">180.00<span class="_icon-rub"></span><span class="value-card__price-sub">/шт</span>
+												</span>
+											</div>
+											<!-- <div class="value-card__old-price">
+												<span class="value-card__old-price-span">180.00<span
+														class="_icon-rub"></span>
+												</span>
+											</div> -->
+										</div>
+										<a href="" class="product-card__favorite _icon-favorite"></a>
+									</div>
+									<div class="product-card__info">
+										<!-- <div class="product-card__offer-new product-card__offer-none"></div> -->
+										<div class="product-card__offer-new product-card__offer">New</div>
+										<!-- <div class="product-card__offer-sale product-card__offer">Sale</div> -->
+										<div class="product-card__rating rating rating_set">
+											<div class="rating__body">
+												<div class="rating__active"></div>
+												<div class="rating__items">
+													<input type="radio" class="rating__item" value="1" name="rating">
+													<input type="radio" class="rating__item" value="2" name="rating">
+													<input type="radio" class="rating__item" value="3" name="rating">
+													<input type="radio" class="rating__item" value="4" name="rating">
+													<input type="radio" class="rating__item" value="5" name="rating">
+												</div>
+											</div>
+											<div class="rating__value">4.3</div>
+										</div>
+									</div>
+								</div>
+								<button class="product-card__button button">Добавить в корзину</button>
+							</li>
+							<li class="product-card">
+								<a href="" class="product-card__image">
+									<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
+										<picture><source srcset="img/products/sibAgro/slivochnaya_SA.webp" type="image/webp"><img src="img/products/sibAgro/slivochnaya_SA.png" alt="slivochnaya_SA"></picture>
+									</span>
+									<span class="icon-card-lt icon-card-span"></span>
+									<span class="icon-card-lb icon-card-span"></span>
+									<span class="icon-card-rt icon-card-span"></span>
+									<span class="icon-card-rb icon-card-span"></span>
+								</a>
+								<div class="product-card__body">
+									<div class="product-card__title">
+										<a href="" class="product-card__link-title">Колбаса вареная “СибАгро”
+											Сливочная
+											450г</a>
+									</div>
+									<div class="product-card__article">
+										<span class="product-card__info-article">00004</span>
+										<span class="_icon-info"></span>
+									</div>
+									<div class="product-card__price">
+										<div class="product-card__value value-card">
+											<div class="value-card__price">
+												<span class="value-card__price-span">271.00<span class="_icon-rub"></span><span class="value-card__price-sub">/шт</span>
+												</span>
+											</div>
+											<!-- <div class="value-card__old-price">
+												<span class="value-card__old-price-span">293.00<span
+														class="_icon-rub"></span>
+												</span>
+											</div> -->
+										</div>
+										<a href="" class="product-card__favorite _icon-favorite"></a>
+									</div>
+									<div class="product-card__info">
+										<!-- <div class="product-card__offer-new product-card__offer-none"></div> -->
+										<div class="product-card__offer-new product-card__offer">New</div>
+										<!-- <div class="product-card__offer-sale product-card__offer">Sale</div> -->
+										<div class="product-card__rating rating rating_set">
+											<div class="rating__body">
+												<div class="rating__active"></div>
+												<div class="rating__items">
+													<input type="radio" class="rating__item" value="1" name="rating">
+													<input type="radio" class="rating__item" value="2" name="rating">
+													<input type="radio" class="rating__item" value="3" name="rating">
+													<input type="radio" class="rating__item" value="4" name="rating">
+													<input type="radio" class="rating__item" value="5" name="rating">
+												</div>
+											</div>
+											<div class="rating__value">4.3</div>
+										</div>
+									</div>
+								</div>
+								<button class="product-card__button button">Добавить в корзину</button>
+							</li>
+							<li class="product-card">
+								<a href="" class="product-card__image">
+									<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
+										<picture><source srcset="img/products/sibAgro/doctorskaya_SA.webp" type="image/webp"><img src="img/products/sibAgro/doctorskaya_SA.png" alt="doctorskaya_SA"></picture>
+									</span>
+									<span class="icon-card-lt icon-card-span"></span>
+									<span class="icon-card-lb icon-card-span"></span>
+									<span class="icon-card-rt icon-card-span"></span>
+									<span class="icon-card-rb icon-card-span"></span>
+								</a>
+								<div class="product-card__body">
+									<div class="product-card__title">
+										<a href="" class="product-card__link-title">Колбаса вареная “СибАгро”
+											Докторская
+											450г</a>
+									</div>
+									<div class="product-card__article">
+										<span class="product-card__info-article">00001</span>
+										<span class="_icon-info"></span>
+									</div>
+									<div class="product-card__price">
+										<div class="product-card__value value-card">
+											<div class="value-card__price">
+												<span class="value-card__price-span">271.00<span class="_icon-rub"></span><span class="value-card__price-sub">/шт</span>
+												</span>
+											</div>
+											<!-- <div class="value-card__old-price">
+												<span class="value-card__old-price-span">293.00<span
+														class="_icon-rub"></span>
+												</span>
+											</div> -->
+										</div>
+										<a href="" class="product-card__favorite _icon-favorite"></a>
+									</div>
+									<div class="product-card__info">
+										<!-- <div class="product-card__offer-new product-card__offer-none"></div> -->
+										<div class="product-card__offer-new product-card__offer">New</div>
+										<!-- <div class="product-card__offer-sale product-card__offer">Sale</div> -->
+										<div class="product-card__rating rating rating_set">
+											<div class="rating__body">
+												<div class="rating__active"></div>
+												<div class="rating__items">
+													<input type="radio" class="rating__item" value="1" name="rating">
+													<input type="radio" class="rating__item" value="2" name="rating">
+													<input type="radio" class="rating__item" value="3" name="rating">
+													<input type="radio" class="rating__item" value="4" name="rating">
+													<input type="radio" class="rating__item" value="5" name="rating">
+												</div>
+											</div>
+											<div class="rating__value">4.3</div>
+										</div>
+									</div>
+								</div>
+								<button class="product-card__button button">Добавить в корзину</button>
+							</li>
+							<li class="product-card">
+								<a href="" class="product-card__image">
+									<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
+										<picture><source srcset="img/products/sibAgro/molochnaya_SA.webp" type="image/webp"><img src="img/products/sibAgro/molochnaya_SA.png" alt="molochnaya_SA"></picture>
+									</span>
+									<span class="icon-card-lt icon-card-span"></span>
+									<span class="icon-card-lb icon-card-span"></span>
+									<span class="icon-card-rt icon-card-span"></span>
+									<span class="icon-card-rb icon-card-span"></span>
+								</a>
+								<div class="product-card__body">
+									<div class="product-card__title">
+										<a href="" class="product-card__link-title">Колбаса вареная “СибАгро” Молочная
+											450г</a>
+									</div>
+									<div class="product-card__article">
+										<span class="product-card__info-article">00002</span>
+										<span class="_icon-info"></span>
+									</div>
+									<div class="product-card__price">
+										<div class="product-card__value value-card">
+											<div class="value-card__price">
+												<span class="value-card__price-span">271.00<span class="_icon-rub"></span><span class="value-card__price-sub">/шт</span>
+												</span>
+											</div>
+											<!-- <div class="value-card__old-price">
+												<span class="value-card__old-price-span">293.00<span
+														class="_icon-rub"></span>
+												</span>
+											</div> -->
+										</div>
+										<a href="" class="product-card__favorite _icon-favorite"></a>
+									</div>
+									<div class="product-card__info">
+										<!-- <div class="product-card__offer-new product-card__offer-none"></div> -->
+										<div class="product-card__offer-new product-card__offer">New</div>
+										<!-- <div class="product-card__offer-sale product-card__offer">Sale</div> -->
+										<div class="product-card__rating rating rating_set">
+											<div class="rating__body">
+												<div class="rating__active"></div>
+												<div class="rating__items">
+													<input type="radio" class="rating__item" value="1" name="rating">
+													<input type="radio" class="rating__item" value="2" name="rating">
+													<input type="radio" class="rating__item" value="3" name="rating">
+													<input type="radio" class="rating__item" value="4" name="rating">
+													<input type="radio" class="rating__item" value="5" name="rating">
+												</div>
+											</div>
+											<div class="rating__value">4.3</div>
+										</div>
+									</div>
+								</div>
+								<button class="product-card__button button">Добавить в корзину</button>
+							</li>
+							<li class="product-card">
+								<a href="" class="product-card__image">
+									<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
+										<picture><source srcset="img/products/sibAgro/slivochnaya_SA.webp" type="image/webp"><img src="img/products/sibAgro/slivochnaya_SA.png" alt="slivochnaya_SA"></picture>
+									</span>
+									<span class="icon-card-lt icon-card-span"></span>
+									<span class="icon-card-lb icon-card-span"></span>
+									<span class="icon-card-rt icon-card-span"></span>
+									<span class="icon-card-rb icon-card-span"></span>
+								</a>
+								<div class="product-card__body">
+									<div class="product-card__title">
+										<a href="" class="product-card__link-title">Колбаса вареная “СибАгро”
+											Сливочная
+											450г</a>
+									</div>
+									<div class="product-card__article">
+										<span class="product-card__info-article">00004</span>
+										<span class="_icon-info"></span>
+									</div>
+									<div class="product-card__price">
+										<div class="product-card__value value-card">
+											<div class="value-card__price">
+												<span class="value-card__price-span">271.00<span class="_icon-rub"></span><span class="value-card__price-sub">/шт</span>
+												</span>
+											</div>
+											<div class="value-card__old-price">
+												<span class="value-card__old-price-span">293.00<span class="_icon-rub"></span>
+												</span>
+											</div>
+										</div>
+										<a href="" class="product-card__favorite _icon-favorite"></a>
+									</div>
+									<div class="product-card__info">
+										<!-- <div class="product-card__offer-new product-card__offer-none"></div> -->
+										<div class="product-card__offer-new product-card__offer">New</div>
+										<!-- <div class="product-card__offer-sale product-card__offer">Sale</div> -->
+										<div class="product-card__rating rating rating_set">
+											<div class="rating__body">
+												<div class="rating__active"></div>
+												<div class="rating__items">
+													<input type="radio" class="rating__item" value="1" name="rating">
+													<input type="radio" class="rating__item" value="2" name="rating">
+													<input type="radio" class="rating__item" value="3" name="rating">
+													<input type="radio" class="rating__item" value="4" name="rating">
+													<input type="radio" class="rating__item" value="5" name="rating">
+												</div>
+											</div>
+											<div class="rating__value">4.3</div>
+										</div>
+									</div>
+								</div>
+								<button class="product-card__button button">Добавить в корзину</button>
+							</li>
+							<li class="product-card">
+								<a href="" class="product-card__image">
+									<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
+										<picture><source srcset="img/products/sibAgro/doctorskaya_SA.webp" type="image/webp"><img src="img/products/sibAgro/doctorskaya_SA.png" alt="doctorskaya_SA"></picture>
+									</span>
+									<span class="icon-card-lt icon-card-span"></span>
+									<span class="icon-card-lb icon-card-span"></span>
+									<span class="icon-card-rt icon-card-span"></span>
+									<span class="icon-card-rb icon-card-span"></span>
+								</a>
+								<div class="product-card__body">
+									<div class="product-card__title">
+										<a href="" class="product-card__link-title">Колбаса вареная “СибАгро”
+											Докторская
+											450г</a>
+									</div>
+									<div class="product-card__article">
+										<span class="product-card__info-article">00001</span>
+										<span class="_icon-info"></span>
+									</div>
+									<div class="product-card__price">
+										<div class="product-card__value value-card">
+											<div class="value-card__price">
+												<span class="value-card__price-span">180.00<span class="_icon-rub"></span><span class="value-card__price-sub">/шт</span>
+												</span>
+											</div>
+											<!-- <div class="value-card__old-price">
+												<span class="value-card__old-price-span">293.00<span
+														class="_icon-rub"></span>
+												</span>
+											</div> -->
+										</div>
+										<a href="" class="product-card__favorite _icon-favorite"></a>
+									</div>
+									<div class="product-card__info">
+										<!-- <div class="product-card__offer-new product-card__offer-none"></div> -->
+										<div class="product-card__offer-new product-card__offer">New</div>
+										<!-- <div class="product-card__offer-sale product-card__offer">Sale</div> -->
+										<div class="product-card__rating rating rating_set">
+											<div class="rating__body">
+												<div class="rating__active"></div>
+												<div class="rating__items">
+													<input type="radio" class="rating__item" value="1" name="rating">
+													<input type="radio" class="rating__item" value="2" name="rating">
+													<input type="radio" class="rating__item" value="3" name="rating">
+													<input type="radio" class="rating__item" value="4" name="rating">
+													<input type="radio" class="rating__item" value="5" name="rating">
+												</div>
+											</div>
+											<div class="rating__value">4.3</div>
+										</div>
+									</div>
+								</div>
+								<button class="product-card__button button">Добавить в корзину</button>
+							</li>
+							<li class="product-card">
+								<a href="" class="product-card__image">
+									<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
+										<picture><source srcset="img/products/sibAgro/slivochnaya_SA.webp" type="image/webp"><img src="img/products/sibAgro/slivochnaya_SA.png" alt="slivochnaya_SA"></picture>
+									</span>
+									<span class="icon-card-lt icon-card-span"></span>
+									<span class="icon-card-lb icon-card-span"></span>
+									<span class="icon-card-rt icon-card-span"></span>
+									<span class="icon-card-rb icon-card-span"></span>
+								</a>
+								<div class="product-card__body">
+									<div class="product-card__title">
+										<a href="" class="product-card__link-title">Колбаса вареная “СибАгро”
+											Сливочная 450г</a>
+									</div>
+									<div class="product-card__article">
+										<span class="product-card__info-article">00004</span>
+										<span class="_icon-info"></span>
+									</div>
+									<div class="product-card__price">
+										<div class="product-card__value value-card">
+											<div class="value-card__price">
+												<span class="value-card__price-span">180.00<span class="_icon-rub"></span><span class="value-card__price-sub">/шт</span>
+												</span>
+											</div>
+											<div class="value-card__old-price">
+												<span class="value-card__old-price-span">293.00<span class="_icon-rub"></span>
+												</span>
+											</div>
+										</div>
+										<a href="" class="product-card__favorite _icon-favorite"></a>
+									</div>
+									<div class="product-card__info">
+										<!-- <div class="product-card__offer-new product-card__offer-none"></div> -->
+										<div class="product-card__offer-new product-card__offer">New</div>
+										<!-- <div class="product-card__offer-sale product-card__offer">Sale</div> -->
+										<div class="product-card__rating rating rating_set">
+											<div class="rating__body">
+												<div class="rating__active"></div>
+												<div class="rating__items">
+													<input type="radio" class="rating__item" value="1" name="rating">
+													<input type="radio" class="rating__item" value="2" name="rating">
+													<input type="radio" class="rating__item" value="3" name="rating">
+													<input type="radio" class="rating__item" value="4" name="rating">
+													<input type="radio" class="rating__item" value="5" name="rating">
+												</div>
+											</div>
+											<div class="rating__value">4.3</div>
+										</div>
+									</div>
+								</div>
+								<button class="product-card__button button">Добавить в корзину</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__body">
+					<div class="footer__info-footer footer-info">
+
+						<div class="footer-info__address address-info">
+							<div data-spollers="767.98" class="address-info__spoller">
+								<div class="address-info__block">
+									<button type="button" data-spoller class="address-info__title footer-title">Центральный офис в
+										России</button>
+									<div class="address-info__body">
+										<ul class="address-info__list">
+											<li class="address-info__item">Россия, г. Новосибирск, Ул. Выборная 186</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div data-spollers="767.98" class="address-info__spoller">
+								<div class="address-info__block">
+									<button type="button" data-spoller class="address-info__title footer-title">Наши филиалы</button>
+									<div class="address-info__body">
+										<ul class="address-info__list">
+											<li class="address-info__item">Россия, г. Куйбышев, ул. Промзона 5а</li>
+											<li class="address-info__item">Россия, г. Омск, ул. И. Н. Багнюка 15/2</li>
+											<li class="address-info__item">Россия, г. Карасук, ул. Калинина 78</li>
+										</ul>
+									</div>
 								</div>
 							</div>
 						</div>
 
-						<div class="return__decor decor-return">
-							<div class="decor-return__title">Оформление возврата</div>
-							<div class="decor-return__text">Для оформления возврата нужно перейти в личный кабинет на сайте
-								компании и скачать форму заявления, заполнить ее и отправить по электронной почте: <a href="" class="decor-return__link gray-text">vozvrat.anisa@anisa.group</a>, либо связаться с Вашим
-								менеджером.
+						<div class="footer-info__company company-info">
+							<div data-spollers="767.98" class="company-info__spoller">
+								<div class="company-info__block">
+									<button type="button" data-spoller class="company-info__title footer-title">О
+										компании</button>
+									<div class="company-info__body">
+										<nav class="menu-footer">
+											<ul class="menu-footer__list">
+												<li class="menu-footer__item"><a href="about.html" class="menu-footer__link">О нас</a>
+												</li>
+												<li class="menu-footer__item"><a href="contacts.html" class="menu-footer__link">Контакты</a></li>
+												<li class="menu-footer__item"><a href="partner.html" class="menu-footer__link">Партнерам</a></li>
+												<li class="menu-footer__item"><a href="product-quality.html" class="menu-footer__link">Контроль качества</a>
+												</li>
+												<li class="menu-footer__item"><a href="vacancy.html" class="menu-footer__link">Работа у
+														нас</a></li>
+												<li class="menu-footer__item"><a href="registration-organization.html" class="menu-footer__link">Заявка на сотрудничество</a></li>
+											</ul>
+										</nav>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="footer-info__buyers buyers-info">
+							<div data-spollers="767.98" class="buyers-info__spoller">
+								<div class="buyers-info__block">
+									<button type="button" data-spoller class="buyers-info__title footer-title">Покупателям</button>
+									<div class="buyers-info__body">
+										<nav class="menu-footer">
+											<ul class="menu-footer__list">
+												<li class="menu-footer__item"><a href="payment.html" class="menu-footer__link">Оплата</a>
+												</li>
+												<li class="menu-footer__item"><a href="delivery.html" class="menu-footer__link">Доставка</a></li>
+												<li class="menu-footer__item"><a href="pickup.html" class="menu-footer__link">Самовывоз</a></li>
+												<li class="menu-footer__item"><a href="return.html" class="menu-footer__link">Условия
+														возврата</a>
+												</li>
+												<li class="menu-footer__item"><a href="answers.html" class="menu-footer__link">Вопросы и
+														ответы</a>
+												</li>
+											</ul>
+										</nav>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="footer-info__feedback feedback-info">
+							<div data-spollers="767.98" class="feedback-info__spoller">
+								<div class="feedback-info__block">
+									<button type="button" data-spoller class="feedback-info__title footer-title">Свяжитесь с
+										нами</button>
+									<div class="feedback-info__body">
+										<nav class="menu-footer">
+											<ul class="menu-footer__list">
+												<li class="menu-footer__item"><a href="tel:83832663535" class="menu-footer__link">+7 (383)
+														266-35-35</a></li>
+												<li class="menu-footer__item"><a href="tel:83833991307" class="menu-footer__link">+7 (383)
+														399-13-07</a></li>
+												<li class="menu-footer__item"><a href="mailto:anisa.info@anisa.group" class="menu-footer__link">anisa.info@anisa.group</a></li>
+											</ul>
+										</nav>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="footer-line"><span></span></div>
+					<div class="footer__bottom-footer footer-bottom">
+						<div class="footer-bottom__body">
+							<div class="footer-bottom__logo logo-footer">
+								<div class="logo-footer">
+									<a href="home.html" class="logo-footer__img"><picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="logo"></picture></a>
+								</div>
+							</div>
+							<div class="footer-bottom__policy policy-footer">
+								<div class="policy-footer__link"><a href="policy.html">Политика конфиденциальности</a></div>
+								<div class="policy-footer__text _icon-copyright">ООО “Аниса”, 1998 - 2023</div>
+							</div>
+							<div class="footer-bottom__development development-footer">
+								<div class="development-footer__dev">
+									Разработка и обслуживание сайта: <a href="index.html" class="development-footer__link">NIKITA
+										VITALEVICH</a>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-
-	</div>
-
-	</main>
-	<footer class="footer">
-		<div class="footer__container">
-			<div class="footer__body">
-				<div class="footer__info-footer footer-info">
-
-					<div class="footer-info__address address-info">
-						<div data-spollers="767.98" class="address-info__spoller">
-							<div class="address-info__block">
-								<button type="button" data-spoller class="address-info__title footer-title">Центральный офис в
-									России</button>
-								<div class="address-info__body">
-									<ul class="address-info__list">
-										<li class="address-info__item">Россия, г. Новосибирск, Ул. Выборная 186</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div data-spollers="767.98" class="address-info__spoller">
-							<div class="address-info__block">
-								<button type="button" data-spoller class="address-info__title footer-title">Наши филиалы</button>
-								<div class="address-info__body">
-									<ul class="address-info__list">
-										<li class="address-info__item">Россия, г. Куйбышев, ул. Промзона 5а</li>
-										<li class="address-info__item">Россия, г. Омск, ул. И. Н. Багнюка 15/2</li>
-										<li class="address-info__item">Россия, г. Карасук, ул. Калинина 78</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="footer-info__company company-info">
-						<div data-spollers="767.98" class="company-info__spoller">
-							<div class="company-info__block">
-								<button type="button" data-spoller class="company-info__title footer-title">О
-									компании</button>
-								<div class="company-info__body">
-									<nav class="menu-footer">
-										<ul class="menu-footer__list">
-											<li class="menu-footer__item"><a href="about.html" class="menu-footer__link">О нас</a>
-											</li>
-											<li class="menu-footer__item"><a href="contacts.html" class="menu-footer__link">Контакты</a></li>
-											<li class="menu-footer__item"><a href="partner.html" class="menu-footer__link">Партнерам</a></li>
-											<li class="menu-footer__item"><a href="product-quality.html" class="menu-footer__link">Контроль качества</a>
-											</li>
-											<li class="menu-footer__item"><a href="vacancy.html" class="menu-footer__link">Работа у
-													нас</a></li>
-											<li class="menu-footer__item"><a href="registration-organization.html" class="menu-footer__link">Заявка на сотрудничество</a></li>
-										</ul>
-									</nav>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="footer-info__buyers buyers-info">
-						<div data-spollers="767.98" class="buyers-info__spoller">
-							<div class="buyers-info__block">
-								<button type="button" data-spoller class="buyers-info__title footer-title">Покупателям</button>
-								<div class="buyers-info__body">
-									<nav class="menu-footer">
-										<ul class="menu-footer__list">
-											<li class="menu-footer__item"><a href="payment.html" class="menu-footer__link">Оплата</a>
-											</li>
-											<li class="menu-footer__item"><a href="delivery.html" class="menu-footer__link">Доставка</a></li>
-											<li class="menu-footer__item"><a href="pickup.html" class="menu-footer__link">Самовывоз</a></li>
-											<li class="menu-footer__item"><a href="return.html" class="menu-footer__link">Условия
-													возврата</a>
-											</li>
-											<li class="menu-footer__item"><a href="answers.html" class="menu-footer__link">Вопросы и
-													ответы</a>
-											</li>
-										</ul>
-									</nav>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="footer-info__feedback feedback-info">
-						<div data-spollers="767.98" class="feedback-info__spoller">
-							<div class="feedback-info__block">
-								<button type="button" data-spoller class="feedback-info__title footer-title">Свяжитесь с
-									нами</button>
-								<div class="feedback-info__body">
-									<nav class="menu-footer">
-										<ul class="menu-footer__list">
-											<li class="menu-footer__item"><a href="tel:83832663535" class="menu-footer__link">+7 (383)
-													266-35-35</a></li>
-											<li class="menu-footer__item"><a href="tel:83833991307" class="menu-footer__link">+7 (383)
-													399-13-07</a></li>
-											<li class="menu-footer__item"><a href="mailto:anisa.info@anisa.group" class="menu-footer__link">anisa.info@anisa.group</a></li>
-										</ul>
-									</nav>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="footer-line"><span></span></div>
-				<div class="footer__bottom-footer footer-bottom">
-					<div class="footer-bottom__body">
-						<div class="footer-bottom__logo logo-footer">
-							<div class="logo-footer">
-								<a href="home.html" class="logo-footer__img"><picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="logo"></picture></a>
-							</div>
-						</div>
-						<div class="footer-bottom__policy policy-footer">
-							<div class="policy-footer__link"><a href="policy.html">Политика конфиденциальности</a></div>
-							<div class="policy-footer__text _icon-copyright">ООО “Аниса”, 1998 - 2023</div>
-						</div>
-						<div class="footer-bottom__development development-footer">
-							<div class="development-footer__dev">
-								Разработка и обслуживание сайта: <a href="index.html" class="development-footer__link">NIKITA
-									VITALEVICH</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
+		</footer>
 	</div>
 	<!-- Уведомление об успешном оформлении заказа -->
 	<div id="popup-ordering" aria-hidden="true" class="popup popup-ordering">

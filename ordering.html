@@ -6,8 +6,9 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230327174756">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230411174014">
 	<link rel="shortcut icon" href="favicon.ico">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js?_v=20230411174014"></script>
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -93,7 +94,7 @@
 												<li>
 													<h3 class="submenu-page__head">Колбасы, ветчина</h3>
 												</li>
-												<li><a href="" class="submenu-page__link">Вареная колбаса</a></li>
+												<li><a href="catalog-category.html" class="submenu-page__link">Вареная колбаса</a></li>
 												<li><a href="" class="submenu-page__link">Копченая колбаса</a></li>
 												<li><a href="" class="submenu-page__link">Сыровяленная колбаса</a></li>
 												<li><a href="" class="submenu-page__link">Ливерная колбаса</a></li>
@@ -1555,13 +1556,15 @@
 						</div>
 						<div class="popup-callback__block">
 							<div class="popup-callback__organization organization-callback">
-								<div class="organization-callback__show" id="showOrganization">
-									<label>
-										<span class="organization-callback__label">Я юридическое лицо</span>
-									</label>
+								<div class="organization-callback__show">
+									<div class="checkbox">
+										<input id="showOrganization" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+										<label for="showOrganization" class="checkbox__label"><span class="checkbox__text">Я
+												юридическое лицо</span></label>
+									</div>
 								</div>
-								<div class="organization-callback__input">
-									<input autocomplete="off" type="text" name="organizationName" id="organizationName" data-error="Ошибка" placeholder="Название организации" class="input">
+								<div id="organizationName" class="organization-callback__input">
+									<input autocomplete="off" type="text" name="organizationName" data-error="Ошибка" placeholder="Название организации" class="input">
 								</div>
 							</div>
 						</div>
@@ -1602,7 +1605,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20230327174756"></script>
+	<script src="js/app.min.js?_v=20230411174014"></script>
 </body>
 
 </html>

@@ -4833,6 +4833,108 @@
             bodyUnlock();
             document.documentElement.classList.remove("menu-open");
         }
+        function showMore() {
+            window.addEventListener("load", (function(e) {
+                const showMoreBlocks = document.querySelectorAll("[data-showmore]");
+                let showMoreBlocksRegular;
+                let mdQueriesArray;
+                if (showMoreBlocks.length) {
+                    showMoreBlocksRegular = Array.from(showMoreBlocks).filter((function(item, index, self) {
+                        return !item.dataset.showmoreMedia;
+                    }));
+                    showMoreBlocksRegular.length ? initItems(showMoreBlocksRegular) : null;
+                    document.addEventListener("click", showMoreActions);
+                    window.addEventListener("resize", showMoreActions);
+                    mdQueriesArray = dataMediaQueries(showMoreBlocks, "showmoreMedia");
+                    if (mdQueriesArray && mdQueriesArray.length) {
+                        mdQueriesArray.forEach((mdQueriesItem => {
+                            mdQueriesItem.matchMedia.addEventListener("change", (function() {
+                                initItems(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
+                            }));
+                        }));
+                        initItemsMedia(mdQueriesArray);
+                    }
+                }
+                function initItemsMedia(mdQueriesArray) {
+                    mdQueriesArray.forEach((mdQueriesItem => {
+                        initItems(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
+                    }));
+                }
+                function initItems(showMoreBlocks, matchMedia) {
+                    showMoreBlocks.forEach((showMoreBlock => {
+                        initItem(showMoreBlock, matchMedia);
+                    }));
+                }
+                function initItem(showMoreBlock, matchMedia = false) {
+                    showMoreBlock = matchMedia ? showMoreBlock.item : showMoreBlock;
+                    let showMoreContent = showMoreBlock.querySelectorAll("[data-showmore-content]");
+                    let showMoreButton = showMoreBlock.querySelectorAll("[data-showmore-button]");
+                    showMoreContent = Array.from(showMoreContent).filter((item => item.closest("[data-showmore]") === showMoreBlock))[0];
+                    showMoreButton = Array.from(showMoreButton).filter((item => item.closest("[data-showmore]") === showMoreBlock))[0];
+                    const hiddenHeight = getHeight(showMoreBlock, showMoreContent);
+                    if (matchMedia.matches || !matchMedia) if (hiddenHeight < getOriginalHeight(showMoreContent)) {
+                        _slideUp(showMoreContent, 0, hiddenHeight);
+                        showMoreButton.hidden = false;
+                    } else {
+                        _slideDown(showMoreContent, 0, hiddenHeight);
+                        showMoreButton.hidden = true;
+                    } else {
+                        _slideDown(showMoreContent, 0, hiddenHeight);
+                        showMoreButton.hidden = true;
+                    }
+                }
+                function getHeight(showMoreBlock, showMoreContent) {
+                    let hiddenHeight = 0;
+                    const showMoreType = showMoreBlock.dataset.showmore ? showMoreBlock.dataset.showmore : "size";
+                    if ("items" === showMoreType) {
+                        const showMoreTypeValue = showMoreContent.dataset.showmoreContent ? showMoreContent.dataset.showmoreContent : 3;
+                        const showMoreItems = showMoreContent.children;
+                        for (let index = 1; index < showMoreItems.length; index++) {
+                            const showMoreItem = showMoreItems[index - 1];
+                            hiddenHeight += showMoreItem.offsetHeight;
+                            if (index == showMoreTypeValue) break;
+                        }
+                    } else {
+                        const showMoreTypeValue = showMoreContent.dataset.showmoreContent ? showMoreContent.dataset.showmoreContent : 150;
+                        hiddenHeight = showMoreTypeValue;
+                    }
+                    return hiddenHeight;
+                }
+                function getOriginalHeight(showMoreContent) {
+                    let parentHidden;
+                    let hiddenHeight = showMoreContent.offsetHeight;
+                    showMoreContent.style.removeProperty("height");
+                    if (showMoreContent.closest(`[hidden]`)) {
+                        parentHidden = showMoreContent.closest(`[hidden]`);
+                        parentHidden.hidden = false;
+                    }
+                    let originalHeight = showMoreContent.offsetHeight;
+                    parentHidden ? parentHidden.hidden = true : null;
+                    showMoreContent.style.height = `${hiddenHeight}px`;
+                    return originalHeight;
+                }
+                function showMoreActions(e) {
+                    const targetEvent = e.target;
+                    const targetType = e.type;
+                    if ("click" === targetType) {
+                        if (targetEvent.closest("[data-showmore-button]")) {
+                            const showMoreButton = targetEvent.closest("[data-showmore-button]");
+                            const showMoreBlock = showMoreButton.closest("[data-showmore]");
+                            const showMoreContent = showMoreBlock.querySelector("[data-showmore-content]");
+                            const showMoreSpeed = showMoreBlock.dataset.showmoreButton ? showMoreBlock.dataset.showmoreButton : "500";
+                            const hiddenHeight = getHeight(showMoreBlock, showMoreContent);
+                            if (!showMoreContent.classList.contains("_slide")) {
+                                showMoreBlock.classList.contains("_showmore-active") ? _slideUp(showMoreContent, showMoreSpeed, hiddenHeight) : _slideDown(showMoreContent, showMoreSpeed, hiddenHeight);
+                                showMoreBlock.classList.toggle("_showmore-active");
+                            }
+                        }
+                    } else if ("resize" === targetType) {
+                        showMoreBlocksRegular && showMoreBlocksRegular.length ? initItems(showMoreBlocksRegular) : null;
+                        mdQueriesArray && mdQueriesArray.length ? initItemsMedia(mdQueriesArray) : null;
+                    }
+                }
+            }));
+        }
         function FLS(message) {
             setTimeout((() => {
                 if (window.FLS) console.log(message);
@@ -11677,56 +11779,6 @@
                 goToHash ? gotoBlock(goToHash, true, 500, 20) : null;
             }
         }
-        function stickyBlock() {
-            addWindowScrollEvent = true;
-            function stickyBlockInit() {
-                const stickyParents = document.querySelectorAll("[data-sticky]");
-                if (stickyParents.length) stickyParents.forEach((stickyParent => {
-                    let stickyConfig = {
-                        media: stickyParent.dataset.sticky ? parseInt(stickyParent.dataset.sticky) : null,
-                        top: stickyParent.dataset.stickyTop ? parseInt(stickyParent.dataset.stickyTop) : 0,
-                        bottom: stickyParent.dataset.stickyBottom ? parseInt(stickyParent.dataset.stickyBottom) : 0,
-                        header: stickyParent.hasAttribute("data-sticky-header") ? document.querySelector("header.header").offsetHeight : 0
-                    };
-                    stickyBlockItem(stickyParent, stickyConfig);
-                }));
-            }
-            function stickyBlockItem(stickyParent, stickyConfig) {
-                const stickyBlockItem = stickyParent.querySelector("[data-sticky-item]");
-                const headerHeight = stickyConfig.header;
-                const offsetTop = headerHeight + stickyConfig.top;
-                const startPoint = stickyBlockItem.getBoundingClientRect().top + scrollY - offsetTop;
-                document.addEventListener("windowScroll", stickyBlockActions);
-                function stickyBlockActions(e) {
-                    const endPoint = stickyParent.offsetHeight + stickyParent.getBoundingClientRect().top + scrollY - (offsetTop + stickyBlockItem.offsetHeight + stickyConfig.bottom);
-                    let stickyItemValues = {
-                        position: "relative",
-                        bottom: "auto",
-                        top: "0px",
-                        left: "0px",
-                        width: "auto"
-                    };
-                    if (!stickyConfig.media || stickyConfig.media < window.innerWidth) if (offsetTop + stickyConfig.bottom + stickyBlockItem.offsetHeight < window.innerHeight) if (scrollY >= startPoint && scrollY <= endPoint) {
-                        stickyItemValues.position = `fixed`;
-                        stickyItemValues.bottom = `auto`;
-                        stickyItemValues.top = `${offsetTop}px`;
-                        stickyItemValues.left = `${stickyBlockItem.getBoundingClientRect().left}px`;
-                        stickyItemValues.width = `${stickyBlockItem.offsetWidth}px`;
-                    } else if (scrollY >= endPoint) {
-                        stickyItemValues.position = `absolute`;
-                        stickyItemValues.bottom = `${stickyConfig.bottom}px`;
-                        stickyItemValues.top = `auto`;
-                        stickyItemValues.left = `0px`;
-                        stickyItemValues.width = `${stickyBlockItem.offsetWidth}px`;
-                    }
-                    stickyBlockType(stickyBlockItem, stickyItemValues);
-                }
-            }
-            function stickyBlockType(stickyBlockItem, stickyItemValues) {
-                stickyBlockItem.style.cssText = `position:${stickyItemValues.position};bottom:${stickyItemValues.bottom};top:${stickyItemValues.top};left:${stickyItemValues.left};width:${stickyItemValues.width};`;
-            }
-            stickyBlockInit();
-        }
         setTimeout((() => {
             if (addWindowScrollEvent) {
                 let windowScroll = new Event("windowScroll");
@@ -11831,37 +11883,20 @@
         };
         const da = new DynamicAdapt("max");
         da.init();
-        const upScroll = {
-            el: document.querySelector(".up-scroll"),
-            scrolling: false,
-            show() {
-                if (this.el.classList.contains("up-scroll_hide") && !this.el.classList.contains("up-scroll_hiding")) {
-                    this.el.classList.remove("up-scroll_hide");
-                    this.el.classList.add("up-scroll_hiding");
-                    window.setTimeout((() => {
-                        this.el.classList.remove("up-scroll_hiding");
-                    }), 300);
-                }
-            },
-            hide() {
-                if (!this.el.classList.contains("up-scroll_hide") && !this.el.classList.contains("up-scroll_hiding")) {
-                    this.el.classList.add("up-scroll_hiding");
-                    window.setTimeout((() => {
-                        this.el.classList.add("up-scroll_hide");
-                        this.el.classList.remove("up-scroll_hiding");
-                    }), 300);
-                }
-            },
-            addEventListener() {
-                window.addEventListener("scroll", (() => {
-                    const scrollY = window.scrollY || document.documentElement.scrollTop;
-                    if (this.scrolling && scrollY > 0) return;
-                    this.scrolling = false;
-                    if (scrollY > 600) this.show(); else this.hide();
-                }));
-            }
-        };
-        upScroll.addEventListener();
+        $(window).scroll((function() {
+            if ($(this).scrollTop() > 300) $(".up-scroll").fadeIn(); else $(".up-scroll").fadeOut();
+        }));
+        $(".up-scroll").click((function() {
+            $("html, body").animate({
+                scrollTop: 0
+            }, 600);
+            return false;
+        }));
+        $(document).ready((function() {
+            $("#focusButton").click((function() {
+                $("#searchInput").focus();
+            }));
+        }));
         var tekuscheyeVremya = new Date;
         var deadlineTime = tekuscheyeVremya.setMinutes(tekuscheyeVremya.getMinutes() + 2);
         var obratniyOtschet = setInterval((function() {
@@ -11904,11 +11939,42 @@
             if (targetElement.closest(".catalog-header__parent")) document.documentElement.classList.add("sub-catalog-open");
             if (targetElement.closest(".submenu-page__back")) document.documentElement.classList.remove("sub-catalog-open");
         }
+        $("#showOrganization").click((function() {
+            if ($(this).is(":checked")) $("#organizationName").show(100); else $("#organizationName").hide(100);
+        }));
+        (function() {
+            var a = document.querySelector("#catalogNav"), b = null, P = 0;
+            window.addEventListener("scroll", Ascroll, false);
+            document.body.addEventListener("scroll", Ascroll, false);
+            function Ascroll() {
+                if (null == b) {
+                    var Sa = getComputedStyle(a, ""), s = "";
+                    for (var i = 0; i < Sa.length; i++) if (0 == Sa[i].indexOf("box-sizing") || 0 == Sa[i].indexOf("overflow") || 0 == Sa[i].indexOf("width") || 0 == Sa[i].indexOf("padding") || 0 == Sa[i].indexOf("border") || 0 == Sa[i].indexOf("outline") || 0 == Sa[i].indexOf("box-shadow") || 0 == Sa[i].indexOf("background")) s += Sa[i] + ": " + Sa.getPropertyValue(Sa[i]) + "; ";
+                    a.innerHTML = '<div style="' + s + '">' + a.innerHTML + "</div>";
+                    b = a.children[0];
+                    a.style.height = b.getBoundingClientRect().height + "px";
+                    a.style.padding = "0";
+                    a.style.border = "0";
+                }
+                var Ra = a.getBoundingClientRect(), R = Math.round(Ra.top + b.getBoundingClientRect().height - document.querySelector("footer").getBoundingClientRect().top + 0);
+                if (Ra.top - P <= 0) if (Ra.top - P <= R) {
+                    b.className = "stop";
+                    b.style.top = -R + "px";
+                } else {
+                    b.className = "sticky";
+                    b.style.top = P + "px";
+                } else {
+                    b.className = "";
+                    b.style.top = "";
+                }
+            }
+        })();
         window["FLS"] = true;
         isWebp();
         menuInit();
         spollers();
         tabs();
+        showMore();
         formFieldsInit({
             viewPass: true
         });
@@ -11916,6 +11982,5 @@
         formQuantity();
         formRating();
         pageNavigation();
-        stickyBlock();
     })();
 })();

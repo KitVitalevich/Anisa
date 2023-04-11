@@ -6,8 +6,9 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230327174756">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230411174014">
 	<link rel="shortcut icon" href="favicon.ico">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js?_v=20230411174014"></script>
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -93,7 +94,7 @@
 												<li>
 													<h3 class="submenu-page__head">Колбасы, ветчина</h3>
 												</li>
-												<li><a href="" class="submenu-page__link">Вареная колбаса</a></li>
+												<li><a href="catalog-category.html" class="submenu-page__link">Вареная колбаса</a></li>
 												<li><a href="" class="submenu-page__link">Копченая колбаса</a></li>
 												<li><a href="" class="submenu-page__link">Сыровяленная колбаса</a></li>
 												<li><a href="" class="submenu-page__link">Ливерная колбаса</a></li>
@@ -694,7 +695,7 @@
 				<div class="page__container">
 					<nav class="page-breadcrumbs breadcrumbs">
 						<ul class="breadcrumbs__list">
-							<li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
+							<li class="breadcrumbs__item"><a href="home.html" class="breadcrumbs__link">Главная</a></li>
 							<span class="breadcrumbs__current">Колбасные изделия</span>
 						</ul>
 					</nav>
@@ -704,333 +705,16 @@
 
 			<div class="catalog">
 				<div class="catalog__container">
-					<div data-spollers class="catalog__filter filter-catalog">
-						<div class="filter-catalog__content">
-							<button type="button" data-spoller class="filter-catalog__title">Фильтр
-								<span class="left-filter-bar"></span>
-								<span class="right-filter-bar"></span>
-								<div class="filter-catalog__body">
-									<div class="filter-catalog__items">
-							</button>
-							<div class="filter-catalog__body">
-								<div class="filter-catalog__items">
-									<div data-spollers class="filter-catalog__item item-filter-catalog">
-										<div class="item-filter-catalog__content">
-											<button type="button" data-spoller class="price-filter__title filter-title _icon-arrow">Цена</button>
-											<div class="price-filter__body">
-												<div id="range" class="price-filter__range"></div>
-												<div class="price-filter__inputs">
-													<input id="min" autocomplete="off" type="text" name="form[]" class="price-filter__input">
-													<input id="max" autocomplete="off" type="text" name="form[]" class="price-filter__input">
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<div data-spollers class="filter-catalog__item item-filter-catalog">
-										<div class="item-filter-catalog__content">
-											<button type="button" data-spoller class="item-filter-catalog__title filter-title _icon-arrow">Бренд</button>
-											<div class="item-filter-catalog__body">
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="sibagro" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="sibagro" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">СибАгро</span></label>
-												</div>
-
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="omskibekon" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="omskibekon" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Омский
-															Бекон</span></label>
-												</div>
-
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="atyashevo" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="atyashevo" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Атяшево</span></label>
-												</div>
-
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="ishim" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="ishim" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Ишимский
-															мясокомбинат</span></label>
-												</div>
-
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="starodvorie" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="starodvorie" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Стародворские колбасы</span></label>
-												</div>
-
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="verbickie" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="verbickie" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Вербицкие
-															колбасы</span></label>
-												</div>
-
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="ivko" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="ivko" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">ИвКо</span></label>
-												</div>
-
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="orsk" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="orsk" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Орские
-															колбасы</span></label>
-												</div>
-
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="bars" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="bars" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Барский
-															продукт</span></label>
-												</div>
-
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="svejeli" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="svejeli" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Свежели</span></label>
-												</div>
-
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="ariant" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="ariant" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Ариант</span></label>
-												</div>
-
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="bravo" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="bravo" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Браво</span></label>
-												</div>
-
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="sava" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="sava" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Сава</span></label>
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<div data-spollers class="filter-catalog__item item-filter-catalog">
-										<div class="item-filter-catalog__content">
-											<button type="button" data-spoller class="item-filter-catalog__title filter-title _icon-arrow">Производитель</button>
-											<div class="item-filter-catalog__body">
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="ao_sibagro" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="ao_sibagro" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text"> АО
-															"СибАгро"</span></label>
-												</div>
-
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="ao_omskibekon" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="ao_omskibekon" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">АО "Омский
-															Бекон"</span></label>
-												</div>
-
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="mpk_atyashevo" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="mpk_atyashevo" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">МПК
-															"Атяшевский"</span></label>
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<div data-spollers class="filter-catalog__item item-filter-catalog">
-										<div class="item-filter-catalog__content">
-											<button type="button" data-spoller class="item-filter-catalog__title filter-title _icon-arrow">Вид мяса</button>
-											<div class="item-filter-catalog__body">
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="beef" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="beef" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Говядина</span></label>
-												</div>
-
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="pork" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="pork" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Свинина</span></label>
-												</div>
-
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="chicken" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="chicken" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Курица</span></label>
-												</div>
-
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="turkey" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="turkey" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Индейка</span></label>
-												</div>
-
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="mixed" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="mixed" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Смешанный</span></label>
-												</div>
-
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="byproduct" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="byproduct" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Субпродукты</span></label>
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<div data-spollers class="filter-catalog__item item-filter-catalog">
-										<div class="item-filter-catalog__content">
-											<button type="button" data-spoller class="item-filter-catalog__title filter-title _icon-arrow">Форма выпуска</button>
-											<div class="item-filter-catalog__body">
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="piece" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="piece" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Кусок</span></label>
-												</div>
-
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="balyk" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="balyk" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Балык</span></label>
-												</div>
-
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="baton" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="baton" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Батон</span></label>
-												</div>
-
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="carbonate" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="carbonate" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Карбонат</span></label>
-												</div>
-
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="ham" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="ham" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Окорок</span></label>
-												</div>
-
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="roll" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="roll" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Рулет</span></label>
-												</div>
-
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="ribs" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="ribs" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Ребрышки</span></label>
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<div data-spollers class="filter-catalog__item item-filter-catalog">
-										<div class="item-filter-catalog__content">
-											<button type="button" data-spoller class="item-filter-catalog__title filter-title _icon-arrow">Вес</button>
-											<div class="item-filter-catalog__body">
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="150г" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="150г" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">150г</span></label>
-												</div>
-
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="160г" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="160г" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">160г</span></label>
-												</div>
-
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="200г" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="200г" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">200г</span></label>
-												</div>
-
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="235г" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="235г" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">235г</span></label>
-												</div>
-
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="250г" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="250г" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">250г</span></label>
-												</div>
-
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="300г" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="300г" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">300г</span></label>
-												</div>
-
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="330г" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="330г" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">330г</span></label>
-												</div>
-
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="350г" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="350г" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">350г</span></label>
-												</div>
-
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="400г" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="400г" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">400г</span></label>
-												</div>
-
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="450г" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="450г" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">450г</span></label>
-												</div>
-
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="470г" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="470г" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">470г</span></label>
-												</div>
-
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="500г" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="500г" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">500г</span></label>
-												</div>
-
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="600г" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="600г" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">600г</span></label>
-												</div>
-
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="840г" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="840г" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">840г</span></label>
-												</div>
-
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="1000г" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="1000г" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">1000г</span></label>
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<div data-spollers class="filter-catalog__item item-filter-catalog">
-										<div class="item-filter-catalog__content">
-											<button type="button" data-spoller class="item-filter-catalog__title filter-title _icon-arrow">Страна
-												производитель</button>
-											<div class="item-filter-catalog__body">
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="russia" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="russia" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Россия</span></label>
-												</div>
-
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="belarus" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="belarus" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Белоруссия</span></label>
-												</div>
-
-												<div class="item-filter-catalog__checkbox checkbox">
-													<input id="kazakhstan" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="kazakhstan" class="item-filter-catalog__label checkbox__label"><span class="checkbox__text">Казахстан</span></label>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div class="filter-catalog__btn btn-filter">
-									<button class="btn-filter__apply button">Применить</button>
-									<button class="btn-filter__clear button">Очистить фильтр</button>
-								</div>
-							</div>
-						</div>
-					</div>
-					<nav class="catalog__navigation navigation-catalog">
+					<nav id="catalogNav" class="catalog__navigation navigation-catalog">
 						<ul class="navigation-catalog__list">
 							<li class="navigation-catalog__item">
-								<a href="" data-goto-top="60" data-goto="#sausages-goto" class="navigation-catalog__btn"><span>Колбасы, ветчина</span></a>
+								<a href="" data-goto-top="70" data-goto="#sausages-goto" class="navigation-catalog__btn"><span>Колбасы, ветчина</span></a>
 							</li>
 							<li class="navigation-catalog__item">
-								<a href="" data-goto-top="40" data-goto="#delicacies-goto" class="navigation-catalog__btn"><span>Деликатесы мясные</span></a>
+								<a href="" data-goto-top="70" data-goto="#delicacies-goto" class="navigation-catalog__btn"><span>Деликатесы мясные</span></a>
 							</li>
 							<li class="navigation-catalog__item">
-								<a href="" data-goto-top="40" data-goto="#sosiski-goto" class="navigation-catalog__btn"><span>Сосиски, срадельки</span></a>
+								<a href="" data-goto-top="70" data-goto="#sosiski-goto" class="navigation-catalog__btn"><span>Сосиски, срадельки</span></a>
 							</li>
 							<li class="navigation-catalog__item">
 								<a href="" class="navigation-catalog__btn" data-goto="#preserve-goto">
@@ -1038,6 +722,7 @@
 							</li>
 						</ul>
 					</nav>
+
 					<div class="catalog__content content-catalog">
 						<div class="content-catalog__control">
 							<select data-class-modif="control" name="form[]" class="control">
@@ -1053,10 +738,13 @@
 								<div id="sausages-goto" class="products-catalog__head-title">Колбасы, ветчина
 								</div>
 								<div class="products-catalog__cards">
-									<div class="products-catalog__block">
-										<div class="products-catalog__title">Вареная колбаса</div>
-										<div class="products-catalog__body">
-											<article class="product-card">
+									<div data-showmore="items" class="products-catalog__block">
+										<div class="products-catalog__title">
+											<h2>Вареная колбаса</h2>
+											<a href="catalog-category.html">Eще</a>
+										</div>
+										<ul data-showmore-content="1" class="products-catalog__body">
+											<li class="product-card">
 												<a href="description-goods.html" class="product-card__image">
 													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
 														<picture><source srcset="img/products/sibAgro/doctorskaya_SA.webp" type="image/webp"><img src="img/products/sibAgro/doctorskaya_SA.png" alt="doctorskaya_SA"></picture>
@@ -1069,9 +757,7 @@
 												<div class="product-card__body">
 													<div class="product-card__title">
 														<a href="description-product.html" class="product-card__link-title">Колбаса
-															вареная
-															“СибАгро” Докторская
-															450г</a>
+															вареная “СибАгро” Докторская 450г</a>
 													</div>
 													<div class="product-card__article">
 														<span class="product-card__info-article">00001</span>
@@ -1080,18 +766,13 @@
 													<div class="product-card__price">
 														<div class="product-card__value value-card">
 															<div class="value-card__price">
-																<span class="value-card__price-span">180<sup class="value-card__price-sup">00
-																	</sup><span class="rub">P</span>
-																	<span class="value-card__price-sub">/шт</span>
+																<span class="value-card__price-span">271.00<span class="_icon-rub"></span><span class="value-card__price-sub">/шт</span>
 																</span>
 															</div>
-															<!-- <div class="value-card__old-price">
-													<span class="value-card__old-price-span">180<sup
-															class="value-card__old-price-sup">00
-														</sup><span class="old-rub">P</span>
-														<span class="value-card__old-price-sub">/шт</span>
-													</span>
-												</div> -->
+															<div class="value-card__old-price">
+																<span class="value-card__old-price-span">293.00<span class="_icon-rub"></span>
+																</span>
+															</div>
 														</div>
 														<a href="" class="product-card__favorite _icon-favorite"></a>
 													</div>
@@ -1115,8 +796,8 @@
 													</div>
 												</div>
 												<button class="product-card__button button">Добавить в корзину</button>
-											</article>
-											<article class="product-card">
+											</li>
+											<li class="product-card">
 												<a href="" class="product-card__image">
 													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
 														<picture><source srcset="img/products/sibAgro/molochnaya_SA.webp" type="image/webp"><img src="img/products/sibAgro/molochnaya_SA.png" alt="molochnaya_SA"></picture>
@@ -1138,18 +819,14 @@
 													<div class="product-card__price">
 														<div class="product-card__value value-card">
 															<div class="value-card__price">
-																<span class="value-card__price-span">180<sup class="value-card__price-sup">00
-																	</sup><span class="rub">P</span>
-																	<span class="value-card__price-sub">/шт</span>
+																<span class="value-card__price-span">180.00<span class="_icon-rub"></span><span class="value-card__price-sub">/шт</span>
 																</span>
 															</div>
 															<!-- <div class="value-card__old-price">
-														<span class="value-card__old-price-span">180<sup
-																class="value-card__old-price-sup">00
-															</sup><span class="old-rub">P</span>
-															<span class="value-card__old-price-sub">/шт</span>
-														</span>
-													</div> -->
+																<span class="value-card__old-price-span">180.00<span
+																		class="_icon-rub"></span>
+																</span>
+															</div> -->
 														</div>
 														<a href="" class="product-card__favorite _icon-favorite"></a>
 													</div>
@@ -1173,8 +850,8 @@
 													</div>
 												</div>
 												<button class="product-card__button button">Добавить в корзину</button>
-											</article>
-											<article class="product-card">
+											</li>
+											<li class="product-card">
 												<a href="" class="product-card__image">
 													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
 														<picture><source srcset="img/products/sibAgro/slivochnaya_SA.webp" type="image/webp"><img src="img/products/sibAgro/slivochnaya_SA.png" alt="slivochnaya_SA"></picture>
@@ -1197,18 +874,13 @@
 													<div class="product-card__price">
 														<div class="product-card__value value-card">
 															<div class="value-card__price">
-																<span class="value-card__price-span">180<sup class="value-card__price-sup">00
-																	</sup><span class="rub">P</span>
-																	<span class="value-card__price-sub">/шт</span>
+																<span class="value-card__price-span">180.00<span class="_icon-rub"></span><span class="value-card__price-sub">/шт</span>
 																</span>
 															</div>
-															<!-- <div class="value-card__old-price">
-														<span class="value-card__old-price-span">180<sup
-																class="value-card__old-price-sup">00
-															</sup><span class="old-rub">P</span>
-															<span class="value-card__old-price-sub">/шт</span>
-														</span>
-													</div> -->
+															<div class="value-card__old-price">
+																<span class="value-card__old-price-span">180.00<span class="_icon-rub"></span>
+																</span>
+															</div>
 														</div>
 														<a href="" class="product-card__favorite _icon-favorite"></a>
 													</div>
@@ -1232,8 +904,8 @@
 													</div>
 												</div>
 												<button class="product-card__button button">Добавить в корзину</button>
-											</article>
-											<article class="product-card">
+											</li>
+											<li class="product-card">
 												<a href="" class="product-card__image">
 													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
 														<picture><source srcset="img/products/sibAgro/molochnaya_SA.webp" type="image/webp"><img src="img/products/sibAgro/molochnaya_SA.png" alt="molochnaya_SA"></picture>
@@ -1255,18 +927,14 @@
 													<div class="product-card__price">
 														<div class="product-card__value value-card">
 															<div class="value-card__price">
-																<span class="value-card__price-span">180<sup class="value-card__price-sup">00
-																	</sup><span class="rub">P</span>
-																	<span class="value-card__price-sub">/шт</span>
+																<span class="value-card__price-span">180.00<span class="_icon-rub"></span><span class="value-card__price-sub">/шт</span>
 																</span>
 															</div>
 															<!-- <div class="value-card__old-price">
-														<span class="value-card__old-price-span">180<sup
-																class="value-card__old-price-sup">00
-															</sup><span class="old-rub">P</span>
-															<span class="value-card__old-price-sub">/шт</span>
-														</span>
-													</div> -->
+																<span class="value-card__old-price-span">180.00<span
+																		class="_icon-rub"></span>
+																</span>
+															</div> -->
 														</div>
 														<a href="" class="product-card__favorite _icon-favorite"></a>
 													</div>
@@ -1290,8 +958,117 @@
 													</div>
 												</div>
 												<button class="product-card__button button">Добавить в корзину</button>
-											</article>
-											<article class="product-card">
+											</li>
+											<li class="product-card">
+												<a href="" class="product-card__image">
+													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
+														<picture><source srcset="img/products/sibAgro/doctorskaya_SA.webp" type="image/webp"><img src="img/products/sibAgro/doctorskaya_SA.png" alt="doctorskaya_SA"></picture>
+													</span>
+													<span class="icon-card-lt icon-card-span"></span>
+													<span class="icon-card-lb icon-card-span"></span>
+													<span class="icon-card-rt icon-card-span"></span>
+													<span class="icon-card-rb icon-card-span"></span>
+												</a>
+												<div class="product-card__body">
+													<div class="product-card__title">
+														<a href="" class="product-card__link-title">Колбаса вареная “СибАгро”
+															Докторская 450г</a>
+													</div>
+													<div class="product-card__article">
+														<span class="product-card__info-article">00001</span>
+														<span class="_icon-info"></span>
+													</div>
+													<div class="product-card__price">
+														<div class="product-card__value value-card">
+															<div class="value-card__price">
+																<span class="value-card__price-span">180.00<span class="_icon-rub"></span><span class="value-card__price-sub">/шт</span>
+																</span>
+															</div>
+															<!-- <div class="value-card__old-price">
+																<span class="value-card__old-price-span">180.00<span
+																		class="_icon-rub"></span>
+																</span>
+															</div> -->
+														</div>
+														<a href="" class="product-card__favorite _icon-favorite"></a>
+													</div>
+													<div class="product-card__info">
+														<!-- <div class="product-card__offer-new product-card__offer-none"></div> -->
+														<div class="product-card__offer-new product-card__offer">New</div>
+														<!-- <div class="product-card__offer-sale product-card__offer">Sale</div> -->
+														<div class="product-card__rating rating rating_set">
+															<div class="rating__body">
+																<div class="rating__active"></div>
+																<div class="rating__items">
+																	<input type="radio" class="rating__item" value="1" name="rating">
+																	<input type="radio" class="rating__item" value="2" name="rating">
+																	<input type="radio" class="rating__item" value="3" name="rating">
+																	<input type="radio" class="rating__item" value="4" name="rating">
+																	<input type="radio" class="rating__item" value="5" name="rating">
+																</div>
+															</div>
+															<div class="rating__value">4.3</div>
+														</div>
+													</div>
+												</div>
+												<button class="product-card__button button">Добавить в корзину</button>
+											</li>
+											<li class="product-card">
+												<a href="" class="product-card__image">
+													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
+														<picture><source srcset="img/products/sibAgro/slivochnaya_SA.webp" type="image/webp"><img src="img/products/sibAgro/slivochnaya_SA.png" alt="slivochnaya_SA"></picture>
+													</span>
+													<span class="icon-card-lt icon-card-span"></span>
+													<span class="icon-card-lb icon-card-span"></span>
+													<span class="icon-card-rt icon-card-span"></span>
+													<span class="icon-card-rb icon-card-span"></span>
+												</a>
+												<div class="product-card__body">
+													<div class="product-card__title">
+														<a href="" class="product-card__link-title">Колбаса вареная “СибАгро”
+															Сливочная
+															450г</a>
+													</div>
+													<div class="product-card__article">
+														<span class="product-card__info-article">00004</span>
+														<span class="_icon-info"></span>
+													</div>
+													<div class="product-card__price">
+														<div class="product-card__value value-card">
+															<div class="value-card__price">
+																<span class="value-card__price-span">271.00<span class="_icon-rub"></span><span class="value-card__price-sub">/шт</span>
+																</span>
+															</div>
+															<!-- <div class="value-card__old-price">
+																<span class="value-card__old-price-span">293.00<span
+																		class="_icon-rub"></span>
+																</span>
+															</div> -->
+														</div>
+														<a href="" class="product-card__favorite _icon-favorite"></a>
+													</div>
+													<div class="product-card__info">
+														<!-- <div class="product-card__offer-new product-card__offer-none"></div> -->
+														<div class="product-card__offer-new product-card__offer">New</div>
+														<!-- <div class="product-card__offer-sale product-card__offer">Sale</div> -->
+														<div class="product-card__rating rating rating_set">
+															<div class="rating__body">
+																<div class="rating__active"></div>
+																<div class="rating__items">
+																	<input type="radio" class="rating__item" value="1" name="rating">
+																	<input type="radio" class="rating__item" value="2" name="rating">
+																	<input type="radio" class="rating__item" value="3" name="rating">
+																	<input type="radio" class="rating__item" value="4" name="rating">
+																	<input type="radio" class="rating__item" value="5" name="rating">
+																</div>
+															</div>
+															<div class="rating__value">4.3</div>
+														</div>
+													</div>
+												</div>
+												<button class="product-card__button button">Добавить в корзину</button>
+											</li>
+											<li class="product-card">
 												<a href="" class="product-card__image">
 													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
 														<picture><source srcset="img/products/sibAgro/doctorskaya_SA.webp" type="image/webp"><img src="img/products/sibAgro/doctorskaya_SA.png" alt="doctorskaya_SA"></picture>
@@ -1314,18 +1091,14 @@
 													<div class="product-card__price">
 														<div class="product-card__value value-card">
 															<div class="value-card__price">
-																<span class="value-card__price-span">180<sup class="value-card__price-sup">00
-																	</sup><span class="rub">P</span>
-																	<span class="value-card__price-sub">/шт</span>
+																<span class="value-card__price-span">271.00<span class="_icon-rub"></span><span class="value-card__price-sub">/шт</span>
 																</span>
 															</div>
 															<!-- <div class="value-card__old-price">
-													<span class="value-card__old-price-span">180<sup
-															class="value-card__old-price-sup">00
-														</sup><span class="old-rub">P</span>
-														<span class="value-card__old-price-sub">/шт</span>
-													</span>
-												</div> -->
+																<span class="value-card__old-price-span">293.00<span
+																		class="_icon-rub"></span>
+																</span>
+															</div> -->
 														</div>
 														<a href="" class="product-card__favorite _icon-favorite"></a>
 													</div>
@@ -1349,126 +1122,8 @@
 													</div>
 												</div>
 												<button class="product-card__button button">Добавить в корзину</button>
-											</article>
-											<article class="product-card">
-												<a href="" class="product-card__image">
-													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-														<picture><source srcset="img/products/sibAgro/slivochnaya_SA.webp" type="image/webp"><img src="img/products/sibAgro/slivochnaya_SA.png" alt="slivochnaya_SA"></picture>
-													</span>
-													<span class="icon-card-lt icon-card-span"></span>
-													<span class="icon-card-lb icon-card-span"></span>
-													<span class="icon-card-rt icon-card-span"></span>
-													<span class="icon-card-rb icon-card-span"></span>
-												</a>
-												<div class="product-card__body">
-													<div class="product-card__title">
-														<a href="" class="product-card__link-title">Колбаса вареная “СибАгро”
-															Сливочная
-															450г</a>
-													</div>
-													<div class="product-card__article">
-														<span class="product-card__info-article">00004</span>
-														<span class="_icon-info"></span>
-													</div>
-													<div class="product-card__price">
-														<div class="product-card__value value-card">
-															<div class="value-card__price">
-																<span class="value-card__price-span">180<sup class="value-card__price-sup">00
-																	</sup><span class="rub">P</span>
-																	<span class="value-card__price-sub">/шт</span>
-																</span>
-															</div>
-															<!-- <div class="value-card__old-price">
-														<span class="value-card__old-price-span">180<sup
-																class="value-card__old-price-sup">00
-															</sup><span class="old-rub">P</span>
-															<span class="value-card__old-price-sub">/шт</span>
-														</span>
-													</div> -->
-														</div>
-														<a href="" class="product-card__favorite _icon-favorite"></a>
-													</div>
-													<div class="product-card__info">
-														<!-- <div class="product-card__offer-new product-card__offer-none"></div> -->
-														<div class="product-card__offer-new product-card__offer">New</div>
-														<!-- <div class="product-card__offer-sale product-card__offer">Sale</div> -->
-														<div class="product-card__rating rating rating_set">
-															<div class="rating__body">
-																<div class="rating__active"></div>
-																<div class="rating__items">
-																	<input type="radio" class="rating__item" value="1" name="rating">
-																	<input type="radio" class="rating__item" value="2" name="rating">
-																	<input type="radio" class="rating__item" value="3" name="rating">
-																	<input type="radio" class="rating__item" value="4" name="rating">
-																	<input type="radio" class="rating__item" value="5" name="rating">
-																</div>
-															</div>
-															<div class="rating__value">4.3</div>
-														</div>
-													</div>
-												</div>
-												<button class="product-card__button button">Добавить в корзину</button>
-											</article>
-											<article class="product-card">
-												<a href="" class="product-card__image">
-													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-														<picture><source srcset="img/products/sibAgro/doctorskaya_SA.webp" type="image/webp"><img src="img/products/sibAgro/doctorskaya_SA.png" alt="doctorskaya_SA"></picture>
-													</span>
-													<span class="icon-card-lt icon-card-span"></span>
-													<span class="icon-card-lb icon-card-span"></span>
-													<span class="icon-card-rt icon-card-span"></span>
-													<span class="icon-card-rb icon-card-span"></span>
-												</a>
-												<div class="product-card__body">
-													<div class="product-card__title">
-														<a href="" class="product-card__link-title">Колбаса вареная “СибАгро”
-															Докторская
-															450г</a>
-													</div>
-													<div class="product-card__article">
-														<span class="product-card__info-article">00001</span>
-														<span class="_icon-info"></span>
-													</div>
-													<div class="product-card__price">
-														<div class="product-card__value value-card">
-															<div class="value-card__price">
-																<span class="value-card__price-span">180<sup class="value-card__price-sup">00
-																	</sup><span class="rub">P</span>
-																	<span class="value-card__price-sub">/шт</span>
-																</span>
-															</div>
-															<!-- <div class="value-card__old-price">
-													<span class="value-card__old-price-span">180<sup
-															class="value-card__old-price-sup">00
-														</sup><span class="old-rub">P</span>
-														<span class="value-card__old-price-sub">/шт</span>
-													</span>
-												</div> -->
-														</div>
-														<a href="" class="product-card__favorite _icon-favorite"></a>
-													</div>
-													<div class="product-card__info">
-														<!-- <div class="product-card__offer-new product-card__offer-none"></div> -->
-														<div class="product-card__offer-new product-card__offer">New</div>
-														<!-- <div class="product-card__offer-sale product-card__offer">Sale</div> -->
-														<div class="product-card__rating rating rating_set">
-															<div class="rating__body">
-																<div class="rating__active"></div>
-																<div class="rating__items">
-																	<input type="radio" class="rating__item" value="1" name="rating">
-																	<input type="radio" class="rating__item" value="2" name="rating">
-																	<input type="radio" class="rating__item" value="3" name="rating">
-																	<input type="radio" class="rating__item" value="4" name="rating">
-																	<input type="radio" class="rating__item" value="5" name="rating">
-																</div>
-															</div>
-															<div class="rating__value">4.3</div>
-														</div>
-													</div>
-												</div>
-												<button class="product-card__button button">Добавить в корзину</button>
-											</article>
-											<article class="product-card">
+											</li>
+											<li class="product-card">
 												<a href="" class="product-card__image">
 													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
 														<picture><source srcset="img/products/sibAgro/molochnaya_SA.webp" type="image/webp"><img src="img/products/sibAgro/molochnaya_SA.png" alt="molochnaya_SA"></picture>
@@ -1490,18 +1145,14 @@
 													<div class="product-card__price">
 														<div class="product-card__value value-card">
 															<div class="value-card__price">
-																<span class="value-card__price-span">180<sup class="value-card__price-sup">00
-																	</sup><span class="rub">P</span>
-																	<span class="value-card__price-sub">/шт</span>
+																<span class="value-card__price-span">271.00<span class="_icon-rub"></span><span class="value-card__price-sub">/шт</span>
 																</span>
 															</div>
 															<!-- <div class="value-card__old-price">
-														<span class="value-card__old-price-span">180<sup
-																class="value-card__old-price-sup">00
-															</sup><span class="old-rub">P</span>
-															<span class="value-card__old-price-sub">/шт</span>
-														</span>
-													</div> -->
+																<span class="value-card__old-price-span">293.00<span
+																		class="_icon-rub"></span>
+																</span>
+															</div> -->
 														</div>
 														<a href="" class="product-card__favorite _icon-favorite"></a>
 													</div>
@@ -1525,8 +1176,8 @@
 													</div>
 												</div>
 												<button class="product-card__button button">Добавить в корзину</button>
-											</article>
-											<article class="product-card">
+											</li>
+											<li class="product-card">
 												<a href="" class="product-card__image">
 													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
 														<picture><source srcset="img/products/sibAgro/slivochnaya_SA.webp" type="image/webp"><img src="img/products/sibAgro/slivochnaya_SA.png" alt="slivochnaya_SA"></picture>
@@ -1549,18 +1200,13 @@
 													<div class="product-card__price">
 														<div class="product-card__value value-card">
 															<div class="value-card__price">
-																<span class="value-card__price-span">180<sup class="value-card__price-sup">00
-																	</sup><span class="rub">P</span>
-																	<span class="value-card__price-sub">/шт</span>
+																<span class="value-card__price-span">271.00<span class="_icon-rub"></span><span class="value-card__price-sub">/шт</span>
 																</span>
 															</div>
-															<!-- <div class="value-card__old-price">
-														<span class="value-card__old-price-span">180<sup
-																class="value-card__old-price-sup">00
-															</sup><span class="old-rub">P</span>
-															<span class="value-card__old-price-sub">/шт</span>
-														</span>
-													</div> -->
+															<div class="value-card__old-price">
+																<span class="value-card__old-price-span">293.00<span class="_icon-rub"></span>
+																</span>
+															</div>
 														</div>
 														<a href="" class="product-card__favorite _icon-favorite"></a>
 													</div>
@@ -1584,8 +1230,8 @@
 													</div>
 												</div>
 												<button class="product-card__button button">Добавить в корзину</button>
-											</article>
-											<article class="product-card">
+											</li>
+											<li class="product-card">
 												<a href="" class="product-card__image">
 													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
 														<picture><source srcset="img/products/sibAgro/doctorskaya_SA.webp" type="image/webp"><img src="img/products/sibAgro/doctorskaya_SA.png" alt="doctorskaya_SA"></picture>
@@ -1608,18 +1254,14 @@
 													<div class="product-card__price">
 														<div class="product-card__value value-card">
 															<div class="value-card__price">
-																<span class="value-card__price-span">180<sup class="value-card__price-sup">00
-																	</sup><span class="rub">P</span>
-																	<span class="value-card__price-sub">/шт</span>
+																<span class="value-card__price-span">180.00<span class="_icon-rub"></span><span class="value-card__price-sub">/шт</span>
 																</span>
 															</div>
 															<!-- <div class="value-card__old-price">
-													<span class="value-card__old-price-span">180<sup
-															class="value-card__old-price-sup">00
-														</sup><span class="old-rub">P</span>
-														<span class="value-card__old-price-sub">/шт</span>
-													</span>
-												</div> -->
+																<span class="value-card__old-price-span">293.00<span
+																		class="_icon-rub"></span>
+																</span>
+															</div> -->
 														</div>
 														<a href="" class="product-card__favorite _icon-favorite"></a>
 													</div>
@@ -1643,8 +1285,8 @@
 													</div>
 												</div>
 												<button class="product-card__button button">Добавить в корзину</button>
-											</article>
-											<article class="product-card">
+											</li>
+											<li class="product-card">
 												<a href="" class="product-card__image">
 													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
 														<picture><source srcset="img/products/sibAgro/slivochnaya_SA.webp" type="image/webp"><img src="img/products/sibAgro/slivochnaya_SA.png" alt="slivochnaya_SA"></picture>
@@ -1657,8 +1299,7 @@
 												<div class="product-card__body">
 													<div class="product-card__title">
 														<a href="" class="product-card__link-title">Колбаса вареная “СибАгро”
-															Сливочная
-															450г</a>
+															Сливочная 450г</a>
 													</div>
 													<div class="product-card__article">
 														<span class="product-card__info-article">00004</span>
@@ -1667,18 +1308,13 @@
 													<div class="product-card__price">
 														<div class="product-card__value value-card">
 															<div class="value-card__price">
-																<span class="value-card__price-span">180<sup class="value-card__price-sup">00
-																	</sup><span class="rub">P</span>
-																	<span class="value-card__price-sub">/шт</span>
+																<span class="value-card__price-span">180.00<span class="_icon-rub"></span><span class="value-card__price-sub">/шт</span>
 																</span>
 															</div>
-															<!-- <div class="value-card__old-price">
-														<span class="value-card__old-price-span">180<sup
-																class="value-card__old-price-sup">00
-															</sup><span class="old-rub">P</span>
-															<span class="value-card__old-price-sub">/шт</span>
-														</span>
-													</div> -->
+															<div class="value-card__old-price">
+																<span class="value-card__old-price-span">293.00<span class="_icon-rub"></span>
+																</span>
+															</div>
 														</div>
 														<a href="" class="product-card__favorite _icon-favorite"></a>
 													</div>
@@ -1702,372 +1338,362 @@
 													</div>
 												</div>
 												<button class="product-card__button button">Добавить в корзину</button>
-											</article>
-										</div>
+											</li>
+										</ul>
+										<button hidden data-showmore-button type="button" class="products-catalog__buttonMore button">
+											<span>Показать еще</span>
+											<span>Скрыть</span>
+										</button>
 									</div>
 
-									<div class="products-catalog__block">
-										<div class="products-catalog__title">Ветчина</div>
-										<div class="products-catalog__body">
-											<article class="product-card">
-												<a href="" class="product-card__image">
-													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-														<picture><source srcset="img/products/sibAgro/molochnaya_SA.webp" type="image/webp"><img src="img/products/sibAgro/molochnaya_SA.png" alt="molochnaya_SA"></picture>
-													</span>
-													<span class="icon-card-lt icon-card-span"></span>
-													<span class="icon-card-lb icon-card-span"></span>
-													<span class="icon-card-rt icon-card-span"></span>
-													<span class="icon-card-rb icon-card-span"></span>
-												</a>
-												<div class="product-card__body">
-													<div class="product-card__title">
-														<a href="" class="product-card__link-title">Колбаса вареная “СибАгро” Молочная
-															450г</a>
-													</div>
-													<div class="product-card__article">
-														<span class="product-card__info-article">00002</span>
-														<span class="_icon-info"></span>
-													</div>
-													<div class="product-card__price">
-														<div class="product-card__value value-card">
-															<div class="value-card__price">
-																<span class="value-card__price-span">180<sup class="value-card__price-sup">00
-																	</sup><span class="rub">P</span>
-																	<span class="value-card__price-sub">/шт</span>
-																</span>
-															</div>
-															<!-- <div class="value-card__old-price">
-														<span class="value-card__old-price-span">180<sup
-																class="value-card__old-price-sup">00
-															</sup><span class="old-rub">P</span>
-															<span class="value-card__old-price-sub">/шт</span>
-														</span>
-													</div> -->
-														</div>
-														<a href="" class="product-card__favorite _icon-favorite"></a>
-													</div>
-													<div class="product-card__info">
-														<!-- <div class="product-card__offer-new product-card__offer-none"></div> -->
-														<div class="product-card__offer-new product-card__offer">New</div>
-														<!-- <div class="product-card__offer-sale product-card__offer">Sale</div> -->
-														<div class="product-card__rating rating rating_set">
-															<div class="rating__body">
-																<div class="rating__active"></div>
-																<div class="rating__items">
-																	<input type="radio" class="rating__item" value="1" name="rating">
-																	<input type="radio" class="rating__item" value="2" name="rating">
-																	<input type="radio" class="rating__item" value="3" name="rating">
-																	<input type="radio" class="rating__item" value="4" name="rating">
-																	<input type="radio" class="rating__item" value="5" name="rating">
-																</div>
-															</div>
-															<div class="rating__value">4.3</div>
-														</div>
-													</div>
-												</div>
-												<button class="product-card__button button">Добавить в корзину</button>
-											</article>
-											<article class="product-card">
-												<a href="" class="product-card__image">
-													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-														<picture><source srcset="img/products/sibAgro/doctorskaya_SA.webp" type="image/webp"><img src="img/products/sibAgro/doctorskaya_SA.png" alt="doctorskaya_SA"></picture>
-													</span>
-													<span class="icon-card-lt icon-card-span"></span>
-													<span class="icon-card-lb icon-card-span"></span>
-													<span class="icon-card-rt icon-card-span"></span>
-													<span class="icon-card-rb icon-card-span"></span>
-												</a>
-												<div class="product-card__body">
-													<div class="product-card__title">
-														<a href="" class="product-card__link-title">Колбаса вареная “СибАгро”
-															Докторская
-															450г</a>
-													</div>
-													<div class="product-card__article">
-														<span class="product-card__info-article">00001</span>
-														<span class="_icon-info"></span>
-													</div>
-													<div class="product-card__price">
-														<div class="product-card__value value-card">
-															<div class="value-card__price">
-																<span class="value-card__price-span">180<sup class="value-card__price-sup">00
-																	</sup><span class="rub">P</span>
-																	<span class="value-card__price-sub">/шт</span>
-																</span>
-															</div>
-															<!-- <div class="value-card__old-price">
-													<span class="value-card__old-price-span">180<sup
-															class="value-card__old-price-sup">00
-														</sup><span class="old-rub">P</span>
-														<span class="value-card__old-price-sub">/шт</span>
-													</span>
-												</div> -->
-														</div>
-														<a href="" class="product-card__favorite _icon-favorite"></a>
-													</div>
-													<div class="product-card__info">
-														<!-- <div class="product-card__offer-new product-card__offer-none"></div> -->
-														<div class="product-card__offer-new product-card__offer">New</div>
-														<!-- <div class="product-card__offer-sale product-card__offer">Sale</div> -->
-														<div class="product-card__rating rating rating_set">
-															<div class="rating__body">
-																<div class="rating__active"></div>
-																<div class="rating__items">
-																	<input type="radio" class="rating__item" value="1" name="rating">
-																	<input type="radio" class="rating__item" value="2" name="rating">
-																	<input type="radio" class="rating__item" value="3" name="rating">
-																	<input type="radio" class="rating__item" value="4" name="rating">
-																	<input type="radio" class="rating__item" value="5" name="rating">
-																</div>
-															</div>
-															<div class="rating__value">4.3</div>
-														</div>
-													</div>
-												</div>
-												<button class="product-card__button button">Добавить в корзину</button>
-											</article>
-											<article class="product-card">
-												<a href="" class="product-card__image">
-													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-														<picture><source srcset="img/products/sibAgro/slivochnaya_SA.webp" type="image/webp"><img src="img/products/sibAgro/slivochnaya_SA.png" alt="slivochnaya_SA"></picture>
-													</span>
-													<span class="icon-card-lt icon-card-span"></span>
-													<span class="icon-card-lb icon-card-span"></span>
-													<span class="icon-card-rt icon-card-span"></span>
-													<span class="icon-card-rb icon-card-span"></span>
-												</a>
-												<div class="product-card__body">
-													<div class="product-card__title">
-														<a href="" class="product-card__link-title">Колбаса вареная “СибАгро”
-															Сливочная
-															450г</a>
-													</div>
-													<div class="product-card__article">
-														<span class="product-card__info-article">00004</span>
-														<span class="_icon-info"></span>
-													</div>
-													<div class="product-card__price">
-														<div class="product-card__value value-card">
-															<div class="value-card__price">
-																<span class="value-card__price-span">180<sup class="value-card__price-sup">00
-																	</sup><span class="rub">P</span>
-																	<span class="value-card__price-sub">/шт</span>
-																</span>
-															</div>
-															<!-- <div class="value-card__old-price">
-														<span class="value-card__old-price-span">180<sup
-																class="value-card__old-price-sup">00
-															</sup><span class="old-rub">P</span>
-															<span class="value-card__old-price-sub">/шт</span>
-														</span>
-													</div> -->
-														</div>
-														<a href="" class="product-card__favorite _icon-favorite"></a>
-													</div>
-													<div class="product-card__info">
-														<!-- <div class="product-card__offer-new product-card__offer-none"></div> -->
-														<div class="product-card__offer-new product-card__offer">New</div>
-														<!-- <div class="product-card__offer-sale product-card__offer">Sale</div> -->
-														<div class="product-card__rating rating rating_set">
-															<div class="rating__body">
-																<div class="rating__active"></div>
-																<div class="rating__items">
-																	<input type="radio" class="rating__item" value="1" name="rating">
-																	<input type="radio" class="rating__item" value="2" name="rating">
-																	<input type="radio" class="rating__item" value="3" name="rating">
-																	<input type="radio" class="rating__item" value="4" name="rating">
-																	<input type="radio" class="rating__item" value="5" name="rating">
-																</div>
-															</div>
-															<div class="rating__value">4.3</div>
-														</div>
-													</div>
-												</div>
-												<button class="product-card__button button">Добавить в корзину</button>
-											</article>
-											<article class="product-card">
-												<a href="" class="product-card__image">
-													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-														<picture><source srcset="img/products/sibAgro/doctorskaya_SA.webp" type="image/webp"><img src="img/products/sibAgro/doctorskaya_SA.png" alt="doctorskaya_SA"></picture>
-													</span>
-													<span class="icon-card-lt icon-card-span"></span>
-													<span class="icon-card-lb icon-card-span"></span>
-													<span class="icon-card-rt icon-card-span"></span>
-													<span class="icon-card-rb icon-card-span"></span>
-												</a>
-												<div class="product-card__body">
-													<div class="product-card__title">
-														<a href="" class="product-card__link-title">Колбаса вареная “СибАгро”
-															Докторская
-															450г</a>
-													</div>
-													<div class="product-card__article">
-														<span class="product-card__info-article">00001</span>
-														<span class="_icon-info"></span>
-													</div>
-													<div class="product-card__price">
-														<div class="product-card__value value-card">
-															<div class="value-card__price">
-																<span class="value-card__price-span">180<sup class="value-card__price-sup">00
-																	</sup><span class="rub">P</span>
-																	<span class="value-card__price-sub">/шт</span>
-																</span>
-															</div>
-															<!-- <div class="value-card__old-price">
-													<span class="value-card__old-price-span">180<sup
-															class="value-card__old-price-sup">00
-														</sup><span class="old-rub">P</span>
-														<span class="value-card__old-price-sub">/шт</span>
-													</span>
-												</div> -->
-														</div>
-														<a href="" class="product-card__favorite _icon-favorite"></a>
-													</div>
-													<div class="product-card__info">
-														<!-- <div class="product-card__offer-new product-card__offer-none"></div> -->
-														<div class="product-card__offer-new product-card__offer">New</div>
-														<!-- <div class="product-card__offer-sale product-card__offer">Sale</div> -->
-														<div class="product-card__rating rating rating_set">
-															<div class="rating__body">
-																<div class="rating__active"></div>
-																<div class="rating__items">
-																	<input type="radio" class="rating__item" value="1" name="rating">
-																	<input type="radio" class="rating__item" value="2" name="rating">
-																	<input type="radio" class="rating__item" value="3" name="rating">
-																	<input type="radio" class="rating__item" value="4" name="rating">
-																	<input type="radio" class="rating__item" value="5" name="rating">
-																</div>
-															</div>
-															<div class="rating__value">4.3</div>
-														</div>
-													</div>
-												</div>
-												<button class="product-card__button button">Добавить в корзину</button>
-											</article>
-											<article class="product-card">
-												<a href="" class="product-card__image">
-													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-														<picture><source srcset="img/products/sibAgro/molochnaya_SA.webp" type="image/webp"><img src="img/products/sibAgro/molochnaya_SA.png" alt="molochnaya_SA"></picture>
-													</span>
-													<span class="icon-card-lt icon-card-span"></span>
-													<span class="icon-card-lb icon-card-span"></span>
-													<span class="icon-card-rt icon-card-span"></span>
-													<span class="icon-card-rb icon-card-span"></span>
-												</a>
-												<div class="product-card__body">
-													<div class="product-card__title">
-														<a href="" class="product-card__link-title">Колбаса вареная “СибАгро” Молочная
-															450г</a>
-													</div>
-													<div class="product-card__article">
-														<span class="product-card__info-article">00002</span>
-														<span class="_icon-info"></span>
-													</div>
-													<div class="product-card__price">
-														<div class="product-card__value value-card">
-															<div class="value-card__price">
-																<span class="value-card__price-span">180<sup class="value-card__price-sup">00
-																	</sup><span class="rub">P</span>
-																	<span class="value-card__price-sub">/шт</span>
-																</span>
-															</div>
-															<!-- <div class="value-card__old-price">
-														<span class="value-card__old-price-span">180<sup
-																class="value-card__old-price-sup">00
-															</sup><span class="old-rub">P</span>
-															<span class="value-card__old-price-sub">/шт</span>
-														</span>
-													</div> -->
-														</div>
-														<a href="" class="product-card__favorite _icon-favorite"></a>
-													</div>
-													<div class="product-card__info">
-														<!-- <div class="product-card__offer-new product-card__offer-none"></div> -->
-														<div class="product-card__offer-new product-card__offer">New</div>
-														<!-- <div class="product-card__offer-sale product-card__offer">Sale</div> -->
-														<div class="product-card__rating rating rating_set">
-															<div class="rating__body">
-																<div class="rating__active"></div>
-																<div class="rating__items">
-																	<input type="radio" class="rating__item" value="1" name="rating">
-																	<input type="radio" class="rating__item" value="2" name="rating">
-																	<input type="radio" class="rating__item" value="3" name="rating">
-																	<input type="radio" class="rating__item" value="4" name="rating">
-																	<input type="radio" class="rating__item" value="5" name="rating">
-																</div>
-															</div>
-															<div class="rating__value">4.3</div>
-														</div>
-													</div>
-												</div>
-												<button class="product-card__button button">Добавить в корзину</button>
-											</article>
-											<article class="product-card">
-												<a href="" class="product-card__image">
-													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-														<picture><source srcset="img/products/sibAgro/slivochnaya_SA.webp" type="image/webp"><img src="img/products/sibAgro/slivochnaya_SA.png" alt="slivochnaya_SA"></picture>
-													</span>
-													<span class="icon-card-lt icon-card-span"></span>
-													<span class="icon-card-lb icon-card-span"></span>
-													<span class="icon-card-rt icon-card-span"></span>
-													<span class="icon-card-rb icon-card-span"></span>
-												</a>
-												<div class="product-card__body">
-													<div class="product-card__title">
-														<a href="" class="product-card__link-title">Колбаса вареная “СибАгро”
-															Сливочная
-															450г</a>
-													</div>
-													<div class="product-card__article">
-														<span class="product-card__info-article">00004</span>
-														<span class="_icon-info"></span>
-													</div>
-													<div class="product-card__price">
-														<div class="product-card__value value-card">
-															<div class="value-card__price">
-																<span class="value-card__price-span">180<sup class="value-card__price-sup">00
-																	</sup><span class="rub">P</span>
-																	<span class="value-card__price-sub">/шт</span>
-																</span>
-															</div>
-															<!-- <div class="value-card__old-price">
-														<span class="value-card__old-price-span">180<sup
-																class="value-card__old-price-sup">00
-															</sup><span class="old-rub">P</span>
-															<span class="value-card__old-price-sub">/шт</span>
-														</span>
-													</div> -->
-														</div>
-														<a href="" class="product-card__favorite _icon-favorite"></a>
-													</div>
-													<div class="product-card__info">
-														<!-- <div class="product-card__offer-new product-card__offer-none"></div> -->
-														<div class="product-card__offer-new product-card__offer">New</div>
-														<!-- <div class="product-card__offer-sale product-card__offer">Sale</div> -->
-														<div class="product-card__rating rating rating_set">
-															<div class="rating__body">
-																<div class="rating__active"></div>
-																<div class="rating__items">
-																	<input type="radio" class="rating__item" value="1" name="rating">
-																	<input type="radio" class="rating__item" value="2" name="rating">
-																	<input type="radio" class="rating__item" value="3" name="rating">
-																	<input type="radio" class="rating__item" value="4" name="rating">
-																	<input type="radio" class="rating__item" value="5" name="rating">
-																</div>
-															</div>
-															<div class="rating__value">4.3</div>
-														</div>
-													</div>
-												</div>
-												<button class="product-card__button button">Добавить в корзину</button>
-											</article>
+									<div data-showmore="items" class="products-catalog__block">
+										<div class="products-catalog__title">
+											<h2>Ветчина</h2>
+											<a href="">Eще</a>
 										</div>
+										<ul data-showmore-content="1" class="products-catalog__body">
+											<li class="product-card">
+												<a href="" class="product-card__image">
+													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
+														<picture><source srcset="img/products/sibAgro/molochnaya_SA.webp" type="image/webp"><img src="img/products/sibAgro/molochnaya_SA.png" alt="molochnaya_SA"></picture>
+													</span>
+													<span class="icon-card-lt icon-card-span"></span>
+													<span class="icon-card-lb icon-card-span"></span>
+													<span class="icon-card-rt icon-card-span"></span>
+													<span class="icon-card-rb icon-card-span"></span>
+												</a>
+												<div class="product-card__body">
+													<div class="product-card__title">
+														<a href="" class="product-card__link-title">Колбаса вареная “СибАгро” Молочная
+															450г</a>
+													</div>
+													<div class="product-card__article">
+														<span class="product-card__info-article">00002</span>
+														<span class="_icon-info"></span>
+													</div>
+													<div class="product-card__price">
+														<div class="product-card__value value-card">
+															<div class="value-card__price">
+																<span class="value-card__price-span">271.00<span class="_icon-rub"></span><span class="value-card__price-sub">/шт</span>
+																</span>
+															</div>
+															<!-- <div class="value-card__old-price">
+																<span class="value-card__old-price-span">293.00<span
+																		class="_icon-rub"></span>
+																</span>
+															</div> -->
+														</div>
+														<a href="" class="product-card__favorite _icon-favorite"></a>
+													</div>
+													<div class="product-card__info">
+														<!-- <div class="product-card__offer-new product-card__offer-none"></div> -->
+														<div class="product-card__offer-new product-card__offer">New</div>
+														<!-- <div class="product-card__offer-sale product-card__offer">Sale</div> -->
+														<div class="product-card__rating rating rating_set">
+															<div class="rating__body">
+																<div class="rating__active"></div>
+																<div class="rating__items">
+																	<input type="radio" class="rating__item" value="1" name="rating">
+																	<input type="radio" class="rating__item" value="2" name="rating">
+																	<input type="radio" class="rating__item" value="3" name="rating">
+																	<input type="radio" class="rating__item" value="4" name="rating">
+																	<input type="radio" class="rating__item" value="5" name="rating">
+																</div>
+															</div>
+															<div class="rating__value">4.3</div>
+														</div>
+													</div>
+												</div>
+												<button class="product-card__button button">Добавить в корзину</button>
+											</li>
+											<li class="product-card">
+												<a href="" class="product-card__image">
+													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
+														<picture><source srcset="img/products/sibAgro/doctorskaya_SA.webp" type="image/webp"><img src="img/products/sibAgro/doctorskaya_SA.png" alt="doctorskaya_SA"></picture>
+													</span>
+													<span class="icon-card-lt icon-card-span"></span>
+													<span class="icon-card-lb icon-card-span"></span>
+													<span class="icon-card-rt icon-card-span"></span>
+													<span class="icon-card-rb icon-card-span"></span>
+												</a>
+												<div class="product-card__body">
+													<div class="product-card__title">
+														<a href="" class="product-card__link-title">Колбаса вареная “СибАгро”
+															Докторская
+															450г</a>
+													</div>
+													<div class="product-card__article">
+														<span class="product-card__info-article">00001</span>
+														<span class="_icon-info"></span>
+													</div>
+													<div class="product-card__price">
+														<div class="product-card__value value-card">
+															<div class="value-card__price">
+																<span class="value-card__price-span">271.00<span class="_icon-rub"></span><span class="value-card__price-sub">/шт</span>
+																</span>
+															</div>
+															<!-- <div class="value-card__old-price">
+																<span class="value-card__old-price-span">293.00<span
+																		class="_icon-rub"></span>
+																</span>
+															</div> -->
+														</div>
+														<a href="" class="product-card__favorite _icon-favorite"></a>
+													</div>
+													<div class="product-card__info">
+														<!-- <div class="product-card__offer-new product-card__offer-none"></div> -->
+														<div class="product-card__offer-new product-card__offer">New</div>
+														<!-- <div class="product-card__offer-sale product-card__offer">Sale</div> -->
+														<div class="product-card__rating rating rating_set">
+															<div class="rating__body">
+																<div class="rating__active"></div>
+																<div class="rating__items">
+																	<input type="radio" class="rating__item" value="1" name="rating">
+																	<input type="radio" class="rating__item" value="2" name="rating">
+																	<input type="radio" class="rating__item" value="3" name="rating">
+																	<input type="radio" class="rating__item" value="4" name="rating">
+																	<input type="radio" class="rating__item" value="5" name="rating">
+																</div>
+															</div>
+															<div class="rating__value">4.3</div>
+														</div>
+													</div>
+												</div>
+												<button class="product-card__button button">Добавить в корзину</button>
+											</li>
+											<li class="product-card">
+												<a href="" class="product-card__image">
+													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
+														<picture><source srcset="img/products/sibAgro/slivochnaya_SA.webp" type="image/webp"><img src="img/products/sibAgro/slivochnaya_SA.png" alt="slivochnaya_SA"></picture>
+													</span>
+													<span class="icon-card-lt icon-card-span"></span>
+													<span class="icon-card-lb icon-card-span"></span>
+													<span class="icon-card-rt icon-card-span"></span>
+													<span class="icon-card-rb icon-card-span"></span>
+												</a>
+												<div class="product-card__body">
+													<div class="product-card__title">
+														<a href="" class="product-card__link-title">Колбаса вареная “СибАгро”
+															Сливочная
+															450г</a>
+													</div>
+													<div class="product-card__article">
+														<span class="product-card__info-article">00004</span>
+														<span class="_icon-info"></span>
+													</div>
+													<div class="product-card__price">
+														<div class="product-card__value value-card">
+															<div class="value-card__price">
+																<span class="value-card__price-span">271.00<span class="_icon-rub"></span><span class="value-card__price-sub">/шт</span>
+																</span>
+															</div>
+															<!-- <div class="value-card__old-price">
+																<span class="value-card__old-price-span">293.00<span
+																		class="_icon-rub"></span>
+																</span>
+															</div> -->
+														</div>
+														<a href="" class="product-card__favorite _icon-favorite"></a>
+													</div>
+													<div class="product-card__info">
+														<!-- <div class="product-card__offer-new product-card__offer-none"></div> -->
+														<div class="product-card__offer-new product-card__offer">New</div>
+														<!-- <div class="product-card__offer-sale product-card__offer">Sale</div> -->
+														<div class="product-card__rating rating rating_set">
+															<div class="rating__body">
+																<div class="rating__active"></div>
+																<div class="rating__items">
+																	<input type="radio" class="rating__item" value="1" name="rating">
+																	<input type="radio" class="rating__item" value="2" name="rating">
+																	<input type="radio" class="rating__item" value="3" name="rating">
+																	<input type="radio" class="rating__item" value="4" name="rating">
+																	<input type="radio" class="rating__item" value="5" name="rating">
+																</div>
+															</div>
+															<div class="rating__value">4.3</div>
+														</div>
+													</div>
+												</div>
+												<button class="product-card__button button">Добавить в корзину</button>
+											</li>
+											<li class="product-card">
+												<a href="" class="product-card__image">
+													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
+														<picture><source srcset="img/products/sibAgro/doctorskaya_SA.webp" type="image/webp"><img src="img/products/sibAgro/doctorskaya_SA.png" alt="doctorskaya_SA"></picture>
+													</span>
+													<span class="icon-card-lt icon-card-span"></span>
+													<span class="icon-card-lb icon-card-span"></span>
+													<span class="icon-card-rt icon-card-span"></span>
+													<span class="icon-card-rb icon-card-span"></span>
+												</a>
+												<div class="product-card__body">
+													<div class="product-card__title">
+														<a href="" class="product-card__link-title">Колбаса вареная “СибАгро”
+															Докторская
+															450г</a>
+													</div>
+													<div class="product-card__article">
+														<span class="product-card__info-article">00001</span>
+														<span class="_icon-info"></span>
+													</div>
+													<div class="product-card__price">
+														<div class="product-card__value value-card">
+															<div class="value-card__price">
+																<span class="value-card__price-span">271.00<span class="_icon-rub"></span><span class="value-card__price-sub">/шт</span>
+																</span>
+															</div>
+															<!-- <div class="value-card__old-price">
+																<span class="value-card__old-price-span">293.00<span
+																		class="_icon-rub"></span>
+																</span>
+															</div> -->
+														</div>
+														<a href="" class="product-card__favorite _icon-favorite"></a>
+													</div>
+													<div class="product-card__info">
+														<!-- <div class="product-card__offer-new product-card__offer-none"></div> -->
+														<div class="product-card__offer-new product-card__offer">New</div>
+														<!-- <div class="product-card__offer-sale product-card__offer">Sale</div> -->
+														<div class="product-card__rating rating rating_set">
+															<div class="rating__body">
+																<div class="rating__active"></div>
+																<div class="rating__items">
+																	<input type="radio" class="rating__item" value="1" name="rating">
+																	<input type="radio" class="rating__item" value="2" name="rating">
+																	<input type="radio" class="rating__item" value="3" name="rating">
+																	<input type="radio" class="rating__item" value="4" name="rating">
+																	<input type="radio" class="rating__item" value="5" name="rating">
+																</div>
+															</div>
+															<div class="rating__value">4.3</div>
+														</div>
+													</div>
+												</div>
+												<button class="product-card__button button">Добавить в корзину</button>
+											</li>
+											<li class="product-card">
+												<a href="" class="product-card__image">
+													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
+														<picture><source srcset="img/products/sibAgro/molochnaya_SA.webp" type="image/webp"><img src="img/products/sibAgro/molochnaya_SA.png" alt="molochnaya_SA"></picture>
+													</span>
+													<span class="icon-card-lt icon-card-span"></span>
+													<span class="icon-card-lb icon-card-span"></span>
+													<span class="icon-card-rt icon-card-span"></span>
+													<span class="icon-card-rb icon-card-span"></span>
+												</a>
+												<div class="product-card__body">
+													<div class="product-card__title">
+														<a href="" class="product-card__link-title">Колбаса вареная “СибАгро” Молочная
+															450г</a>
+													</div>
+													<div class="product-card__article">
+														<span class="product-card__info-article">00002</span>
+														<span class="_icon-info"></span>
+													</div>
+													<div class="product-card__price">
+														<div class="product-card__value value-card">
+															<div class="value-card__price">
+																<span class="value-card__price-span">271.00<span class="_icon-rub"></span><span class="value-card__price-sub">/шт</span>
+																</span>
+															</div>
+															<!-- <div class="value-card__old-price">
+																<span class="value-card__old-price-span">293.00<span
+																		class="_icon-rub"></span>
+																</span>
+															</div> -->
+														</div>
+														<a href="" class="product-card__favorite _icon-favorite"></a>
+													</div>
+													<div class="product-card__info">
+														<!-- <div class="product-card__offer-new product-card__offer-none"></div> -->
+														<div class="product-card__offer-new product-card__offer">New</div>
+														<!-- <div class="product-card__offer-sale product-card__offer">Sale</div> -->
+														<div class="product-card__rating rating rating_set">
+															<div class="rating__body">
+																<div class="rating__active"></div>
+																<div class="rating__items">
+																	<input type="radio" class="rating__item" value="1" name="rating">
+																	<input type="radio" class="rating__item" value="2" name="rating">
+																	<input type="radio" class="rating__item" value="3" name="rating">
+																	<input type="radio" class="rating__item" value="4" name="rating">
+																	<input type="radio" class="rating__item" value="5" name="rating">
+																</div>
+															</div>
+															<div class="rating__value">4.3</div>
+														</div>
+													</div>
+												</div>
+												<button class="product-card__button button">Добавить в корзину</button>
+											</li>
+											<li class="product-card">
+												<a href="" class="product-card__image">
+													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
+														<picture><source srcset="img/products/sibAgro/slivochnaya_SA.webp" type="image/webp"><img src="img/products/sibAgro/slivochnaya_SA.png" alt="slivochnaya_SA"></picture>
+													</span>
+													<span class="icon-card-lt icon-card-span"></span>
+													<span class="icon-card-lb icon-card-span"></span>
+													<span class="icon-card-rt icon-card-span"></span>
+													<span class="icon-card-rb icon-card-span"></span>
+												</a>
+												<div class="product-card__body">
+													<div class="product-card__title">
+														<a href="" class="product-card__link-title">Колбаса вареная “СибАгро”
+															Сливочная
+															450г</a>
+													</div>
+													<div class="product-card__article">
+														<span class="product-card__info-article">00004</span>
+														<span class="_icon-info"></span>
+													</div>
+													<div class="product-card__price">
+														<div class="product-card__value value-card">
+															<div class="value-card__price">
+																<span class="value-card__price-span">271.00<span class="_icon-rub"></span><span class="value-card__price-sub">/шт</span>
+																</span>
+															</div>
+															<!-- <div class="value-card__old-price">
+																<span class="value-card__old-price-span">293.00<span
+																		class="_icon-rub"></span>
+																</span>
+															</div> -->
+														</div>
+														<a href="" class="product-card__favorite _icon-favorite"></a>
+													</div>
+													<div class="product-card__info">
+														<!-- <div class="product-card__offer-new product-card__offer-none"></div> -->
+														<div class="product-card__offer-new product-card__offer">New</div>
+														<!-- <div class="product-card__offer-sale product-card__offer">Sale</div> -->
+														<div class="product-card__rating rating rating_set">
+															<div class="rating__body">
+																<div class="rating__active"></div>
+																<div class="rating__items">
+																	<input type="radio" class="rating__item" value="1" name="rating">
+																	<input type="radio" class="rating__item" value="2" name="rating">
+																	<input type="radio" class="rating__item" value="3" name="rating">
+																	<input type="radio" class="rating__item" value="4" name="rating">
+																	<input type="radio" class="rating__item" value="5" name="rating">
+																</div>
+															</div>
+															<div class="rating__value">4.3</div>
+														</div>
+													</div>
+												</div>
+												<button class="product-card__button button">Добавить в корзину</button>
+											</li>
+										</ul>
+										<button hidden data-showmore-button type="button" class="products-catalog__buttonMore button">
+											<span>Показать еще</span>
+											<span>Скрыть</span>
+										</button>
 									</div>
 
-									<div class="products-catalog__block">
-										<div class="products-catalog__title">Копчёная колбаса</div>
-										<div class="products-catalog__body">
-											<article class="product-card">
+									<div data-showmore="items" class="products-catalog__block">
+										<div class="products-catalog__title">
+											<h2>Копчёная колбаса</h2>
+											<a href="">Eще</a>
+										</div>
+										<ul data-showmore-content="1" class="products-catalog__body">
+											<li class="product-card">
 												<a href="" class="product-card__image">
 													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
 														<picture><source srcset="img/products/sibAgro/orehovi_SA.webp" type="image/webp"><img src="img/products/sibAgro/orehovi_SA.png" alt="orehovi_SA"></picture>
@@ -2089,18 +1715,14 @@
 													<div class="product-card__price">
 														<div class="product-card__value value-card">
 															<div class="value-card__price">
-																<span class="value-card__price-span">180<sup class="value-card__price-sup">00
-																	</sup><span class="rub">P</span>
-																	<span class="value-card__price-sub">/шт</span>
+																<span class="value-card__price-span">271.00<span class="_icon-rub"></span><span class="value-card__price-sub">/шт</span>
 																</span>
 															</div>
 															<!-- <div class="value-card__old-price">
-														<span class="value-card__old-price-span">180<sup
-																class="value-card__old-price-sup">00
-															</sup><span class="old-rub">P</span>
-															<span class="value-card__old-price-sub">/шт</span>
-														</span>
-													</div> -->
+																<span class="value-card__old-price-span">293.00<span
+																		class="_icon-rub"></span>
+																</span>
+															</div> -->
 														</div>
 														<a href="" class="product-card__favorite _icon-favorite"></a>
 													</div>
@@ -2124,8 +1746,8 @@
 													</div>
 												</div>
 												<button class="product-card__button button">Добавить в корзину</button>
-											</article>
-											<article class="product-card">
+											</li>
+											<li class="product-card">
 												<a href="" class="product-card__image">
 													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
 														<picture><source srcset="img/products/omskiyBekon/servelat_OB.webp" type="image/webp"><img src="img/products/omskiyBekon/servelat_OB.png" alt="servelat_OB"></picture>
@@ -2148,15 +1770,11 @@
 													<div class="product-card__price">
 														<div class="product-card__value value-card">
 															<div class="value-card__price">
-																<span class="value-card__price-span">271<sup class="value-card__price-sup">00
-																	</sup><span class="rub">P</span>
-																	<span class="value-card__price-sub">/шт</span>
+																<span class="value-card__price-span">271.00<span class="_icon-rub"></span><span class="value-card__price-sub">/шт</span>
 																</span>
 															</div>
 															<div class="value-card__old-price">
-																<span class="value-card__old-price-span">293<sup class="value-card__old-price-sup">00
-																	</sup><span class="old-rub">P</span>
-																	<span class="value-card__old-price-sub">/шт</span>
+																<span class="value-card__old-price-span">293.00<span class="_icon-rub"></span>
 																</span>
 															</div>
 														</div>
@@ -2182,8 +1800,8 @@
 													</div>
 												</div>
 												<button class="product-card__button button">Добавить в корзину</button>
-											</article>
-											<article class="product-card">
+											</li>
+											<li class="product-card">
 												<a href="" class="product-card__image">
 													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
 														<picture><source srcset="img/products/omskiyBekon/orehov_OB.webp" type="image/webp"><img src="img/products/omskiyBekon/orehov_OB.png" alt="orehov_OB"></picture>
@@ -2206,15 +1824,11 @@
 													<div class="product-card__price">
 														<div class="product-card__value value-card">
 															<div class="value-card__price">
-																<span class="value-card__price-span">195<sup class="value-card__price-sup">00
-																	</sup><span class="rub">P</span>
-																	<span class="value-card__price-sub">/шт</span>
+																<span class="value-card__price-span">195.00<span class="_icon-rub"></span><span class="value-card__price-sub">/шт</span>
 																</span>
 															</div>
 															<div class="value-card__old-price">
-																<span class="value-card__old-price-span">219<sup class="value-card__old-price-sup">00
-																	</sup><span class="old-rub">P</span>
-																	<span class="value-card__old-price-sub">/шт</span>
+																<span class="value-card__old-price-span">219.00<span class="_icon-rub"></span>
 																</span>
 															</div>
 														</div>
@@ -2240,8 +1854,8 @@
 													</div>
 												</div>
 												<button class="product-card__button button">Добавить в корзину</button>
-											</article>
-											<article class="product-card">
+											</li>
+											<li class="product-card">
 												<a href="" class="product-card__image">
 													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
 														<picture><source srcset="img/products/omskiyBekon/borovin_OB.webp" type="image/webp"><img src="img/products/omskiyBekon/borovin_OB.png" alt="borovin_OB"></picture>
@@ -2265,15 +1879,11 @@
 													<div class="product-card__price">
 														<div class="product-card__value value-card">
 															<div class="value-card__price">
-																<span class="value-card__price-span">171<sup class="value-card__price-sup">00
-																	</sup><span class="rub">P</span>
-																	<span class="value-card__price-sub">/шт</span>
+																<span class="value-card__price-span">171.00<span class="_icon-rub"></span><span class="value-card__price-sub">/шт</span>
 																</span>
 															</div>
 															<div class="value-card__old-price">
-																<span class="value-card__old-price-span">206<sup class="value-card__old-price-sup">00
-																	</sup><span class="old-rub">P</span>
-																	<span class="value-card__old-price-sub">/шт</span>
+																<span class="value-card__old-price-span">206.00<span class="_icon-rub"></span>
 																</span>
 															</div>
 														</div>
@@ -2299,8 +1909,8 @@
 													</div>
 												</div>
 												<button class="product-card__button button">Добавить в корзину</button>
-											</article>
-											<article class="product-card">
+											</li>
+											<li class="product-card">
 												<a href="" class="product-card__image">
 													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
 														<picture><source srcset="img/products/omskiyBekon/borovin_OB.webp" type="image/webp"><img src="img/products/omskiyBekon/borovin_OB.png" alt="borovin_OB"></picture>
@@ -2324,15 +1934,11 @@
 													<div class="product-card__price">
 														<div class="product-card__value value-card">
 															<div class="value-card__price">
-																<span class="value-card__price-span">171<sup class="value-card__price-sup">00
-																	</sup><span class="rub">P</span>
-																	<span class="value-card__price-sub">/шт</span>
+																<span class="value-card__price-span">171.00<span class="_icon-rub"></span><span class="value-card__price-sub">/шт</span>
 																</span>
 															</div>
 															<div class="value-card__old-price">
-																<span class="value-card__old-price-span">206<sup class="value-card__old-price-sup">00
-																	</sup><span class="old-rub">P</span>
-																	<span class="value-card__old-price-sub">/шт</span>
+																<span class="value-card__old-price-span">206.00<span class="_icon-rub"></span>
 																</span>
 															</div>
 														</div>
@@ -2358,8 +1964,142 @@
 													</div>
 												</div>
 												<button class="product-card__button button">Добавить в корзину</button>
-											</article>
+											</li>
+										</ul>
+										<button hidden data-showmore-button type="button" class="products-catalog__buttonMore button">
+											<span>Показать еще</span>
+											<span>Скрыть</span>
+										</button>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="products-catalog__wrapper">
+								<div id="delicacies-goto" class="products-catalog__head-title">Мясные
+									деликатесы</div>
+								<div class="products-catalog__cards">
+									<div data-showmore="items" class="products-catalog__block">
+										<div class="products-catalog__title">
+											<h2>Грудинка</h2>
+											<a href="">Eще</a>
 										</div>
+										<ul data-showmore-content="1" class="products-catalog__body">
+											<li class="product-card">
+												<a href="" class="product-card__image">
+													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
+														<picture><source srcset="img/products/sibAgro/grudinka_SA.webp" type="image/webp"><img src="img/products/sibAgro/grudinka_SA.png" alt="grudinka_SA"></picture>
+													</span>
+													<span class="icon-card-lt icon-card-span"></span>
+													<span class="icon-card-lb icon-card-span"></span>
+													<span class="icon-card-rt icon-card-span"></span>
+													<span class="icon-card-rb icon-card-span"></span>
+												</a>
+
+												<div class="product-card__body">
+													<div class="product-card__title">
+														<a href="" class="product-card__link-title">Деликатес “СибАгро”
+															Грудинка 350г</a>
+													</div>
+													<div class="product-card__article">
+														<span class="product-card__info-article">00010</span>
+														<span class="_icon-info"></span>
+													</div>
+													<div class="product-card__price">
+														<div class="product-card__value value-card">
+															<div class="value-card__price">
+																<span class="value-card__price-span">271.00<span class="_icon-rub"></span><span class="value-card__price-sub">/шт</span>
+																</span>
+															</div>
+															<!-- <div class="value-card__old-price">
+																	<span class="value-card__old-price-span">293.00<span
+																			class="_icon-rub"></span>
+																	</span>
+																</div> -->
+														</div>
+														<a href="" class="product-card__favorite _icon-favorite"></a>
+													</div>
+													<div class="product-card__info">
+														<!-- <div class="product-card__offer-new product-card__offer-none"></div> -->
+														<div class="product-card__offer-new product-card__offer">New</div>
+														<!-- <div class="product-card__offer-sale product-card__offer">Sale</div> -->
+														<div class="product-card__rating rating rating_set">
+															<div class="rating__body">
+																<div class="rating__active"></div>
+																<div class="rating__items">
+																	<input type="radio" class="rating__item" value="1" name="rating">
+																	<input type="radio" class="rating__item" value="2" name="rating">
+																	<input type="radio" class="rating__item" value="3" name="rating">
+																	<input type="radio" class="rating__item" value="4" name="rating">
+																	<input type="radio" class="rating__item" value="5" name="rating">
+																</div>
+															</div>
+															<div class="rating__value">4.3</div>
+														</div>
+													</div>
+												</div>
+												<button class="product-card__button button">Добавить в корзину</button>
+											</li>
+											<li class="product-card">
+												<a href="" class="product-card__image">
+													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
+														<picture><source srcset="img/products/sibAgro/grudinka_SA.webp" type="image/webp"><img src="img/products/sibAgro/grudinka_SA.png" alt="grudinka_SA"></picture>
+													</span>
+													<span class="icon-card-lt icon-card-span"></span>
+													<span class="icon-card-lb icon-card-span"></span>
+													<span class="icon-card-rt icon-card-span"></span>
+													<span class="icon-card-rb icon-card-span"></span>
+												</a>
+
+												<div class="product-card__body">
+													<div class="product-card__title">
+														<a href="" class="product-card__link-title">Деликатес “СибАгро”
+															Грудинка 350г</a>
+													</div>
+													<div class="product-card__article">
+														<span class="product-card__info-article">00010</span>
+														<span class="_icon-info"></span>
+													</div>
+													<div class="product-card__price">
+														<div class="product-card__value value-card">
+															<div class="value-card__price">
+																<span class="value-card__price-span">271.00<span class="_icon-rub"></span><span class="value-card__price-sub">/шт</span>
+																</span>
+															</div>
+															<!-- <div class="value-card__old-price">
+																	<span class="value-card__old-price-span">293.00<span
+																			class="_icon-rub"></span>
+																	</span>
+																</div> -->
+														</div>
+														<a href="" class="product-card__favorite _icon-favorite"></a>
+													</div>
+													<div class="product-card__info">
+														<!-- <div class="product-card__offer-new product-card__offer-none"></div> -->
+														<div class="product-card__offer-new product-card__offer">New</div>
+														<!-- <div class="product-card__offer-sale product-card__offer">Sale</div> -->
+														<div class="product-card__rating rating rating_set">
+															<div class="rating__body">
+																<div class="rating__active"></div>
+																<div class="rating__items">
+																	<input type="radio" class="rating__item" value="1" name="rating">
+																	<input type="radio" class="rating__item" value="2" name="rating">
+																	<input type="radio" class="rating__item" value="3" name="rating">
+																	<input type="radio" class="rating__item" value="4" name="rating">
+																	<input type="radio" class="rating__item" value="5" name="rating">
+																</div>
+															</div>
+															<div class="rating__value">4.3</div>
+														</div>
+													</div>
+												</div>
+												<button class="product-card__button button">Добавить в корзину</button>
+											</li>
+										</ul>
+										<button hidden data-showmore-button type="button" class="products-catalog__buttonMore button">
+											<span>Показать еще</span>
+											<span>Скрыть</span>
+										</button>
 									</div>
 								</div>
 							</div>
@@ -2368,198 +2108,16 @@
 								<div id="sosiski-goto" class="products-catalog__head-title">Сосиски и сардельки
 								</div>
 								<div class="products-catalog__cards">
-									<div class="products-catalog__block">
-										<div class="products-catalog__title">Cосиски</div>
-										<div class="products-catalog__body">
-											<article class="product-card">
-												<a href="" class="product-card__image">
-													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-														<picture><source srcset="img/products/sibAgro/sos-bavarskie_SA.webp" type="image/webp"><img src="img/products/sibAgro/sos-bavarskie_SA.png" alt="sos-bavarskie_SA"></picture>
-													</span>
-													<span class="icon-card-lt icon-card-span"></span>
-													<span class="icon-card-lb icon-card-span"></span>
-													<span class="icon-card-rt icon-card-span"></span>
-													<span class="icon-card-rb icon-card-span"></span>
-												</a>
-
-												<div class="product-card__body">
-													<div class="product-card__title">
-														<a href="" class="product-card__link-title">Сосиски “СибАгро”
-															Баварские с сыром 420г</a>
-													</div>
-													<div class="product-card__article">
-														<span class="product-card__info-article">00009</span>
-														<span class="_icon-info"></span>
-													</div>
-													<div class="product-card__price">
-														<div class="product-card__value value-card">
-															<!-- Новая цена -->
-															<div class="value-card__price">
-																<span class="value-card__price-span">156<sup class="value-card__price-sup">00
-																	</sup><span class="rub">P</span>
-																	<span class="value-card__price-sub">/шт</span>
-																</span>
-																<!-- Старая цена -->
-																<!-- <div class="value-card__old-price">
-														<span class="value-card__old-price-span">293<sup
-																class="value-card__old-price-sup">00
-															</sup><span class="old-rub">P</span>
-															<span class="value-card__old-price-sub">/шт</span>
-														</span> -->
-															</div>
-														</div>
-														<a href="" class="product-card__favorite _icon-favorite"></a>
-													</div>
-													<div class="product-card__info">
-														<div class="product-card__offer-new product-card__offer-none"></div>
-														<!-- <div class="product-card__offer-new product-card__offer">New</div> -->
-														<!-- <div class="product-card__offer-sale product-card__offer">Sale</div> -->
-														<div class="product-card__rating rating rating_set">
-															<div class="rating__body">
-																<div class="rating__active"></div>
-																<div class="rating__items">
-																	<input type="radio" class="rating__item" value="1" name="rating">
-																	<input type="radio" class="rating__item" value="2" name="rating">
-																	<input type="radio" class="rating__item" value="3" name="rating">
-																	<input type="radio" class="rating__item" value="4" name="rating">
-																	<input type="radio" class="rating__item" value="5" name="rating">
-																</div>
-															</div>
-															<div class="rating__value">4.3</div>
-														</div>
-													</div>
-												</div>
-												<button class="product-card__button button">Добавить в корзину</button>
-											</article>
-											<article class="product-card">
-												<a href="" class="product-card__image">
-													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-														<picture><source srcset="img/products/sibAgro/sos-bavarskie_SA.webp" type="image/webp"><img src="img/products/sibAgro/sos-bavarskie_SA.png" alt="sos-bavarskie_SA"></picture>
-													</span>
-													<span class="icon-card-lt icon-card-span"></span>
-													<span class="icon-card-lb icon-card-span"></span>
-													<span class="icon-card-rt icon-card-span"></span>
-													<span class="icon-card-rb icon-card-span"></span>
-												</a>
-
-												<div class="product-card__body">
-													<div class="product-card__title">
-														<a href="" class="product-card__link-title">Сосиски “СибАгро”
-															Баварские с сыром 420г</a>
-													</div>
-													<div class="product-card__article">
-														<span class="product-card__info-article">00009</span>
-														<span class="_icon-info"></span>
-													</div>
-													<div class="product-card__price">
-														<div class="product-card__value value-card">
-															<!-- Новая цена -->
-															<div class="value-card__price">
-																<span class="value-card__price-span">156<sup class="value-card__price-sup">00
-																	</sup><span class="rub">P</span>
-																	<span class="value-card__price-sub">/шт</span>
-																</span>
-																<!-- Старая цена -->
-																<!-- <div class="value-card__old-price">
-														<span class="value-card__old-price-span">293<sup
-																class="value-card__old-price-sup">00
-															</sup><span class="old-rub">P</span>
-															<span class="value-card__old-price-sub">/шт</span>
-														</span> -->
-															</div>
-														</div>
-														<a href="" class="product-card__favorite _icon-favorite"></a>
-													</div>
-													<div class="product-card__info">
-														<div class="product-card__offer-new product-card__offer-none"></div>
-														<!-- <div class="product-card__offer-new product-card__offer">New</div> -->
-														<!-- <div class="product-card__offer-sale product-card__offer">Sale</div> -->
-														<div class="product-card__rating rating rating_set">
-															<div class="rating__body">
-																<div class="rating__active"></div>
-																<div class="rating__items">
-																	<input type="radio" class="rating__item" value="1" name="rating">
-																	<input type="radio" class="rating__item" value="2" name="rating">
-																	<input type="radio" class="rating__item" value="3" name="rating">
-																	<input type="radio" class="rating__item" value="4" name="rating">
-																	<input type="radio" class="rating__item" value="5" name="rating">
-																</div>
-															</div>
-															<div class="rating__value">4.3</div>
-														</div>
-													</div>
-												</div>
-												<button class="product-card__button button">Добавить в корзину</button>
-											</article>
-											<article class="product-card">
-												<a href="" class="product-card__image">
-													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-														<picture><source srcset="img/products/sibAgro/sos-bavarskie_SA.webp" type="image/webp"><img src="img/products/sibAgro/sos-bavarskie_SA.png" alt="sos-bavarskie_SA"></picture>
-													</span>
-													<span class="icon-card-lt icon-card-span"></span>
-													<span class="icon-card-lb icon-card-span"></span>
-													<span class="icon-card-rt icon-card-span"></span>
-													<span class="icon-card-rb icon-card-span"></span>
-												</a>
-
-												<div class="product-card__body">
-													<div class="product-card__title">
-														<a href="" class="product-card__link-title">Сосиски “СибАгро”
-															Баварские с сыром 420г</a>
-													</div>
-													<div class="product-card__article">
-														<span class="product-card__info-article">00009</span>
-														<span class="_icon-info"></span>
-													</div>
-													<div class="product-card__price">
-														<div class="product-card__value value-card">
-															<!-- Новая цена -->
-															<div class="value-card__price">
-																<span class="value-card__price-span">156<sup class="value-card__price-sup">00
-																	</sup><span class="rub">P</span>
-																	<span class="value-card__price-sub">/шт</span>
-																</span>
-																<!-- Старая цена -->
-																<!-- <div class="value-card__old-price">
-														<span class="value-card__old-price-span">293<sup
-																class="value-card__old-price-sup">00
-															</sup><span class="old-rub">P</span>
-															<span class="value-card__old-price-sub">/шт</span>
-														</span> -->
-															</div>
-														</div>
-														<a href="" class="product-card__favorite _icon-favorite"></a>
-													</div>
-													<div class="product-card__info">
-														<div class="product-card__offer-new product-card__offer-none"></div>
-														<!-- <div class="product-card__offer-new product-card__offer">New</div> -->
-														<!-- <div class="product-card__offer-sale product-card__offer">Sale</div> -->
-														<div class="product-card__rating rating rating_set">
-															<div class="rating__body">
-																<div class="rating__active"></div>
-																<div class="rating__items">
-																	<input type="radio" class="rating__item" value="1" name="rating">
-																	<input type="radio" class="rating__item" value="2" name="rating">
-																	<input type="radio" class="rating__item" value="3" name="rating">
-																	<input type="radio" class="rating__item" value="4" name="rating">
-																	<input type="radio" class="rating__item" value="5" name="rating">
-																</div>
-															</div>
-															<div class="rating__value">4.3</div>
-														</div>
-													</div>
-												</div>
-												<button class="product-card__button button">Добавить в корзину</button>
-											</article>
+									<div data-showmore="items" class="products-catalog__block">
+										<div class="products-catalog__title">
+											<h2>Cосиски</h2>
+											<a href="">Eще</a>
 										</div>
-									</div>
-									<div class="products-catalog__block">
-										<div class="products-catalog__title">Шпикачки</div>
-										<div class="products-catalog__body">
-											<article class="product-card">
+										<ul data-showmore-content="1" class="products-catalog__body">
+											<li class="product-card">
 												<a href="" class="product-card__image">
 													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-														<picture><source srcset="img/products/omskiyBekon/sard-chehi_OB.webp" type="image/webp"><img src="img/products/omskiyBekon/sard-chehi_OB.png" alt="sard-chehi_OB"></picture>
+														<picture><source srcset="img/products/sibAgro/sos-bavarskie_SA.webp" type="image/webp"><img src="img/products/sibAgro/sos-bavarskie_SA.png" alt="sos-bavarskie_SA"></picture>
 													</span>
 													<span class="icon-card-lt icon-card-span"></span>
 													<span class="icon-card-lb icon-card-span"></span>
@@ -2569,222 +2127,30 @@
 
 												<div class="product-card__body">
 													<div class="product-card__title">
-														<a href="" class="product-card__link-title">Шпикачки “Омский Бекон” Чешские
-															400г</a>
+														<a href="" class="product-card__link-title">Сосиски “СибАгро”
+															Баварские с сыром 420г</a>
 													</div>
 													<div class="product-card__article">
-														<span class="product-card__info-article">00006</span>
+														<span class="product-card__info-article">00009</span>
 														<span class="_icon-info"></span>
 													</div>
 													<div class="product-card__price">
 														<div class="product-card__value value-card">
 															<div class="value-card__price">
-																<span class="value-card__price-span">146<sup class="value-card__price-sup">00
-																	</sup><span class="rub">P</span>
-																	<span class="value-card__price-sub">/шт</span>
+																<span class="value-card__price-span">271.00<span class="_icon-rub"></span><span class="value-card__price-sub">/шт</span>
 																</span>
 															</div>
-															<div class="value-card__old-price">
-																<span class="value-card__old-price-span">183<sup class="value-card__old-price-sup">00
-																	</sup><span class="old-rub">P</span>
-																	<span class="value-card__old-price-sub">/шт</span>
-																</span>
-															</div>
-														</div>
-														<a href="" class="product-card__favorite _icon-favorite"></a>
-													</div>
-													<div class="product-card__info">
-														<!-- <div class="product-card__offer-new product-card__offer-none"></div> -->
-														<!-- <div class="product-card__offer-new product-card__offer">New</div> -->
-														<div class="product-card__offer-sale product-card__offer">Sale</div>
-														<div class="product-card__rating rating rating_set">
-															<div class="rating__body">
-																<div class="rating__active"></div>
-																<div class="rating__items">
-																	<input type="radio" class="rating__item" value="1" name="rating">
-																	<input type="radio" class="rating__item" value="2" name="rating">
-																	<input type="radio" class="rating__item" value="3" name="rating">
-																	<input type="radio" class="rating__item" value="4" name="rating">
-																	<input type="radio" class="rating__item" value="5" name="rating">
-																</div>
-															</div>
-															<div class="rating__value">4.3</div>
-														</div>
-													</div>
-												</div>
-												<button class="product-card__button button">Добавить в корзину</button>
-											</article>
-											<article class="product-card">
-												<a href="" class="product-card__image">
-													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-														<picture><source srcset="img/products/omskiyBekon/sard-chehi_OB.webp" type="image/webp"><img src="img/products/omskiyBekon/sard-chehi_OB.png" alt="sard-chehi_OB"></picture>
-													</span>
-													<span class="icon-card-lt icon-card-span"></span>
-													<span class="icon-card-lb icon-card-span"></span>
-													<span class="icon-card-rt icon-card-span"></span>
-													<span class="icon-card-rb icon-card-span"></span>
-												</a>
-
-												<div class="product-card__body">
-													<div class="product-card__title">
-														<a href="" class="product-card__link-title">Шпикачки “Омский Бекон” Чешские
-															400г</a>
-													</div>
-													<div class="product-card__article">
-														<span class="product-card__info-article">00006</span>
-														<span class="_icon-info"></span>
-													</div>
-													<div class="product-card__price">
-														<div class="product-card__value value-card">
-															<div class="value-card__price">
-																<span class="value-card__price-span">146<sup class="value-card__price-sup">00
-																	</sup><span class="rub">P</span>
-																	<span class="value-card__price-sub">/шт</span>
-																</span>
-															</div>
-															<div class="value-card__old-price">
-																<span class="value-card__old-price-span">183<sup class="value-card__old-price-sup">00
-																	</sup><span class="old-rub">P</span>
-																	<span class="value-card__old-price-sub">/шт</span>
-																</span>
-															</div>
-														</div>
-														<a href="" class="product-card__favorite _icon-favorite"></a>
-													</div>
-													<div class="product-card__info">
-														<!-- <div class="product-card__offer-new product-card__offer-none"></div> -->
-														<!-- <div class="product-card__offer-new product-card__offer">New</div> -->
-														<div class="product-card__offer-sale product-card__offer">Sale</div>
-														<div class="product-card__rating rating rating_set">
-															<div class="rating__body">
-																<div class="rating__active"></div>
-																<div class="rating__items">
-																	<input type="radio" class="rating__item" value="1" name="rating">
-																	<input type="radio" class="rating__item" value="2" name="rating">
-																	<input type="radio" class="rating__item" value="3" name="rating">
-																	<input type="radio" class="rating__item" value="4" name="rating">
-																	<input type="radio" class="rating__item" value="5" name="rating">
-																</div>
-															</div>
-															<div class="rating__value">4.3</div>
-														</div>
-													</div>
-												</div>
-												<button class="product-card__button button">Добавить в корзину</button>
-											</article>
-											<article class="product-card">
-												<a href="" class="product-card__image">
-													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-														<picture><source srcset="img/products/omskiyBekon/sard-chehi_OB.webp" type="image/webp"><img src="img/products/omskiyBekon/sard-chehi_OB.png" alt="sard-chehi_OB"></picture>
-													</span>
-													<span class="icon-card-lt icon-card-span"></span>
-													<span class="icon-card-lb icon-card-span"></span>
-													<span class="icon-card-rt icon-card-span"></span>
-													<span class="icon-card-rb icon-card-span"></span>
-												</a>
-
-												<div class="product-card__body">
-													<div class="product-card__title">
-														<a href="" class="product-card__link-title">Шпикачки “Омский Бекон” Чешские
-															400г</a>
-													</div>
-													<div class="product-card__article">
-														<span class="product-card__info-article">00006</span>
-														<span class="_icon-info"></span>
-													</div>
-													<div class="product-card__price">
-														<div class="product-card__value value-card">
-															<div class="value-card__price">
-																<span class="value-card__price-span">146<sup class="value-card__price-sup">00
-																	</sup><span class="rub">P</span>
-																	<span class="value-card__price-sub">/шт</span>
-																</span>
-															</div>
-															<div class="value-card__old-price">
-																<span class="value-card__old-price-span">183<sup class="value-card__old-price-sup">00
-																	</sup><span class="old-rub">P</span>
-																	<span class="value-card__old-price-sub">/шт</span>
-																</span>
-															</div>
-														</div>
-														<a href="" class="product-card__favorite _icon-favorite"></a>
-													</div>
-													<div class="product-card__info">
-														<!-- <div class="product-card__offer-new product-card__offer-none"></div> -->
-														<!-- <div class="product-card__offer-new product-card__offer">New</div> -->
-														<div class="product-card__offer-sale product-card__offer">Sale</div>
-														<div class="product-card__rating rating rating_set">
-															<div class="rating__body">
-																<div class="rating__active"></div>
-																<div class="rating__items">
-																	<input type="radio" class="rating__item" value="1" name="rating">
-																	<input type="radio" class="rating__item" value="2" name="rating">
-																	<input type="radio" class="rating__item" value="3" name="rating">
-																	<input type="radio" class="rating__item" value="4" name="rating">
-																	<input type="radio" class="rating__item" value="5" name="rating">
-																</div>
-															</div>
-															<div class="rating__value">4.3</div>
-														</div>
-													</div>
-												</div>
-												<button class="product-card__button button">Добавить в корзину</button>
-											</article>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="products-catalog__wrapper">
-								<div id="delicacies-goto" class="products-catalog__head-title">Мясные
-									деликатесы</div>
-								<div class="products-catalog__cards">
-									<div class="products-catalog__block">
-										<div class="products-catalog__title">Грудинка</div>
-										<div class="products-catalog__body">
-											<article class="product-card">
-												<a href="" class="product-card__image">
-													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-														<picture><source srcset="img/products/sibAgro/grudinka_SA.webp" type="image/webp"><img src="img/products/sibAgro/grudinka_SA.png" alt="grudinka_SA"></picture>
-													</span>
-													<span class="icon-card-lt icon-card-span"></span>
-													<span class="icon-card-lb icon-card-span"></span>
-													<span class="icon-card-rt icon-card-span"></span>
-													<span class="icon-card-rb icon-card-span"></span>
-												</a>
-
-												<div class="product-card__body">
-													<div class="product-card__title">
-														<a href="" class="product-card__link-title">Деликатес “СибАгро”
-															Грудинка 350г</a>
-													</div>
-													<div class="product-card__article">
-														<span class="product-card__info-article">00010</span>
-														<span class="_icon-info"></span>
-													</div>
-													<div class="product-card__price">
-														<div class="product-card__value value-card">
-															<!-- Новая цена -->
-															<div class="value-card__price">
-																<span class="value-card__price-span">153<sup class="value-card__price-sup">00
-																	</sup><span class="rub">P</span>
-																	<span class="value-card__price-sub">/шт</span>
-																</span>
-															</div>
-															<!-- Старая цена -->
 															<!-- <div class="value-card__old-price">
-														<span class="value-card__old-price-span">293<sup
-																class="value-card__old-price-sup">00
-															</sup><span class="old-rub">P</span>
-															<span class="value-card__old-price-sub">/шт</span>
-														</span>
-													</div> -->
+																<span class="value-card__old-price-span">293.00<span
+																		class="_icon-rub"></span>
+																</span>
+															</div> -->
 														</div>
 														<a href="" class="product-card__favorite _icon-favorite"></a>
 													</div>
 													<div class="product-card__info">
-														<!-- <div class="product-card__offer-new product-card__offer-none"></div> -->
-														<div class="product-card__offer-new product-card__offer">New</div>
+														<div class="product-card__offer-new product-card__offer-none"></div>
+														<!-- <div class="product-card__offer-new product-card__offer">New</div> -->
 														<!-- <div class="product-card__offer-sale product-card__offer">Sale</div> -->
 														<div class="product-card__rating rating rating_set">
 															<div class="rating__body">
@@ -2802,11 +2168,11 @@
 													</div>
 												</div>
 												<button class="product-card__button button">Добавить в корзину</button>
-											</article>
-											<article class="product-card">
+											</li>
+											<li class="product-card">
 												<a href="" class="product-card__image">
 													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-														<picture><source srcset="img/products/sibAgro/grudinka_SA.webp" type="image/webp"><img src="img/products/sibAgro/grudinka_SA.png" alt="grudinka_SA"></picture>
+														<picture><source srcset="img/products/sibAgro/sos-bavarskie_SA.webp" type="image/webp"><img src="img/products/sibAgro/sos-bavarskie_SA.png" alt="sos-bavarskie_SA"></picture>
 													</span>
 													<span class="icon-card-lt icon-card-span"></span>
 													<span class="icon-card-lb icon-card-span"></span>
@@ -2816,36 +2182,30 @@
 
 												<div class="product-card__body">
 													<div class="product-card__title">
-														<a href="" class="product-card__link-title">Деликатес “СибАгро”
-															Грудинка 350г</a>
+														<a href="" class="product-card__link-title">Сосиски “СибАгро”
+															Баварские с сыром 420г</a>
 													</div>
 													<div class="product-card__article">
-														<span class="product-card__info-article">00010</span>
+														<span class="product-card__info-article">00009</span>
 														<span class="_icon-info"></span>
 													</div>
 													<div class="product-card__price">
 														<div class="product-card__value value-card">
-															<!-- Новая цена -->
 															<div class="value-card__price">
-																<span class="value-card__price-span">153<sup class="value-card__price-sup">00
-																	</sup><span class="rub">P</span>
-																	<span class="value-card__price-sub">/шт</span>
+																<span class="value-card__price-span">271.00<span class="_icon-rub"></span><span class="value-card__price-sub">/шт</span>
 																</span>
 															</div>
-															<!-- Старая цена -->
 															<!-- <div class="value-card__old-price">
-														<span class="value-card__old-price-span">293<sup
-																class="value-card__old-price-sup">00
-															</sup><span class="old-rub">P</span>
-															<span class="value-card__old-price-sub">/шт</span>
-														</span>
-													</div> -->
+																<span class="value-card__old-price-span">293.00<span
+																		class="_icon-rub"></span>
+																</span>
+															</div> -->
 														</div>
 														<a href="" class="product-card__favorite _icon-favorite"></a>
 													</div>
 													<div class="product-card__info">
-														<!-- <div class="product-card__offer-new product-card__offer-none"></div> -->
-														<div class="product-card__offer-new product-card__offer">New</div>
+														<div class="product-card__offer-new product-card__offer-none"></div>
+														<!-- <div class="product-card__offer-new product-card__offer">New</div> -->
 														<!-- <div class="product-card__offer-sale product-card__offer">Sale</div> -->
 														<div class="product-card__rating rating rating_set">
 															<div class="rating__body">
@@ -2863,13 +2223,246 @@
 													</div>
 												</div>
 												<button class="product-card__button button">Добавить в корзину</button>
-											</article>
+											</li>
+											<li class="product-card">
+												<a href="" class="product-card__image">
+													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
+														<picture><source srcset="img/products/sibAgro/sos-bavarskie_SA.webp" type="image/webp"><img src="img/products/sibAgro/sos-bavarskie_SA.png" alt="sos-bavarskie_SA"></picture>
+													</span>
+													<span class="icon-card-lt icon-card-span"></span>
+													<span class="icon-card-lb icon-card-span"></span>
+													<span class="icon-card-rt icon-card-span"></span>
+													<span class="icon-card-rb icon-card-span"></span>
+												</a>
+
+												<div class="product-card__body">
+													<div class="product-card__title">
+														<a href="" class="product-card__link-title">Сосиски “СибАгро”
+															Баварские с сыром 420г</a>
+													</div>
+													<div class="product-card__article">
+														<span class="product-card__info-article">00009</span>
+														<span class="_icon-info"></span>
+													</div>
+													<div class="product-card__price">
+														<div class="product-card__value value-card">
+															<div class="value-card__price">
+																<span class="value-card__price-span">271.00<span class="_icon-rub"></span><span class="value-card__price-sub">/шт</span>
+																</span>
+															</div>
+															<!-- <div class="value-card__old-price">
+																<span class="value-card__old-price-span">293.00<span
+																		class="_icon-rub"></span>
+																</span>
+															</div> -->
+														</div>
+														<a href="" class="product-card__favorite _icon-favorite"></a>
+													</div>
+													<div class="product-card__info">
+														<div class="product-card__offer-new product-card__offer-none"></div>
+														<!-- <div class="product-card__offer-new product-card__offer">New</div> -->
+														<!-- <div class="product-card__offer-sale product-card__offer">Sale</div> -->
+														<div class="product-card__rating rating rating_set">
+															<div class="rating__body">
+																<div class="rating__active"></div>
+																<div class="rating__items">
+																	<input type="radio" class="rating__item" value="1" name="rating">
+																	<input type="radio" class="rating__item" value="2" name="rating">
+																	<input type="radio" class="rating__item" value="3" name="rating">
+																	<input type="radio" class="rating__item" value="4" name="rating">
+																	<input type="radio" class="rating__item" value="5" name="rating">
+																</div>
+															</div>
+															<div class="rating__value">4.3</div>
+														</div>
+													</div>
+												</div>
+												<button class="product-card__button button">Добавить в корзину</button>
+											</li>
+										</ul>
+										<button hidden data-showmore-button type="button" class="products-catalog__buttonMore button">
+											<span>Показать еще</span>
+											<span>Скрыть</span>
+										</button>
+									</div>
+									<div data-showmore="items" class="products-catalog__block">
+										<div class="products-catalog__title">
+											<h2>Шпикачки</h2>
+											<a href="">Eще</a>
 										</div>
+										<ul data-showmore-content="1" class="products-catalog__body">
+											<li class="product-card">
+												<a href="" class="product-card__image">
+													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
+														<picture><source srcset="img/products/omskiyBekon/sard-chehi_OB.webp" type="image/webp"><img src="img/products/omskiyBekon/sard-chehi_OB.png" alt="sard-chehi_OB"></picture>
+													</span>
+													<span class="icon-card-lt icon-card-span"></span>
+													<span class="icon-card-lb icon-card-span"></span>
+													<span class="icon-card-rt icon-card-span"></span>
+													<span class="icon-card-rb icon-card-span"></span>
+												</a>
+
+												<div class="product-card__body">
+													<div class="product-card__title">
+														<a href="" class="product-card__link-title">Шпикачки “Омский Бекон” Чешские
+															400г</a>
+													</div>
+													<div class="product-card__article">
+														<span class="product-card__info-article">00006</span>
+														<span class="_icon-info"></span>
+													</div>
+													<div class="product-card__price">
+														<div class="product-card__value value-card">
+															<div class="value-card__price">
+																<span class="value-card__price-span">146.00<span class="_icon-rub"></span><span class="value-card__price-sub">/шт</span>
+																</span>
+															</div>
+															<div class="value-card__old-price">
+																<span class="value-card__old-price-span">183.00<span class="_icon-rub"></span>
+																</span>
+															</div>
+														</div>
+														<a href="" class="product-card__favorite _icon-favorite"></a>
+													</div>
+													<div class="product-card__info">
+														<!-- <div class="product-card__offer-new product-card__offer-none"></div> -->
+														<!-- <div class="product-card__offer-new product-card__offer">New</div> -->
+														<div class="product-card__offer-sale product-card__offer">Sale</div>
+														<div class="product-card__rating rating rating_set">
+															<div class="rating__body">
+																<div class="rating__active"></div>
+																<div class="rating__items">
+																	<input type="radio" class="rating__item" value="1" name="rating">
+																	<input type="radio" class="rating__item" value="2" name="rating">
+																	<input type="radio" class="rating__item" value="3" name="rating">
+																	<input type="radio" class="rating__item" value="4" name="rating">
+																	<input type="radio" class="rating__item" value="5" name="rating">
+																</div>
+															</div>
+															<div class="rating__value">4.3</div>
+														</div>
+													</div>
+												</div>
+												<button class="product-card__button button">Добавить в корзину</button>
+											</li>
+											<li class="product-card">
+												<a href="" class="product-card__image">
+													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
+														<picture><source srcset="img/products/omskiyBekon/sard-chehi_OB.webp" type="image/webp"><img src="img/products/omskiyBekon/sard-chehi_OB.png" alt="sard-chehi_OB"></picture>
+													</span>
+													<span class="icon-card-lt icon-card-span"></span>
+													<span class="icon-card-lb icon-card-span"></span>
+													<span class="icon-card-rt icon-card-span"></span>
+													<span class="icon-card-rb icon-card-span"></span>
+												</a>
+
+												<div class="product-card__body">
+													<div class="product-card__title">
+														<a href="" class="product-card__link-title">Шпикачки “Омский Бекон” Чешские
+															400г</a>
+													</div>
+													<div class="product-card__article">
+														<span class="product-card__info-article">00006</span>
+														<span class="_icon-info"></span>
+													</div>
+													<div class="product-card__price">
+														<div class="product-card__value value-card">
+															<div class="value-card__price">
+																<span class="value-card__price-span">146.00<span class="_icon-rub"></span><span class="value-card__price-sub">/шт</span>
+																</span>
+															</div>
+															<div class="value-card__old-price">
+																<span class="value-card__old-price-span">183.00<span class="_icon-rub"></span>
+																</span>
+															</div>
+														</div>
+														<a href="" class="product-card__favorite _icon-favorite"></a>
+													</div>
+													<div class="product-card__info">
+														<!-- <div class="product-card__offer-new product-card__offer-none"></div> -->
+														<!-- <div class="product-card__offer-new product-card__offer">New</div> -->
+														<div class="product-card__offer-sale product-card__offer">Sale</div>
+														<div class="product-card__rating rating rating_set">
+															<div class="rating__body">
+																<div class="rating__active"></div>
+																<div class="rating__items">
+																	<input type="radio" class="rating__item" value="1" name="rating">
+																	<input type="radio" class="rating__item" value="2" name="rating">
+																	<input type="radio" class="rating__item" value="3" name="rating">
+																	<input type="radio" class="rating__item" value="4" name="rating">
+																	<input type="radio" class="rating__item" value="5" name="rating">
+																</div>
+															</div>
+															<div class="rating__value">4.3</div>
+														</div>
+													</div>
+												</div>
+												<button class="product-card__button button">Добавить в корзину</button>
+											</li>
+											<li class="product-card">
+												<a href="" class="product-card__image">
+													<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
+														<picture><source srcset="img/products/omskiyBekon/sard-chehi_OB.webp" type="image/webp"><img src="img/products/omskiyBekon/sard-chehi_OB.png" alt="sard-chehi_OB"></picture>
+													</span>
+													<span class="icon-card-lt icon-card-span"></span>
+													<span class="icon-card-lb icon-card-span"></span>
+													<span class="icon-card-rt icon-card-span"></span>
+													<span class="icon-card-rb icon-card-span"></span>
+												</a>
+
+												<div class="product-card__body">
+													<div class="product-card__title">
+														<a href="" class="product-card__link-title">Шпикачки “Омский Бекон” Чешские
+															400г</a>
+													</div>
+													<div class="product-card__article">
+														<span class="product-card__info-article">00006</span>
+														<span class="_icon-info"></span>
+													</div>
+													<div class="product-card__price">
+														<div class="product-card__value value-card">
+															<div class="value-card__price">
+																<span class="value-card__price-span">146.00<span class="_icon-rub"></span><span class="value-card__price-sub">/шт</span>
+																</span>
+															</div>
+															<div class="value-card__old-price">
+																<span class="value-card__old-price-span">183.00<span class="_icon-rub"></span>
+																</span>
+															</div>
+														</div>
+														<a href="" class="product-card__favorite _icon-favorite"></a>
+													</div>
+													<div class="product-card__info">
+														<!-- <div class="product-card__offer-new product-card__offer-none"></div> -->
+														<!-- <div class="product-card__offer-new product-card__offer">New</div> -->
+														<div class="product-card__offer-sale product-card__offer">Sale</div>
+														<div class="product-card__rating rating rating_set">
+															<div class="rating__body">
+																<div class="rating__active"></div>
+																<div class="rating__items">
+																	<input type="radio" class="rating__item" value="1" name="rating">
+																	<input type="radio" class="rating__item" value="2" name="rating">
+																	<input type="radio" class="rating__item" value="3" name="rating">
+																	<input type="radio" class="rating__item" value="4" name="rating">
+																	<input type="radio" class="rating__item" value="5" name="rating">
+																</div>
+															</div>
+															<div class="rating__value">4.3</div>
+														</div>
+													</div>
+												</div>
+												<button class="product-card__button button">Добавить в корзину</button>
+											</li>
+										</ul>
+										<button hidden data-showmore-button type="button" class="products-catalog__buttonMore button">
+											<span>Показать еще</span>
+											<span>Скрыть</span>
+										</button>
 									</div>
 								</div>
 							</div>
 						</div>
-						<a href="" data-goto-top="30" data-goto="#up-goto" class="content-catalog__up-scroll up-scroll _icon-arrow"></a>
+						<a href="" id="up-scroll" data-goto-top="30" data-goto="#up-goto" class="content-catalog__up-scroll up-scroll _icon-arrow"></a>
 					</div>
 				</div>
 			</div>
@@ -3337,13 +2930,15 @@
 						</div>
 						<div class="popup-callback__block">
 							<div class="popup-callback__organization organization-callback">
-								<div class="organization-callback__show" id="showOrganization">
-									<label>
-										<span class="organization-callback__label">Я юридическое лицо</span>
-									</label>
+								<div class="organization-callback__show">
+									<div class="checkbox">
+										<input id="showOrganization" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+										<label for="showOrganization" class="checkbox__label"><span class="checkbox__text">Я
+												юридическое лицо</span></label>
+									</div>
 								</div>
-								<div class="organization-callback__input">
-									<input autocomplete="off" type="text" name="organizationName" id="organizationName" data-error="Ошибка" placeholder="Название организации" class="input">
+								<div id="organizationName" class="organization-callback__input">
+									<input autocomplete="off" type="text" name="organizationName" data-error="Ошибка" placeholder="Название организации" class="input">
 								</div>
 							</div>
 						</div>
@@ -3384,7 +2979,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20230327174756"></script>
+	<script src="js/app.min.js?_v=20230411174014"></script>
 </body>
 
 </html>

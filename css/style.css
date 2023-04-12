@@ -4400,6 +4400,10 @@ body::after {
   height: 0.5rem;
 }
 
+.navigation-catalog__list::-webkit-scrollbar-track {
+  height: 9px !important;
+}
+
 .navigation-catalog__list::-webkit-scrollbar-thumb {
   background-color: #c0c98a;
   border-radius: 0.625rem;

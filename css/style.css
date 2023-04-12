@@ -1998,6 +1998,7 @@ body::after {
 }
 
 .product-card {
+  position: relative;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: auto 1fr;
@@ -2270,6 +2271,10 @@ body::after {
   display: inline-block;
   font-size: 0.625rem;
   text-decoration: none;
+}
+
+.rouble {
+  font-family: "ALSRubl";
 }
 
 .icon-card-span {
@@ -3750,10 +3755,6 @@ body::after {
   text-align: right;
   bottom: 0;
   right: 0;
-}
-
-.advantages-shipping__delivery span {
-  font-family: "ALSRubl";
 }
 
 .delivery-shipping {
@@ -9726,7 +9727,7 @@ body::after {
   }
 
   .submenu-page__items {
-    padding: 0px 0.9375rem 1.875rem 0.9375rem;
+    padding: 0px 0.9375rem 5rem 0.9375rem;
   }
 
 @supports (gap: clamp( 0.9375rem , 0.5965909091rem  +  1.7045454545vw , 1.875rem )) {
@@ -10992,6 +10993,10 @@ body::after {
 }
 
 @media (max-width: 31.25em) {
+  .product-card__image {
+    padding: 0px 0px 0px 0px;
+  }
+
   .product-card__image img {
     left: 50%;
     -webkit-transform: translateX(-50%);
@@ -10999,44 +11004,68 @@ body::after {
             transform: translateX(-50%);
   }
 
-  .products-catalog .product-card__item-image-ibg {
+  .product-card__item-image-ibg {
     padding-bottom: 100%;
   }
 
-  .products-catalog .icon-card-span {
-    display: none;
+  .product-card__body {
+    padding: 0px 0px 0px 0px;
   }
 
-  .products-catalog .product-card__title {
+  .product-card__title {
     font-size: 0.75rem;
   }
 
-  .products-catalog .product-card__article {
-    display: none;
+  .product-card__article {
+    font-size: 0.8125rem;
   }
 
-  .products-catalog .value-card__price-span {
+  .product-card ._icon-info::before {
+    font-size: 0.875rem;
+  }
+
+  .product-card__price {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+
+  .product-card__price-span {
     font-size: 1rem;
   }
 
-  .products-catalog .product-card__info {
+  .product-card__info {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .product-card__info .product-card__rating {
     display: none;
   }
 
-  .products-catalog .product-card__button {
+  .product-card__offer {
+    background-color: transparent;
+    padding: 0px 0px 0px 0px;
+    font-size: 1rem;
+  }
+
+  .product-card__offer-new {
+    background-color: transparent;
+    color: #e74349;
+  }
+
+  .product-card__offer-sale {
+    background-color: transparent;
+    color: #c0c98a;
+  }
+
+  .product-card__button {
     font-size: 0.8125rem;
     padding: 0.4375rem 0;
   }
 
-  .products-catalog .product-card__body {
-    padding: 0px 0px 0px 0px;
-  }
-
-  .products-catalog .product-card__image {
-    padding: 0px 0px 0px 0px;
-  }
-
-  .products-catalog .value-card {
+  .value-card {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -11047,64 +11076,8 @@ body::after {
             align-items: start;
   }
 
-  .products-catalog .product-card__price {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 auto;
-            flex: 1 1 auto;
-  }
-
-  .catalog-category .product-card__item-image-ibg {
-    padding-bottom: 100%;
-  }
-
-  .catalog-category .icon-card-span {
+  .icon-card-span {
     display: none;
-  }
-
-  .catalog-category .product-card__title {
-    font-size: 0.75rem;
-  }
-
-  .catalog-category .product-card__article {
-    display: none;
-  }
-
-  .catalog-category .value-card__price-span {
-    font-size: 1rem;
-  }
-
-  .catalog-category .product-card__info {
-    display: none;
-  }
-
-  .catalog-category .product-card__button {
-    font-size: 0.8125rem;
-    padding: 0.4375rem 0;
-  }
-
-  .catalog-category .product-card__body {
-    padding: 0px 0px 0px 0px;
-  }
-
-  .catalog-category .product-card__image {
-    padding: 0px 0px 0px 0px;
-  }
-
-  .catalog-category .value-card {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    row-gap: 0.3125rem;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
-  }
-
-  .catalog-category .product-card__price {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 auto;
-            flex: 1 1 auto;
   }
 
   .products-catalog__body {

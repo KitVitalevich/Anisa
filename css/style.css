@@ -4394,6 +4394,7 @@ body::after {
 }
 
 .navigation-catalog__list::-webkit-scrollbar {
+  display: inherit;
   background-color: #e7e2e2;
   border-radius: 0.625rem;
   height: 0.5rem;

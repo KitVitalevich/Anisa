@@ -9646,10 +9646,6 @@ body::after {
     height: 20px;
   }
 
-  .catalog-header__button .icon-menu::before {
-    display: none;
-  }
-
   .catalog-header__btn {
     display: none;
   }
@@ -9900,8 +9896,13 @@ body::after {
     display: block;
     top: 40px;
     z-index: 4;
+    height: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
+  }
+
+  .sub-catalog-open .catalog-header__list {
+    height: 0;
   }
 
   .sub-catalog-open ._active .submenu-page {

@@ -16391,6 +16391,10 @@
                 }
             }
         })();
+        $(window).on("resize", (function() {
+            var size = $(window).width();
+            $(".catalog-header__button").toggleClass("icon-menu", size > 991.98);
+        })).resize();
         window["FLS"] = true;
         isWebp();
         addTouchClass();

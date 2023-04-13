@@ -2960,7 +2960,6 @@ body::after {
 .submenu-page {
   position: absolute;
   top: 40px;
-  left: 0;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -3655,20 +3654,9 @@ body::after {
   width: 100%;
 }
 
-@supports (max-width: clamp( 3.75rem , 1.4063476563rem  +  7.8125vw , 6.25rem )) {
-  .header-shipping__icon img {
-    max-width: clamp( 3.75rem , 1.4063476563rem  +  7.8125vw , 6.25rem );
-  }
-}
-
-@supports not (max-width: clamp( 3.75rem , 1.4063476563rem  +  7.8125vw , 6.25rem )) {
-  .header-shipping__icon img {
-    max-width: calc(3.75rem + 2.5 * (100vw - 29.99875rem) / 32);
-  }
-}
-
 .header-shipping__text {
   margin-top: 1.875rem;
+  text-align: center;
   font-size: 1rem;
   line-height: 1.125;
 }
@@ -9313,6 +9301,10 @@ body::after {
   .select_control .select__options {
     max-width: 11.25rem;
   }
+
+  .header-shipping__text br {
+    display: none;
+  }
 }
 
 @media (min-width: 47.99875em) {
@@ -10082,6 +10074,7 @@ body::after {
   .sub-catalog-open ._active .submenu-page {
     display: block;
     top: -2.1875rem;
+    left: 0;
     padding: 0.8125rem 0;
     width: 100%;
     height: 100vh;
@@ -10625,6 +10618,18 @@ body::after {
   .development-footer__link {
     line-height: 1.8;
   }
+
+@supports (gap: clamp( 2.0625rem , 1.6761363636rem  +  1.9318181818vw , 3.125rem )) {
+    .header-shipping {
+      gap: clamp( 2.0625rem , 1.6761363636rem  +  1.9318181818vw , 3.125rem );
+    }
+}
+
+@supports not (gap: clamp( 2.0625rem , 1.6761363636rem  +  1.9318181818vw , 3.125rem )) {
+    .header-shipping {
+      gap: calc(2.0625rem + 1.0625 * (100vw - 20rem) / 55);
+    }
+}
 
 @supports (font-size: clamp( 2.5rem , 0.6818181818rem  +  9.0909090909vw , 7.5rem )) {
     .special-info__percent-info::before {
@@ -11335,25 +11340,12 @@ body::after {
     display: none;
   }
 
-  .header-shipping {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-
   .header-shipping__item {
-    padding: 1.5625rem 0.625rem;
+    padding: 0px 0px 0px 0px;
   }
 
-  .header-shipping__item_rotate {
-    -webkit-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-            transform: rotate(90deg);
-  }
-
-  .header-shipping__icon img {
-    max-width: 6.25rem;
+  .header-shipping__text {
+    font-size: 0.875rem;
   }
 
   .advantages-shipping__items {
@@ -11527,6 +11519,20 @@ body::after {
         -ms-flex: 0 0 42px;
             flex: 0 0 42px;
   }
+}
+
+@media (max-width: 21.6875em) {
+@supports (max-width: clamp( 4.6875rem , 4.1193181818rem  +  2.8409090909vw , 6.25rem )) {
+    .header-shipping__icon img {
+      max-width: clamp( 4.6875rem , 4.1193181818rem  +  2.8409090909vw , 6.25rem );
+    }
+}
+
+@supports not (max-width: clamp( 4.6875rem , 4.1193181818rem  +  2.8409090909vw , 6.25rem )) {
+    .header-shipping__icon img {
+      max-width: calc(4.6875rem + 1.5625 * (100vw - 20rem) / 55);
+    }
+}
 }
 
 @media (any-hover: hover) {

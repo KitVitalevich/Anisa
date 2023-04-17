@@ -6,9 +6,9 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230413173053">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230414174111">
 	<link rel="shortcut icon" href="favicon.ico">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js?_v=20230413173053"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js?_v=20230414174111"></script>
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -682,7 +682,7 @@
 						<div class="actions-header__cart cart-header">
 							<a href="basket-goods.html" class="cart-header__icon _icon-cart"><span>0</span></a>
 							<div class="cart-header__body">
-								<div class="cart-header__summ">0 <span class="old-rub">Р</span></div>
+								<div class="cart-header__summ _icon-rub">0</div>
 								<a href="basket-goods.html" class="cart-header__link">Оформить заказ</a>
 							</div>
 						</div>
@@ -711,30 +711,42 @@
 						<div class="profile-edit__block">
 							<div class="profile-edit__subtitle subtitle">Контактные данные</div>
 							<div class="profile-edit__items">
-								<div class="profile-edit__item">
-									<div class="profile-edit__inp">
-										<input data-required data-validate autocomplete="off" type="text" name="name" id="formName" data-error="Введите ФИО" placeholder="ФИО" class="profile-edit__input input">
+								<div class="profile-edit__list">
+									<div class="profile-edit__item">
+										<div class="profile-edit__inp">
+											<input data-required data-validate autocomplete="off" type="text" name="name" id="formName" data-error="Введите ФИО" placeholder="ФИО" class="profile-edit__input input">
+										</div>
+										<div class="profile-edit__checkbox checkbox">
+											<input id="profileEditNovelty" class="checkbox__input" type="checkbox" value="1" name="formCheckbox">
+											<label for="profileEditNovelty" class="profile-edit__checkbox-label checkbox__label"><span class="profile-edit__checkbox-text checkbox__text">Сообщать о новинках и
+													изменениях</span></label>
+										</div>
 									</div>
-									<div class="profile-edit__checkbox checkbox">
-										<input id="profileEditNovelty" class="checkbox__input" type="checkbox" value="1" name="formCheckbox">
-										<label for="profileEditNovelty" class="profile-edit__checkbox-label checkbox__label"><span class="profile-edit__checkbox-text checkbox__text">Сообщать о новинках и
-												изменениях</span></label>
+
+									<div class="profile-edit__item">
+										<div class="profile-edit__inp">
+											<input data-required data-validate data-inputmask="'mask': '+7 (999) 999 - 99 - 99'" autocomplete="off" type="tel" id="formTel" name="tel" data-error="Введен не верный телефон" placeholder="Номер телефона" class="profile-edit__input input">
+										</div>
+										<div class="profile-edit__checkbox checkbox">
+											<input id="profileEditAgreement" class="checkbox__input" type="checkbox" value="1" name="formCheckbox">
+											<label for="profileEditAgreement" class="profile-edit__checkbox-label checkbox__label"><span class="profile-edit__checkbox-text checkbox__text">Согласен с <a href="return.html" class="profile-edit__link">правилами обмена и
+														возврата</a></span></label>
+										</div>
+									</div>
+
+									<div class="profile-edit__item">
+										<div class="profile-edit__inp">
+											<input data-required data-validate autocomplete="off" type="email" name="formEmail" id="email" data-error="Введите элетронную почту" placeholder="Эл. почта" class="profile-edit__input input">
+										</div>
 									</div>
 								</div>
-								<div class="profile-edit__item">
+
+								<div class="profile-edit__list">
 									<div class="profile-edit__inp">
-										<input data-required data-validate data-inputmask="'mask': '+7 (999) 999 - 99 - 99'" autocomplete="off" type="tel" id="formTel" name="tel" data-error="Введен не верный телефон" placeholder="Номер телефона" class="profile-edit__input input">
-									</div>
-									<div class="profile-edit__checkbox checkbox">
-										<input id="profileEditAgreement" class="checkbox__input" type="checkbox" value="1" name="formCheckbox">
-										<label for="profileEditAgreement" class="profile-edit__checkbox-label checkbox__label"><span class="profile-edit__checkbox-text checkbox__text">Согласен с <a href="return.html" class="profile-edit__link">правилами обмена и возврата</a></span></label>
+										<input autocomplete="off" type="date" name="formDate" placeholder="Дата рождения" class="profile-edit__input input">
 									</div>
 								</div>
-								<div class="profile-edit__item">
-									<div class="profile-edit__inp">
-										<input data-required data-validate autocomplete="off" type="email" name="formEmail" id="email" data-error="Введите элетронную почту" placeholder="Эл. почта" class="profile-edit__input input">
-									</div>
-								</div>
+
 							</div>
 						</div>
 
@@ -1283,7 +1295,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20230413173053"></script>
+	<script src="js/app.min.js?_v=20230414174111"></script>
 </body>
 
 </html>

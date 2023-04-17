@@ -16364,6 +16364,18 @@
         $("#showOrganization").click((function() {
             if ($(this).is(":checked")) $("#organizationName").show(100); else $("#organizationName").hide(100);
         }));
+        $("#formPickup").click((function() {
+            if ($(this).is(":checked")) $("#orderPickup").show(100); else $("#orderPickup").hide(100);
+        }));
+        $("#formDelivery").click((function() {
+            if ($(this).is(":checked")) $("#orderDelivery").show(100); else $("#orderDelivery").hide(100);
+        }));
+        $("#formPickup").click((function() {
+            if ($(this).is(":checked")) $("#formDelivery").attr("disabled", "disabled"); else $("#formDelivery").removeAttr("disabled");
+        }));
+        $("#formDelivery").click((function() {
+            if ($(this).is(":checked")) $("#formPickup").attr("disabled", "disabled"); else $("#formPickup").removeAttr("disabled");
+        }));
         (function() {
             var a = document.querySelector("#catalogNav"), b = null, P = 0;
             window.addEventListener("scroll", Ascroll, false);

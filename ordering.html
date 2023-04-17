@@ -6,9 +6,9 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230413173053">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230414174111">
 	<link rel="shortcut icon" href="favicon.ico">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js?_v=20230413173053"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js?_v=20230414174111"></script>
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -682,7 +682,7 @@
 						<div class="actions-header__cart cart-header">
 							<a href="basket-goods.html" class="cart-header__icon _icon-cart"><span>0</span></a>
 							<div class="cart-header__body">
-								<div class="cart-header__summ">0 <span class="old-rub">Р</span></div>
+								<div class="cart-header__summ _icon-rub">0</div>
 								<a href="basket-goods.html" class="cart-header__link">Оформить заказ</a>
 							</div>
 						</div>
@@ -717,15 +717,16 @@
 											<span class="ordering-form__title-number">1</span>
 											<span class="ordering-form__title-text">Контактные данные получателя</span>
 										</div>
-										<div class="ordering-form__matches-profile">
+										<!-- <div class="ordering-form__matches-profile">
 											<div class="ordering-form__checkbox checkbox">
-												<input id="matches-profile" class="checkbox__input" type="checkbox" value="1" name="form[]">
+												<input id="matches-profile" class="checkbox__input" type="checkbox" value="1"
+													name="form[]">
 												<label for="matches-profile" class="ordering-form__checkbox-label checkbox__label">
 													<span class="ordering-form__checkbox-text checkbox__text">Совпадает с данными
 														профиля</span>
 												</label>
 											</div>
-										</div>
+										</div> -->
 										<div class="ordering-form__list">
 											<div class="ordering-form__inputs ordering-form__inputs-name">
 												<input data-required data-error="Введите ФИО" data-validate autocomplete="off" id="formName" type="text" name="name" placeholder="ФИО" class="ordering-form__input input">
@@ -771,26 +772,59 @@
 										</div>
 									</div>
 
-									<div class="ordering-form__item">
+									<div id="orderCheckbox" class="ordering-form__item">
 										<div class="ordering-form__title">
 											<span class="ordering-form__title-number">4</span>
 											<span class="ordering-form__title-text">Место получения заказа</span>
 										</div>
-										<div class="ordering-form__delivery-checkbox">
-											<div class="ordering-form__checkbox checkbox">
-												<input id="formPickup" class="checkbox__input" type="checkbox" value="1" name="formPickup">
-												<label for="formPickup" class="ordering-form__checkbox-label checkbox__label">
-													<span class="ordering-form__checkbox-text checkbox__text">Заберу товар
-														самостоятельно</span>
-												</label>
+
+										<div class="ordering-form__pickup">
+											<div class="ordering-form__delivery-checkbox">
+												<div class="ordering-form__checkbox checkbox">
+													<input id="formPickup" class="checkbox__input" type="checkbox" value="1" name="formPickup">
+													<label for="formPickup" class="ordering-form__checkbox-label checkbox__label">
+														<span class="ordering-form__checkbox-text checkbox__text">Заберу товар
+															самостоятельно</span>
+													</label>
+												</div>
+											</div>
+											<div id="orderPickup" class="ordering-form__pickup_block">
+												<div class="ordering-form__list">
+													<div class="ordering-form__inputs ordering-form__inputs-address">
+														<select data-required data-error="Выберите адрес" data-validate data-class-modif="orderibg-location" name="formLocation">
+															<option data-class="option-placeholder" value="" selected>Выберите склад
+																для самовывоза</option>
+															<option value="1">г. Новосибирск, ул. Выборная 186</option>
+															<option value="2"> г. Куйбышев, ул. Промзона 5а</option>
+															<option value="3">г. Омск, ул. И. Н. Багнюка 15/2</option>
+															<option value="4">г. Карасук, ул. Калинина 78</option>
+														</select>
+													</div>
+													<div class="ordering-form__delivery-time">
+														<input data-required data-error="Выберите дату" data-validate autocomplete="off" type="date" name="formDate" placeholder="Дата доставки" class="ordering-form__input input">
+													</div>
+												</div>
 											</div>
 										</div>
-										<div class="ordering-form__list">
-											<div class="ordering-form__inputs ordering-form__inputs-address">
-												<input data-required data-error="Введите адрес доставки" data-validate autocomplete="off" id="formAddress" type="text" name="address" placeholder="Адрес доставки" class="ordering-form__input input">
+										<div class="ordering-form__delivery">
+											<div class="ordering-form__delivery-checkbox">
+												<div class="ordering-form__checkbox checkbox">
+													<input id="formDelivery" class="checkbox__input" type="checkbox" value="1" name="formPickup">
+													<label for="formDelivery" class="ordering-form__checkbox-label checkbox__label">
+														<span class="ordering-form__checkbox-text checkbox__text">Доставить по
+															адресу</span>
+													</label>
+												</div>
 											</div>
-											<div class="ordering-form__delivery-time">
-												<input data-required data-error="Выберите дату" data-validate autocomplete="off" type="date" name="formDate" placeholder="Дата доставки" class="ordering-form__input input">
+											<div id="orderDelivery" class="ordering-form__delivery_block">
+												<div class="ordering-form__list">
+													<div class="ordering-form__inputs ordering-form__inputs-address">
+														<input data-required data-error="Введите адрес доставки" data-validate autocomplete="off" id="formAddress" type="text" name="address" placeholder="Адрес доставки" class="ordering-form__input input">
+													</div>
+													<div class="ordering-form__delivery-time">
+														<input data-required data-error="Выберите дату" data-validate autocomplete="off" type="date" name="formDate" placeholder="Дата доставки" class="ordering-form__input input">
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -835,18 +869,23 @@
 												</div>
 												<div class="side-basket__item">
 													<div class="side-basket__label">Цена без скидки:</div>
-													<div class="side-basket__value"><span class="value-card__price-span">1895<sup class="value-card__price-sup">00
-															</sup></div>
+													<div class="side-basket__value">
+														<div class="value-card__price">
+															<span class="value-card__price-value _icon-rub">1895.00</span>
+														</div>
+													</div>
 												</div>
 												<div class="side-basket__item">
 													<div class="side-basket__label">Скидка:</div>
-													<div class="side-basket__value"><span class="value-card__price-span">148<sup class="value-card__price-sup">00
-															</sup></div>
+													<div class="side-basket__value">
+														<span class="value-card__price-value _icon-rub">148.00</span>
+													</div>
 												</div>
 												<div class="side-basket__item">
 													<div class="side-basket__label-total">Итого:</div>
-													<div class="side-basket__value-total"><span class="value-card__price-span">1747<sup class="value-card__price-sup">00
-															</sup></div>
+													<div class="side-basket__value-total">
+														<span class="value-card__price-value _icon-rub">1747.00</span>
+													</div>
 												</div>
 											</div>
 											<button type="submit" class="side-basket__btn button">Оформить заказ</button>
@@ -855,7 +894,6 @@
 										</div>
 										<div class="horizont-line"><span></span></div>
 										<div class="side-basket__description">
-
 											<div class="side-basket__text">Стоимость корзины рассчитана исходя
 												из выбранного веса. Окончательная цена может отличаться в меньшую или большую
 												сторону и
@@ -884,210 +922,7 @@
 								</div>
 							</form>
 
-							<div class="ordering__list">
-								<div class="ordering__title subtitle">Состав заказа</div>
-								<div class="ordering__body">
 
-									<article class="product-card-row">
-										<a href="description-goods.html" class="product-card-row__image">
-											<span class="product-card-row__item">
-												<picture><source srcset="img/products/sibAgro/doctorskaya_SA.webp" type="image/webp"><img src="img/products/sibAgro/doctorskaya_SA.png" alt="doctorskaya_SA"></picture>
-											</span>
-											<span class="icon-card-lt icon-card-span"></span>
-											<span class="icon-card-lb icon-card-span"></span>
-											<span class="icon-card-rt icon-card-span"></span>
-											<span class="icon-card-rb icon-card-span"></span>
-										</a>
-										<div class="product-card-row__body">
-											<div class="product-card-row__title-quantity">
-												<a href="description-goods.html" class="product-card-row__link-title">Колбаса
-													вареная
-													“СибАгро” Докторская 450г</a>
-												<div class="quantity">
-													<button type="button" class="quantity__button quantity__button_plus"></button>
-													<div class="quantity__input">
-														<input autocomplete="off" type="text" name="form[]" value="1">
-													</div>
-													<button type="button" class="quantity__button quantity__button_minus"></button>
-												</div>
-											</div>
-											<div class="product-card-row__article-available">
-												<div class="product-card-row__article product-card__article">
-													<span class="product-card__info-article">00001</span>
-													<span class="_icon-info"></span>
-												</div>
-												<div class="product-card-row__available available">
-													<div class="available__text">Доступно:<span class="available__value">321
-															шт</span>
-													</div>
-												</div>
-											</div>
-											<div class="product-card-row__price-sum">
-												<div class="product-card__price product-card-row__price">
-													<div class="product-card-row__value value-card">
-														<div class="value-card__price">
-															<span class="value-card__price-span">180<sup class="value-card__price-sup">00
-																</sup><span class="rub">P</span>
-																<span class="value-card__price-sub">/шт</span>
-															</span>
-														</div>
-														<!-- <div class="value-card__old-price">
-																			<span class="value-card__old-price-span">180<sup
-																					class="value-card__old-price-sup">00
-																				</sup><span class="old-rub">P</span>
-																				<span class="value-card__old-price-sub">/шт</span>
-																			</span>
-																		</div> -->
-													</div>
-												</div>
-												<div class="product-card-row__sum sum"><span class="value-card__price-span">180<sup class="value-card__price-sup">00</sup><span class="rub">P</span></span>
-												</div>
-											</div>
-											<div class="product-card-row__info-actions">
-												<span data-tippy-content="В ОПТ коробке - 30 шт" class="product-card-row__info">Дополнительная
-													информация</span>
-												<div class="product-card-row__actions">
-													<a href="" class="product-card-row__favorite _icon-favorite"></a>
-													<a href="" class="product-card-row__delete _icon-delete"></a>
-												</div>
-											</div>
-										</div>
-									</article>
-
-									<article class="product-card-row">
-										<a href="description-goods.html" class="product-card-row__image">
-											<span class="product-card-row__item">
-												<picture><source srcset="img/products/sibAgro/doctorskaya_SA.webp" type="image/webp"><img src="img/products/sibAgro/doctorskaya_SA.png" alt="doctorskaya_SA"></picture>
-											</span>
-											<span class="icon-card-lt icon-card-span"></span>
-											<span class="icon-card-lb icon-card-span"></span>
-											<span class="icon-card-rt icon-card-span"></span>
-											<span class="icon-card-rb icon-card-span"></span>
-										</a>
-										<div class="product-card-row__body">
-											<div class="product-card-row__title-quantity">
-												<a href="description-goods.html" class="product-card-row__link-title">Колбаса
-													вареная
-													“СибАгро” Докторская 450г</a>
-												<div class="quantity">
-													<button type="button" class="quantity__button quantity__button_plus"></button>
-													<div class="quantity__input">
-														<input autocomplete="off" type="text" name="form[]" value="1">
-													</div>
-													<button type="button" class="quantity__button quantity__button_minus"></button>
-												</div>
-											</div>
-											<div class="product-card-row__article-available">
-												<div class="product-card-row__article product-card__article">
-													<span class="product-card__info-article">00001</span>
-													<span class="_icon-info"></span>
-												</div>
-												<div class="product-card-row__available available">
-													<div class="available__text">Доступно:<span class="available__value">321
-															шт</span>
-													</div>
-												</div>
-											</div>
-											<div class="product-card-row__price-sum">
-												<div class="product-card__price product-card-row__price">
-													<div class="product-card-row__value value-card">
-														<div class="value-card__price">
-															<span class="value-card__price-span">180<sup class="value-card__price-sup">00
-																</sup><span class="rub">P</span>
-																<span class="value-card__price-sub">/шт</span>
-															</span>
-														</div>
-														<!-- <div class="value-card__old-price">
-																			<span class="value-card__old-price-span">180<sup
-																					class="value-card__old-price-sup">00
-																				</sup><span class="old-rub">P</span>
-																				<span class="value-card__old-price-sub">/шт</span>
-																			</span>
-																		</div> -->
-													</div>
-												</div>
-												<div class="product-card-row__sum sum"><span class="value-card__price-span">180<sup class="value-card__price-sup">00</sup><span class="rub">P</span></span>
-												</div>
-											</div>
-											<div class="product-card-row__info-actions">
-												<span data-tippy-content="В ОПТ коробке - 30 шт" class="product-card-row__info">Дополнительная
-													информация</span>
-												<div class="product-card-row__actions">
-													<a href="" class="product-card-row__favorite _icon-favorite"></a>
-													<a href="" class="product-card-row__delete _icon-delete"></a>
-												</div>
-											</div>
-										</div>
-									</article>
-
-									<article class="product-card-row">
-										<a href="description-goods.html" class="product-card-row__image">
-											<span class="product-card-row__item">
-												<picture><source srcset="img/products/sibAgro/doctorskaya_SA.webp" type="image/webp"><img src="img/products/sibAgro/doctorskaya_SA.png" alt="doctorskaya_SA"></picture>
-											</span>
-											<span class="icon-card-lt icon-card-span"></span>
-											<span class="icon-card-lb icon-card-span"></span>
-											<span class="icon-card-rt icon-card-span"></span>
-											<span class="icon-card-rb icon-card-span"></span>
-										</a>
-										<div class="product-card-row__body">
-											<div class="product-card-row__title-quantity">
-												<a href="description-goods.html" class="product-card-row__link-title">Колбаса
-													вареная
-													“СибАгро” Докторская 450г</a>
-												<div class="quantity">
-													<button type="button" class="quantity__button quantity__button_plus"></button>
-													<div class="quantity__input">
-														<input autocomplete="off" type="text" name="form[]" value="1">
-													</div>
-													<button type="button" class="quantity__button quantity__button_minus"></button>
-												</div>
-											</div>
-											<div class="product-card-row__article-available">
-												<div class="product-card-row__article product-card__article">
-													<span class="product-card__info-article">00001</span>
-													<span class="_icon-info"></span>
-												</div>
-												<div class="product-card-row__available available">
-													<div class="available__text">Доступно:<span class="available__value">321
-															шт</span>
-													</div>
-												</div>
-											</div>
-											<div class="product-card-row__price-sum">
-												<div class="product-card__price product-card-row__price">
-													<div class="product-card-row__value value-card">
-														<div class="value-card__price">
-															<span class="value-card__price-span">180<sup class="value-card__price-sup">00
-																</sup><span class="rub">P</span>
-																<span class="value-card__price-sub">/шт</span>
-															</span>
-														</div>
-														<!-- <div class="value-card__old-price">
-																			<span class="value-card__old-price-span">180<sup
-																					class="value-card__old-price-sup">00
-																				</sup><span class="old-rub">P</span>
-																				<span class="value-card__old-price-sub">/шт</span>
-																			</span>
-																		</div> -->
-													</div>
-												</div>
-												<div class="product-card-row__sum sum"><span class="value-card__price-span">180<sup class="value-card__price-sup">00</sup><span class="rub">P</span></span>
-												</div>
-											</div>
-											<div class="product-card-row__info-actions">
-												<span data-tippy-content="В ОПТ коробке - 30 шт" class="product-card-row__info">Дополнительная
-													информация</span>
-												<div class="product-card-row__actions">
-													<a href="" class="product-card-row__favorite _icon-favorite"></a>
-													<a href="" class="product-card-row__delete _icon-delete"></a>
-												</div>
-											</div>
-										</div>
-									</article>
-
-								</div>
-							</div>
 						</div>
 					</div>
 				</div>
@@ -1608,7 +1443,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20230413173053"></script>
+	<script src="js/app.min.js?_v=20230414174111"></script>
 </body>
 
 </html>

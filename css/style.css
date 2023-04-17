@@ -6012,6 +6012,13 @@ body::after {
 }
 
 .ordering-form__delivery-time input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
   color: #a6a2a2;
   font-weight: 300;
 }

@@ -5923,11 +5923,7 @@ body::after {
   font-size: 1rem;
 }
 
-.ordering-form__pickup_block {
-  display: none;
-}
-
-.ordering-form__delivery_block {
+.ordering-form__delivery_item {
   display: none;
 }
 

@@ -6,9 +6,9 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230417102611">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230417171746">
 	<link rel="shortcut icon" href="favicon.ico">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js?_v=20230417102611"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js?_v=20230417171746"></script>
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -752,7 +752,7 @@
 												</option>
 												<option value="1">Юридическое лицо 1</option>
 												<option value="2">Юридическое лицо 2</option>
-												<option value="3">Физическое лицо</option>
+												<!-- <option value="3">Физическое лицо</option> -->
 											</select>
 										</div>
 									</div>
@@ -763,22 +763,6 @@
 											<span class="ordering-form__title-text">Способы доставки</span>
 										</div>
 										<div class="ordering-form__delivery">
-											<select data-required data-error="Введите ФИО" data-validate data-class-modif="ordering-sel" name="formDelivery">
-												<option data-class="option-placeholder" value="" selected>Выберите способ доставки
-												</option>
-												<option value="1">Доставка компании Аниса (для юр. лиц)</option>
-												<option value="2">Яндекс доставка (для физ. лиц)</option>
-											</select>
-										</div>
-									</div>
-
-									<div id="orderCheckbox" class="ordering-form__item">
-										<div class="ordering-form__title">
-											<span class="ordering-form__title-number">4</span>
-											<span class="ordering-form__title-text">Место получения заказа</span>
-										</div>
-
-										<div class="ordering-form__pickup">
 											<div class="ordering-form__delivery-checkbox">
 												<div class="ordering-form__checkbox checkbox">
 													<input id="formPickup" class="checkbox__input" type="checkbox" value="1" name="formPickup">
@@ -788,7 +772,28 @@
 													</label>
 												</div>
 											</div>
-											<div id="orderPickup" class="ordering-form__pickup_block">
+
+											<div class="ordering-form__delivery-checkbox">
+												<div class="ordering-form__checkbox checkbox">
+													<input id="formDelivery" class="checkbox__input" type="checkbox" value="1" name="formPickup">
+													<label for="formDelivery" class="ordering-form__checkbox-label checkbox__label">
+														<span class="ordering-form__checkbox-text checkbox__text">Доставить по
+															адресу</span>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div id="orderCheckbox" class="ordering-form__item">
+										<div class="ordering-form__title">
+											<span class="ordering-form__title-number">4</span>
+											<span class="ordering-form__title-text">Место получения заказа</span>
+										</div>
+
+
+										<div id="group" class="ordering-form__delivery">
+											<div id="selectPickup" class="ordering-form__delivery_item">
 												<div class="ordering-form__list">
 													<div class="ordering-form__inputs ordering-form__inputs-address">
 														<select data-required data-error="Выберите адрес" data-validate data-class-modif="orderibg-location" name="formLocation">
@@ -805,18 +810,8 @@
 													</div>
 												</div>
 											</div>
-										</div>
-										<div class="ordering-form__delivery">
-											<div class="ordering-form__delivery-checkbox">
-												<div class="ordering-form__checkbox checkbox">
-													<input id="formDelivery" class="checkbox__input" type="checkbox" value="1" name="formPickup">
-													<label for="formDelivery" class="ordering-form__checkbox-label checkbox__label">
-														<span class="ordering-form__checkbox-text checkbox__text">Доставить по
-															адресу</span>
-													</label>
-												</div>
-											</div>
-											<div id="orderDelivery" class="ordering-form__delivery_block">
+
+											<div id="selectDelivery" class="ordering-form__delivery_item">
 												<div class="ordering-form__list">
 													<div class="ordering-form__inputs ordering-form__inputs-address">
 														<input data-required data-error="Введите адрес доставки" data-validate autocomplete="off" id="formAddress" type="text" name="address" placeholder="Адрес доставки" class="ordering-form__input input">
@@ -840,7 +835,7 @@
 												</option>
 												<!-- <option value="1">Отсрочка платежа</option> -->
 												<option value="2">Оплата на сайте банковской картой</option>
-												<option value="3">Оплата при получении (карта или наличные)</option>
+												<option value="3">Оплата при получении (наличные)</option>
 											</select>
 										</div>
 									</div>
@@ -1443,7 +1438,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20230417102611"></script>
+	<script src="js/app.min.js?_v=20230417171746"></script>
 </body>
 
 </html>

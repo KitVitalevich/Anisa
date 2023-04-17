@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-	<title>Аниса - О нас</title>
+	<title>Аниса - Оформление заказа</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -696,95 +696,215 @@
 					<nav class="page-breadcrumbs breadcrumbs">
 						<ul class="breadcrumbs__list">
 							<li class="breadcrumbs__item"><a href="home.html" class="breadcrumbs__link">Главная</a></li>
+							<li class="breadcrumbs__item"><a href="basket-goods.html" class="breadcrumbs__link">Корзина</a>
 							</li>
-							<span class="breadcrumbs__current">О нас</span>
+							<span class="breadcrumbs__current">Оформление заказа</span>
 						</ul>
 					</nav>
-					<h1 class="page__title title">О нас</h1>
+					<h1 class="page__title title">Оформление заказа</h1>
 				</div>
 			</div>
 
-			<div class="about">
-				<div class="about__container">
-					<div class="about__wrapper">
-						<div class="about__ourway ourway-about">
-							<div class="ourway-about__title">Наш путь</div>
-							<div class="ourway-about__body">
-								<div class="ourway-about__discription">
-									<p>Компания “АНИСА” начала свою работу в 1998 году, и занималась поставками колбасных изделий
-										и мясных деликатесов в торговые точки г. Новосибирска.
-									</p>
-									<p>Деятельность компании была направлена на расширение как ассортимента продукции,
-										поставляемой в розничные торговые точки, так и географии продаж.</p>
-									<p>Ставя перед собой амбициозные цели и имея профессиональный штат сотрудников, оборудованные
-										складские площади (поддерживающие температурные режимы +4С˚ +8С˚ / - 18С˚ -20С˚), парк
-										собственной автотехники – мы получили и являемся держателями дистрибьюторских контрактов
-										таких именитых компаний, как Кудряшевский Мясокомбинат, ГК «Талина» /Атяшево, Омский
-										Бекон, ВиммБилльДанн и осуществляем системные поставки продукции по всей территории г.
-										Новосибирска и Новосибирской области.</p>
-									<p>В настоящее время компания "АНИСА" работает многопрофильно, поставляя не только колбасные
-										изделия и мясные деликатесы, а также молочные продукты, сыры, масло, майонез, рыбные
-										пресервы, кондитерские изделия, безалкогольные напитки и полуфабрикаты.</p>
+			<div class="ordering">
+				<div class="ordering__container">
+					<div class="ordering__wrapper">
+						<div class="ordering__checkout">
+
+							<form data-dev data-one-select method="POST" data-popup-message="#popup-ordering" action="#" class="ordering-form">
+								<div class="ordering__form">
+									<div class="ordering-form__item">
+										<div class="ordering-form__title">
+											<span class="ordering-form__title-number">1</span>
+											<span class="ordering-form__title-text">Контактные данные получателя</span>
+										</div>
+										<!-- <div class="ordering-form__matches-profile">
+											<div class="ordering-form__checkbox checkbox">
+												<input id="matches-profile" class="checkbox__input" type="checkbox" value="1"
+													name="form[]">
+												<label for="matches-profile" class="ordering-form__checkbox-label checkbox__label">
+													<span class="ordering-form__checkbox-text checkbox__text">Совпадает с данными
+														профиля</span>
+												</label>
+											</div>
+										</div> -->
+										<div class="ordering-form__list">
+											<div class="ordering-form__inputs ordering-form__inputs-name">
+												<input data-required data-error="Введите ФИО" data-validate autocomplete="off" id="formName" type="text" name="name" placeholder="ФИО" class="ordering-form__input input">
+											</div>
+											<div class="ordering-form__inputs ordering-form__inputs-tel">
+												<input data-inputmask="'mask': '+7 (999) 999 - 99 - 99'" data-required="tel" data-error="Введен не верный телефон" data-validate autocomplete="off" id="formTel" type="tel" name="tel" placeholder="Номер телефона" class="ordering-form__input input">
+											</div>
+											<div class="ordering-form__inputs ordering-form__inputs-email">
+												<input data-required="email" data-error="Введен не верный E-mail" data-validate autocomplete="off" id="formEmail" type="email" name="email" placeholder="Эл. почта" class="ordering-form__input input">
+											</div>
+										</div>
+									</div>
+
+									<div class="ordering-form__item">
+										<div class="ordering-form__title">
+											<span class="ordering-form__title-number">2</span>
+											<span class="ordering-form__title-text">Способы доставки</span>
+										</div>
+										<div class="ordering-form__delivery">
+											<div class="ordering-form__delivery-checkbox">
+												<div class="ordering-form__checkbox checkbox">
+													<input id="formPickup" class="checkbox__input" type="checkbox" value="1" name="formPickup">
+													<label for="formPickup" class="ordering-form__checkbox-label checkbox__label">
+														<span class="ordering-form__checkbox-text checkbox__text">Заберу товар
+															самостоятельно</span>
+													</label>
+												</div>
+											</div>
+
+											<div class="ordering-form__delivery-checkbox">
+												<div class="ordering-form__checkbox checkbox">
+													<input id="formDelivery" class="checkbox__input" type="checkbox" value="1" name="formPickup">
+													<label for="formDelivery" class="ordering-form__checkbox-label checkbox__label">
+														<span class="ordering-form__checkbox-text checkbox__text">Доставить по
+															адресу</span>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div id="orderCheckbox" class="ordering-form__item">
+										<div class="ordering-form__title">
+											<span class="ordering-form__title-number">3</span>
+											<span class="ordering-form__title-text">Место получения заказа</span>
+										</div>
+
+
+										<div id="group" class="ordering-form__delivery">
+											<div id="selectPickup" class="ordering-form__delivery_item">
+												<div class="ordering-form__list">
+													<div class="ordering-form__inputs ordering-form__inputs-address">
+														<select data-required data-error="Выберите адрес" data-validate data-class-modif="orderibg-location" name="formLocation">
+															<option data-class="option-placeholder" value="" selected>Выберите склад
+																для самовывоза</option>
+															<option value="1">г. Новосибирск, ул. Выборная 186</option>
+															<option value="2"> г. Куйбышев, ул. Промзона 5а</option>
+															<option value="3">г. Омск, ул. И. Н. Багнюка 15/2</option>
+															<option value="4">г. Карасук, ул. Калинина 78</option>
+														</select>
+													</div>
+													<div class="ordering-form__delivery-time">
+														<input data-required data-error="Выберите дату" data-validate autocomplete="off" type="date" name="formDate" placeholder="Дата доставки" class="ordering-form__input input">
+													</div>
+												</div>
+											</div>
+
+											<div id="selectDelivery" class="ordering-form__delivery_item">
+												<div class="ordering-form__list">
+													<div class="ordering-form__inputs ordering-form__inputs-address">
+														<input data-required data-error="Введите адрес доставки" data-validate autocomplete="off" id="formAddress" type="text" name="address" placeholder="Адрес доставки" class="ordering-form__input input">
+													</div>
+													<div class="ordering-form__delivery-time">
+														<input data-required data-error="Выберите дату" data-validate autocomplete="off" type="date" name="formDate" placeholder="Дата доставки" class="ordering-form__input input">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="ordering-form__item">
+										<div class="ordering-form__title">
+											<span class="ordering-form__title-number">4</span>
+											<span class="ordering-form__title-text">Способы оплаты</span>
+										</div>
+										<div class="ordering-form__payment">
+											<select data-required data-error="Введите ФИО" data-validate data-class-modif="ordering-sel" name="form[]">
+												<option data-class="option-placeholder" value="" selected>Выберите способ оплаты
+												</option>
+												<!-- <option value="1">Отсрочка платежа</option> -->
+												<option value="2">Оплата на сайте банковской картой</option>
+												<!-- <option value="3">Оплата при получении (наличные)</option> -->
+											</select>
+										</div>
+									</div>
+
+									<div class="ordering-form__item">
+										<div class="ordering-form__title">
+											<span class="ordering-form__title-text">Комментарий к заказу</span>
+										</div>
+										<div class="ordering-form__inputs">
+											<textarea name="message" id="formMessage" class="ordering-form__input-message input" placeholder="Ваш комментарий" cols="10" rows="5"></textarea>
+										</div>
+									</div>
 								</div>
-							</div>
-						</div>
-						<div class="about__advantage advantage-about">
-							<div class="advantage-about__title">Преимущества работы с нашей компанией
-							</div>
-							<div class="advantage-about__body">
-								<div class="advantage-about__items">
-									<div class="advantage-about__item _icon-basket">Мы предлагаем широкий ассортимент продукции
-										различных
-										торговых марок, высокооборачиваемость которых проверена временем и гарантирует Вашей
-										компании стабильную прибыль.</div>
-									<div class="advantage-about__item _icon-sale">Гибкую ценовую политику, рассчитанную на
-										долговременное
-										сотрудничество.
+
+								<div class="ordering__side">
+									<div class="side-basket">
+
+										<div class="side-basket__content">
+											<div class="side-basket__title"><span class="side-basket__title-big">3</span> товара в
+												корзине
+											</div>
+											<div class="side-basket__price">
+												<div class="side-basket__item">
+													<div class="side-basket__label">Общий вес:</div>
+													<div class="side-basket__value">4.9 кг</div>
+												</div>
+												<div class="side-basket__item">
+													<div class="side-basket__label">Цена без скидки:</div>
+													<div class="side-basket__value">
+														<div class="value-card__price">
+															<span class="value-card__price-value _icon-rub">1895.00</span>
+														</div>
+													</div>
+												</div>
+												<div class="side-basket__item">
+													<div class="side-basket__label">Скидка:</div>
+													<div class="side-basket__value">
+														<span class="value-card__price-value _icon-rub">148.00</span>
+													</div>
+												</div>
+												<div class="side-basket__item">
+													<div class="side-basket__label-total">Итого:</div>
+													<div class="side-basket__value-total">
+														<span class="value-card__price-value _icon-rub">1747.00</span>
+													</div>
+												</div>
+											</div>
+											<button type="submit" class="side-basket__btn button">Оформить заказ</button>
+											<div class="side-basket__policy">Нажимая кнопку, я соглашаюсь с <a href="" class="link-info">политикой конфиденциальности</a> и <a href="" class="link-info">возврата</a>
+											</div>
+										</div>
+										<div class="horizont-line"><span></span></div>
+										<div class="side-basket__description">
+											<div class="side-basket__text">Стоимость корзины рассчитана исходя
+												из выбранного веса. Окончательная цена может отличаться в меньшую или большую
+												сторону и
+												будет
+												отражена в кассовом чеке.
+											</div>
+											<div class="side-basket__text">Обращаем ваше внимание,
+												что самовывоз алкогольной продукции осуществляется в соответствии
+												с действующими в вашем регионе ограничениями по времени продажи.
+											</div>
+											<div class="side-basket__text">Сервис работает как для физических, так
+												и для юридических лиц. Для покупки
+												в качестве юридического лица: зарегистрируйтесь на сайте, обратитесь
+												к своему личному менеджеру или по адресу <a href="" class="link-info">anisa@anisa.group</a>
+											</div>
+										</div>
+
 									</div>
-									<div class="advantage-about__item _icon-full-range">Бесперебойную поставку и наличие полного
-										ассортимента.
-									</div>
-									<div class="advantage-about__item _icon-documents">Обеспечение всеми необходимыми документами
-										(сертификаты,
-										удостоверения о качестве, счета - фактуры, ГТД, товаросопроводительные документы, кассовые
-										чеки).</div>
-									<div class="advantage-about__item _icon-work-time">Удобный график работы.
-									</div>
-									<div class="advantage-about__item _icon-advantage-delivery">Осуществление логистики по
-										Новосибирской и Омской
-										областях, сотрудничество со всеми транспортными компаниями и отправка в другие регионы
-										России.</div>
-									<div class="advantage-about__item _icon-human">Квалифицированный персонал и индивидуальный
-										подход.
-									</div>
-									<div class="advantage-about__item _icon-advantage-sale">Проведение ежемесячных акций в целях
-										стимулирования продаж
-										и привлечения новых покупателей.</div>
-									<div class="advantage-about__item _icon-flag">Обеспечение торговых точек оригинальными и
-										качественными
-										POS - материалами.
-									</div>
-									<div class="advantage-about__item _icon-operator">Осуществление мероприятий и консультаций в
-										области
-										мерчендайзинга.
-									</div>
-									<div class="advantage-about__item _icon-growth">Оказание поддержки в решении любых вопросов,
-										направленных
-										на увеличение продаж.</div>
-									<div class="advantage-about__item _icon-secure">Прием оплаты в любом виде, при стабильной
-										работе возможна
-										отсрочка платежа</div>
-									<div class="advantage-about__item _icon-location">Центральный офис и главный склад на одной
-										территории.
-									</div>
-									<div class="advantage-about__item _icon-piggy-bank">Экономия денег.</div>
+									<!-- <div class="side__debt">
+										<div class="side__debt-it">После оформления заказа задолжность составит <span
+												class="value-card__price-span">1747<sup class="value-card__price-sup">00
+												</sup></span>
+										</div>
+										<div class="side__debt-off">следует погасить до 21.12.2022</div>
+									</div> -->
 								</div>
-							</div>
+							</form>
+
+
 						</div>
 					</div>
 				</div>
 			</div>
-
 		</main>
 		<footer class="footer">
 			<div class="footer__container">

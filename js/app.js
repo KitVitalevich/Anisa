@@ -16365,10 +16365,10 @@
             if ($(this).is(":checked")) $("#organizationName").show(100); else $("#organizationName").hide(100);
         }));
         $("#formPickup").click((function() {
-            if ($(this).is(":checked")) $("#orderPickup").show(100); else $("#orderPickup").hide(100);
+            if ($(this).is(":checked")) $("#selectPickup").show(100); else $("#selectPickup").hide(100);
         }));
         $("#formDelivery").click((function() {
-            if ($(this).is(":checked")) $("#orderDelivery").show(100); else $("#orderDelivery").hide(100);
+            if ($(this).is(":checked")) $("#selectDelivery").show(100); else $("#selectDelivery").hide(100);
         }));
         $("#formPickup").click((function() {
             if ($(this).is(":checked")) $("#formDelivery").attr("disabled", "disabled"); else $("#formDelivery").removeAttr("disabled");

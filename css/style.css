@@ -739,7 +739,6 @@ textarea.input {
 }
 
 .select_massage-callback .select__content {
-  margin-bottom: 0.4375rem;
   font-weight: 300;
   letter-spacing: 0.1em;
   color: #a6a2a2;
@@ -1934,10 +1933,13 @@ body::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-column-gap: 0.3125rem;
      -moz-column-gap: 0.3125rem;
           column-gap: 0.3125rem;
-  margin-bottom: 0.625rem;
+  margin-bottom: 1.25rem;
 }
 
 .organization-callback {
@@ -5996,6 +5998,13 @@ body::after {
 }
 
 .ordering-form__delivery-time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
   position: relative;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 0px;
@@ -6203,7 +6212,7 @@ body::after {
           flex-direction: column;
   gap: 1.25rem;
   padding: 0.9375rem;
-  border: 1px solid #a6a2a2;
+  border: 1px solid #e7e2e2;
   border-radius: 0.625rem;
 }
 
@@ -6455,6 +6464,7 @@ body::after {
   -webkit-transition: all 0.2s ease 0s;
   -o-transition: all 0.2s ease 0s;
   transition: all 0.2s ease 0s;
+  color: #a6a2a2;
 }
 
 .side-b2b__wrapper {

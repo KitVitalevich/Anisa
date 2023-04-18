@@ -5945,6 +5945,17 @@ body::after {
   transition: all 0.3s ease 0s;
 }
 
+.ordering-form__list_deliveryYandex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.25rem;
+}
+
 .ordering-form__delivery-checkbox {
   margin: 0px 0px 0.9375rem 0px;
 }
@@ -5961,6 +5972,25 @@ body::after {
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+}
+
+.ordering-form__inputs_apartment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 1.25rem;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.ordering-form .input_apartment {
+  width: 100%;
+  position: relative;
 }
 
 .ordering-form__input-message {
@@ -6017,6 +6047,7 @@ body::after {
   width: 100%;
   color: #a6a2a2;
   font-weight: 300;
+  cursor: pointer;
 }
 
 .side__debt {
@@ -11572,6 +11603,13 @@ body::after {
   }
 
   .product-card-row__title-quantity {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .ordering-form__inputs_apartment {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;

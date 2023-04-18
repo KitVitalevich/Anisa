@@ -6,9 +6,9 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230417172131">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230418152302">
 	<link rel="shortcut icon" href="favicon.ico">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js?_v=20230417172131"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js?_v=20230418152302"></script>
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -717,25 +717,15 @@
 											<span class="ordering-form__title-number">1</span>
 											<span class="ordering-form__title-text">Контактные данные получателя</span>
 										</div>
-										<!-- <div class="ordering-form__matches-profile">
-											<div class="ordering-form__checkbox checkbox">
-												<input id="matches-profile" class="checkbox__input" type="checkbox" value="1"
-													name="form[]">
-												<label for="matches-profile" class="ordering-form__checkbox-label checkbox__label">
-													<span class="ordering-form__checkbox-text checkbox__text">Совпадает с данными
-														профиля</span>
-												</label>
-											</div>
-										</div> -->
 										<div class="ordering-form__list">
 											<div class="ordering-form__inputs ordering-form__inputs-name">
-												<input data-required data-error="Введите ФИО" data-validate autocomplete="off" id="formName" type="text" name="name" placeholder="ФИО" class="ordering-form__input input">
+												<input data-required data-error="Введите ФИО" data-validate autocomplete="off" id="formName" type="text" name="name" placeholder="ФИО*" class="ordering-form__input input">
 											</div>
 											<div class="ordering-form__inputs ordering-form__inputs-tel">
-												<input data-inputmask="'mask': '+7 (999) 999 - 99 - 99'" data-required="tel" data-error="Введен не верный телефон" data-validate autocomplete="off" id="formTel" type="tel" name="tel" placeholder="Номер телефона" class="ordering-form__input input">
+												<input data-inputmask="'mask': '+7 (999) 999 - 99 - 99'" data-required="tel" data-error="Введен не верный телефон" data-validate autocomplete="off" id="formTel" type="tel" name="tel" placeholder="Номер телефона*" class="ordering-form__input input">
 											</div>
 											<div class="ordering-form__inputs ordering-form__inputs-email">
-												<input data-required="email" data-error="Введен не верный E-mail" data-validate autocomplete="off" id="formEmail" type="email" name="email" placeholder="Эл. почта" class="ordering-form__input input">
+												<input data-required="email" data-error="Введен не верный E-mail" data-validate autocomplete="off" id="formEmail" type="email" name="email" placeholder="Эл. почта*" class="ordering-form__input input">
 											</div>
 										</div>
 									</div>
@@ -781,7 +771,7 @@
 													<div class="ordering-form__inputs ordering-form__inputs-address">
 														<select data-required data-error="Выберите адрес" data-validate data-class-modif="orderibg-location" name="formLocation">
 															<option data-class="option-placeholder" value="" selected>Выберите склад
-																для самовывоза</option>
+																для самовывоза*</option>
 															<option value="1">г. Новосибирск, ул. Выборная 186</option>
 															<option value="2"> г. Куйбышев, ул. Промзона 5а</option>
 															<option value="3">г. Омск, ул. И. Н. Багнюка 15/2</option>
@@ -789,21 +779,30 @@
 														</select>
 													</div>
 													<div class="ordering-form__delivery-time">
-														<input data-required data-error="Выберите дату" data-validate autocomplete="off" type="date" name="formDate" placeholder="Дата доставки" class="ordering-form__input input">
+														<input data-required data-error="Выберите дату" data-validate autocomplete="off" type="date" name="formDate" placeholder="Дата доставки*" class="ordering-form__input input">
 													</div>
 												</div>
 											</div>
 
 											<div id="selectDelivery" class="ordering-form__delivery_item">
-												<div class="ordering-form__list">
-													<div class="ordering-form__inputs ordering-form__inputs-address">
-														<input data-required data-error="Введите адрес доставки" data-validate autocomplete="off" id="formAddress" type="text" name="address" placeholder="Адрес доставки" class="ordering-form__input input">
+												<div class="ordering-form__list_deliveryYandex">
+													<div class="ordering-form__inputs">
+														<input data-required data-error="Введите адрес доставки" data-validate autocomplete="off" id="formAddress" type="text" name="address" placeholder="Адрес доставки*" class="ordering-form__input input">
 													</div>
-													<!-- <div class="ordering-form__delivery-time">
-														<input data-required data-error="Выберите дату" data-validate
-															autocomplete="off" type="date" name="formDate" placeholder="Дата доставки"
-															class="ordering-form__input input">
-													</div> -->
+													<div class="ordering-form__checkbox checkbox">
+														<input id="privateHouse" class="checkbox__input" type="checkbox" value="1" name="privateHouse">
+														<label for="privateHouse" class="ordering-form__checkbox-label checkbox__label">
+															<span class="ordering-form__checkbox-text checkbox__text">Частный
+																дом</span>
+														</label>
+													</div>
+													<div class="ordering-form__inputs ordering-form__inputs_apartment">
+														<input autocomplete="off" id="formAddress" type="text" name="entrance" placeholder="Подъезд" class="ordering-form__input input">
+														<input autocomplete="off" id="formAddress" type="text" name="Floor" placeholder="Этаж" class="ordering-form__input input">
+														<div id="apartment" class="input_apartment">
+															<input id="apartment" data-required data-error="Укажите квартиру" data-validate autocomplete="off" id="formAddress" type="text" name="apartment" placeholder="Кв./Оф.*" class="ordering-form__input input">
+														</div>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -816,9 +815,8 @@
 										</div>
 										<div class="ordering-form__payment">
 											<select data-required data-error="Введите ФИО" data-validate data-class-modif="ordering-sel" name="form[]">
-												<option data-class="option-placeholder" value="" selected>Выберите способ оплаты
+												<option data-class="option-placeholder" value="" selected>Выберите способ оплаты*
 												</option>
-												<!-- <option value="1">Отсрочка платежа</option> -->
 												<option value="2">Оплата на сайте банковской картой</option>
 												<!-- <option value="3">Оплата при получении (наличные)</option> -->
 											</select>
@@ -1423,7 +1421,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20230417172131"></script>
+	<script src="js/app.min.js?_v=20230418152302"></script>
 </body>
 
 </html>

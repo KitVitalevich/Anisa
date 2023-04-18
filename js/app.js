@@ -16370,6 +16370,9 @@
         $("#formDelivery").click((function() {
             if ($(this).is(":checked")) $("#selectDelivery").show(100); else $("#selectDelivery").hide(100);
         }));
+        $("#privateHouse").click((function() {
+            if ($(this).is(":checked")) $("#apartment").hide(100); else $("#apartment").show(100);
+        }));
         $("#formPickup").click((function() {
             if ($(this).is(":checked")) $("#formDelivery").attr("disabled", "disabled"); else $("#formDelivery").removeAttr("disabled");
         }));

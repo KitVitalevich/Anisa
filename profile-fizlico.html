@@ -6,9 +6,9 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230424162949">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230425164213">
 	<link rel="shortcut icon" href="favicon.ico">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js?_v=20230424162949"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js?_v=20230425164213"></script>
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -997,7 +997,7 @@
 	</div>
 
 
-	<!-- Форма добавления адреса доставки -->
+	<!-- Форма добавления адреса доставки физ. лиц -->
 	<div id="popup-address" aria-hidden="true" class="popup popup-address">
 		<div class="popup__wrapper popup-address__wrapper">
 			<div class="popup__content popup-address__content">
@@ -1006,8 +1006,49 @@
 					<h1 class="popup-address__title popup__title">Добавить адрес доставки</h1>
 				</div>
 				<div class="popup-address__body popup__body">
-					<form data-ajax method="POST" action="kit.vitalevich@yandex.ru" class="popup-address__form form-popup form-popup-address">
+					<form data-ajax method="POST" action="#" class="popup-address__form form-popup form-popup-address">
 						<div class="form-popup__item form-popup-address__item">
+							<div class="form-popup-address__column-big">
+								<input data-required data-validate autocomplete="off" type="text" name="form[]" placeholder="Страна" class="form-popup-address__input-small input">
+								<input data-required data-validate autocomplete="off" type="text" name="form[]" placeholder="Область" class="form-popup-address__input-small input">
+								<input data-da=".form-popup-address__column-small, 479.98, 1" data-required data-validate autocomplete="off" type="text" name="form[]" placeholder="Улица" class="form-popup-address__input-big input">
+							</div>
+
+							<div class="form-popup-address__column-small">
+								<input data-required data-validate autocomplete="off" type="text" name="form[]" placeholder="Город" class="form-popup-address__input-big input">
+								<input data-required data-validate autocomplete="off" type="text" name="form[]" placeholder="Дом" class="form-popup-address__input-small input">
+								<input data-required data-validate autocomplete="off" type="text" name="form[]" placeholder="Кв/Офис" class="form-popup-address__input-small input">
+							</div>
+						</div>
+						<button type="submit" class="form-popup-address__button button">Добавить</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Форма добавления адреса доставки юр. лиц -->
+	<div id="popup-address-organization" aria-hidden="true" class="popup popup-address">
+		<div class="popup__wrapper popup-address__wrapper">
+			<div class="popup__content popup-address__content">
+				<button data-close type="button" class="popup__close popup-address__close _icon-exet"></button>
+				<div class="popup-address__title-block popup__title-block">
+					<h1 class="popup-address__title popup__title">Добавить адрес доставки</h1>
+				</div>
+				<div class="popup-address__body popup__body">
+					<form data-ajax method="POST" action="#" class="popup-address__form form-popup form-popup-address">
+						<div class="form-popup__item form-popup-address__item-organization">
+							<div class="form-popup-address__column-organization">
+								<select data-required data-validate data-class-modif="add-organization" name="formAddOrganization">
+									<option data-class="option-placeholder" value="" selected>Выберите организацию к которой будет
+										добавлен адрес доставки</option>
+									<option value="1">ООО "Альфа-Сервис"</option>
+									<!-- <option value="2">Пункт №3</option>
+								<option value="3">Пункт №4</option> -->
+								</select>
+							</div>
+
 							<div class="form-popup-address__column-big">
 								<input data-required data-validate autocomplete="off" type="text" name="form[]" placeholder="Страна" class="form-popup-address__input-small input">
 								<input data-required data-validate autocomplete="off" type="text" name="form[]" placeholder="Область" class="form-popup-address__input-small input">
@@ -1037,7 +1078,7 @@
 					<h1 class="popup-registration__title popup__title">Регистрация</h1>
 				</div>
 				<div class="popup-registration__body popup__body">
-					<form data-ajax action="kit.vitalevich@yandex.ru" method="POST" class="popup-registration__form form-popup form-popup-registration">
+					<form data-ajax action="#" method="POST" class="popup-registration__form form-popup form-popup-registration">
 						<div class="form-popup-registration__inp form-popup__input">
 							<input data-required data-validate autocomplete="off" type="text" id="formName" name="formName" data-error="Введите ФИО" placeholder="ФИО" class="form-popup-registration__input input">
 						</div>
@@ -1074,7 +1115,7 @@
 					<a href="" data-popup="#popup-authorizationTel" class="popup-authorizationEmail__entry-tel underline-line">Войти через телефон</a>
 				</div>
 
-				<form data-ajax method="POST" action="kit.vitalevich@yandex.ru" class="popup-authorizationEmail__form popup__body form-popup-authorizationEmail">
+				<form data-ajax method="POST" action="#" class="popup-authorizationEmail__form popup__body form-popup-authorizationEmail">
 					<div class="form-popup-authorizationEmail__input-list">
 						<div class="form-popup-authorizationEmail__inputs">
 							<div class="form-popup-authorizationEmail__inp form-popup__input">
@@ -1113,7 +1154,7 @@
 					<a href="" data-popup="#popup-authorizationEmail" class="popup-authorizationTel__entry-tel underline-line">Войти через эл. почту</a>
 				</div>
 
-				<form data-ajax method="POST" action="kit.vitalevich@yandex.ru" class="popup-authorizationTel__form popup__body form-popup-authorizationTel">
+				<form data-ajax method="POST" action="#" class="popup-authorizationTel__form popup__body form-popup-authorizationTel">
 					<div class="form-popup-authorizationTel__input-list">
 						<div class="form-popup-authorizationTel__inputs">
 							<div class="form-popup-authorizationTel__inp form-popup__input">
@@ -1163,7 +1204,7 @@
 				<div class="popup-restorePasswordTel__title-block popup__title-block">
 					<h1 class="popup-restorePasswordTel__title popup__title">Восстановить пароль</h1>
 				</div>
-				<form data-ajax method="POST" action="kit.vitalevich@yandex.ru" class="popup-restorePasswordTel__form popup__body form-popup-restorePasswordTel">
+				<form data-ajax method="POST" action="#" class="popup-restorePasswordTel__form popup__body form-popup-restorePasswordTel">
 					<div class="form-popup-restorePasswordTel__inp form-popup__input">
 						<input data-required data-validate data-inputmask="'mask': '+7 (999) 999 - 99 - 99'" autocomplete="off" type="tel" id="formTel" name="formTel" data-error="Введен не верный телефон" placeholder="Телефон" class=" form-popup-restorePasswordTel__input input">
 					</div>
@@ -1183,7 +1224,7 @@
 				<div class="popup-restorePasswordEmail__title-block popup__title-block">
 					<h1 class="popup-restorePasswordEmail__title popup__title">Восстановить пароль</h1>
 				</div>
-				<form data-ajax method="POST" action="kit.vitalevich@yandex.ru" class="popup-restorePasswordEmail__form popup__body form-popup-restorePasswordEmail">
+				<form data-ajax method="POST" action="#" class="popup-restorePasswordEmail__form popup__body form-popup-restorePasswordEmail">
 					<div class="form-popup-restorePasswordEmail__inp form-popup__input">
 						<input data-required data-validate autocomplete="off" type="email" id="formEmail" name="formEmail" data-error="Введите электронную почту" placeholder="Эл. почта" class="form-popup-authorizationEmail__input input">
 					</div>
@@ -1221,7 +1262,7 @@
 				</div>
 				<div class="popup-restoreNotificationTel__text">На номер <span>+7 (923) 143-27-72</span> отправлено СМС
 					сообщение с секретным кодом</div>
-				<form data-ajax method="POST" action="kit.vitalevich@yandex.ru" class="popup-restoreNotificationTel__form popup__body form-popup-restoreNotificationTel">
+				<form data-ajax method="POST" action="#" class="popup-restoreNotificationTel__form popup__body form-popup-restoreNotificationTel">
 					<div class="form-popup-restoreNotificationTel__inp form-popup__input">
 						<input data-required data-validate data-inputmask="'mask': '9 9 9 9'" autocomplete="off" type="tel" id="formCode" name="formCode" data-error="Введите код" placeholder="_ _ _ _" class=" form-popup-restoreNotificationTel__input-code input">
 					</div>
@@ -1244,7 +1285,7 @@
 					<h1 class="popup-newPassword__title popup__title">Сменить пароль</h1>
 				</div>
 				<div class="popup-newPassword__text">Введите новый пароль</div>
-				<form data-ajax method="POST" action="kit.vitalevich@yandex.ru" class="popup-newPassword__form popup__body form-popup-newPassword">
+				<form data-ajax method="POST" action="#" class="popup-newPassword__form popup__body form-popup-newPassword">
 					<div class="form-popup-newPassword__inp form-popup__input">
 						<input data-required data-validate autocomplete="off" type="password" id="formPassword" name="formPassword" data-error="Введите пароль" placeholder="Пароль" class="form-popup-newPassword__input input">
 						<button class="form-popup-registration__viewpass form__viewpass _icon-eye" type="button"></button>
@@ -1258,7 +1299,6 @@
 			</div>
 		</div>
 	</div>
-	</div>
 
 
 	<!-- Авторизация с телефоном (по коду) -->
@@ -1271,7 +1311,7 @@
 				</div>
 				<div class="popup-authorizationCode__text">На номер <span>+7 (923) 143-27-72</span> отправлено СМС
 					сообщение с секретным кодом</div>
-				<form data-ajax method="POST" action="kit.vitalevich@yandex.ru" class="popup-authorizationCode__form popup__body form-popup-authorizationCode">
+				<form data-ajax method="POST" action="#" class="popup-authorizationCode__form popup__body form-popup-authorizationCode">
 					<div class="form-popup-authorizationCode__inp form-popup__input">
 						<input data-required data-validate data-inputmask="'mask': '9 9 9 9'" autocomplete="off" type="tel" id="formCode" name="formCode" data-error="Введите код" placeholder="_ _ _ _" class="form-popup-authorizationCode__input-code input">
 					</div>
@@ -1294,7 +1334,7 @@
 					<h1 class="popup-callback__title popup__title">Обратная связь</h1>
 				</div>
 
-				<form data-ajax method="POST" action="kit.vitalevich@yandex.ru" class="popup-callback__form">
+				<form data-ajax method="POST" action="#" class="popup-callback__form">
 					<div class="popup-callback__massage massage-callback">
 						<div class="massage-callback__block">
 							<div class="massage-callback__topic-wrapper">
@@ -1370,7 +1410,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20230424162949"></script>
+	<script src="js/app.min.js?_v=20230425164213"></script>
 </body>
 
 </html>

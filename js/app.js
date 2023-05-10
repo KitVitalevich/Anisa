@@ -14831,7 +14831,8 @@
                 spaceBetween: 30,
                 loop: true,
                 autoplay: {
-                    delay: 7e3,
+                    delay: 6e3,
+                    pauseOnMouseEnter: true,
                     disableOnInteraction: false
                 },
                 navigation: {
@@ -14852,7 +14853,8 @@
                 simulateTouch: false,
                 loop: true,
                 autoplay: {
-                    delay: 7e3,
+                    delay: 6e3,
+                    pauseOnMouseEnter: true,
                     disableOnInteraction: false
                 },
                 navigation: {
@@ -14892,7 +14894,8 @@
                 simulateTouch: false,
                 loop: true,
                 autoplay: {
-                    delay: 7e3,
+                    delay: 6e3,
+                    pauseOnMouseEnter: true,
                     disableOnInteraction: false
                 },
                 navigation: {
@@ -14932,7 +14935,8 @@
                 simulateTouch: false,
                 loop: true,
                 autoplay: {
-                    delay: 7e3,
+                    delay: 6e3,
+                    pauseOnMouseEnter: true,
                     disableOnInteraction: false
                 },
                 navigation: {
@@ -14971,7 +14975,8 @@
                 spaceBetween: 30,
                 loop: true,
                 autoplay: {
-                    delay: 7e3,
+                    delay: 6e3,
+                    pauseOnMouseEnter: true,
                     disableOnInteraction: false
                 },
                 scrollbar: {
@@ -15015,7 +15020,8 @@
                 simulateTouch: false,
                 loop: true,
                 autoplay: {
-                    delay: 7e3,
+                    delay: 6e3,
+                    pauseOnMouseEnter: true,
                     disableOnInteraction: false
                 },
                 scrollbar: {
@@ -16361,23 +16367,8 @@
             if (targetElement.closest(".catalog-header__parent")) document.documentElement.classList.add("sub-catalog-open");
             if (targetElement.closest(".submenu-page__back")) document.documentElement.classList.remove("sub-catalog-open");
         }
-        $("#showOrganization").click((function() {
-            if ($(this).is(":checked")) $("#organizationName").show(100); else $("#organizationName").hide(100);
-        }));
-        $("#formPickup").click((function() {
-            if ($(this).is(":checked")) $("#selectPickup").show(100); else $("#selectPickup").hide(100);
-        }));
-        $("#formDelivery").click((function() {
-            if ($(this).is(":checked")) $("#selectDelivery").show(100); else $("#selectDelivery").hide(100);
-        }));
         $("#privateHouse").click((function() {
             if ($(this).is(":checked")) $("#apartment").hide(100); else $("#apartment").show(100);
-        }));
-        $("#formPickup").click((function() {
-            if ($(this).is(":checked")) $("#formDelivery").attr("disabled", "disabled"); else $("#formDelivery").removeAttr("disabled");
-        }));
-        $("#formDelivery").click((function() {
-            if ($(this).is(":checked")) $("#formPickup").attr("disabled", "disabled"); else $("#formPickup").removeAttr("disabled");
         }));
         (function() {
             var a = document.querySelector("#catalogNav"), b = null, P = 0;
@@ -16410,6 +16401,73 @@
             var size = $(window).width();
             $(".catalog-header__button").toggleClass("icon-menu", size > 991.98);
         })).resize();
+        $(document).ready((function() {
+            $('input[type="radio"]').click((function() {
+                var inputValue = $(this).attr("value");
+                var targetBox = $("." + inputValue);
+                $(".choice-delivery").not(targetBox).hide();
+                $(targetBox).show();
+            }));
+        }));
+        ymaps.ready(init);
+        function init() {
+            var myMap = new ymaps.Map("map", {
+                center: [ 55.005299, 83.042403 ],
+                zoom: 12,
+                controls: []
+            }), myGeoObject = new ymaps.GeoObject({});
+            var address1 = new ymaps.Placemark([ 55.005299, 83.042403 ], {
+                balloonContent: "г. Новосибирск, ул. Выборная 186",
+                iconContent: 'ООО "Аниса - Н"'
+            }, {
+                preset: "islands#darkOrangeStretchyIcon",
+                iconColor: "#D13F22"
+            });
+            var address2 = new ymaps.Placemark([ 54.990426, 73.194226 ], {
+                balloonContent: "г. Омск, ул. И. Н. Багнюка, д. 15/2, Офис №1",
+                iconContent: 'ООО "Аниса - О"'
+            }, {
+                preset: "islands#darkOrangeStretchyIcon",
+                iconColor: "#D13F22"
+            });
+            var address3 = new ymaps.Placemark([ 55.440447, 78.339094 ], {
+                balloonContent: "г. Куйбышев, ул. Промзона 5а, Торговый комплекс “Солнечный”",
+                iconContent: 'ООО "Аниса - К"'
+            }, {
+                preset: "islands#darkOrangeStretchyIcon",
+                iconColor: "#D13F22"
+            });
+            var address4 = new ymaps.Placemark([ 53.746788, 78.03116 ], {
+                balloonContent: "г. Карасук, ул. Калиника 78",
+                iconContent: 'ООО "Аниса - Карасук"'
+            }, {
+                preset: "islands#darkOrangeStretchyIcon",
+                iconColor: "#D13F22"
+            });
+            myMap.geoObjects.add(myGeoObject).add(address1).add(address2).add(address3).add(address4);
+            var mapControls = $(".map-control");
+            var destinations = {
+                "#address1": address1,
+                "#address2": address2,
+                "#address3": address3,
+                "#address4": address4
+            };
+            mapControls.each((function(item, i) {
+                $(this).bind("click", (function() {
+                    $("#map").offset().top;
+                    window.scrollTo({
+                        top: 600,
+                        behavior: "smooth"
+                    });
+                    var destination = destinations[$(this).attr("href")];
+                    myMap.panTo(destination.geometry.getCoordinates(), {
+                        flying: true,
+                        duration: 5e3
+                    });
+                    return false;
+                }));
+            }));
+        }
         window["FLS"] = true;
         isWebp();
         addTouchClass();

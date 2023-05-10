@@ -6,9 +6,10 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230425164213">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230510163941">
 	<link rel="shortcut icon" href="favicon.ico">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js?_v=20230425164213"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js?_v=20230510163941"></script>
+	<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&_v=20230510163941" type="text/javascript"></script>
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -34,8 +35,6 @@
 					<button type="button" class="menu__icon icon-menu"><span></span></button>
 					<div data-da=".menu__content, 991.98, 3" class="top-header__info info-top-header">
 						<ul class="info-top-header__list">
-							<li><a href="vacancy.html" class="info-top-header__item _icon-briefcase">Наши вакансии</a></li>
-							<li><a href="location.html" class="info-top-header__item _icon-location">Где мы находимся</a></li>
 							<li><a href="#" data-popup="#popup-callback" class="info-top-header__item _icon-mail">Обратная
 									связь</a>
 							</li>
@@ -2394,13 +2393,7 @@
 					<form data-ajax method="POST" action="#" class="popup-address__form form-popup form-popup-address">
 						<div class="form-popup__item form-popup-address__item-organization">
 							<div class="form-popup-address__column-organization">
-								<select data-required data-validate data-class-modif="add-organization" name="formAddOrganization">
-									<option data-class="option-placeholder" value="" selected>Выберите организацию к которой будет
-										добавлен адрес доставки</option>
-									<option value="1">ООО "Альфа-Сервис"</option>
-									<!-- <option value="2">Пункт №3</option>
-								<option value="3">Пункт №4</option> -->
-								</select>
+								<input data-required data-validate autocomplete="off" type="text" name="form[]" placeholder="Название магазина" class="form-popup-address__input-small input">
 							</div>
 
 							<div class="form-popup-address__column-big">
@@ -2753,6 +2746,141 @@
 	</div>
 
 
+	<!-- Форма подтверждения (удаление карты)-->
+	<div id="delete-card" aria-hidden="true" class="popup popup-ok">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close _icon-exet"></button>
+				<div class="popup-ok__title-block popup__title-block">
+					<h1 class="popup-ok__title popup__title">Удалить карту</h1>
+				</div>
+				<form action="#" class="popup-ok__form">
+					<div class="popup-ok__text">
+						<p>Вы уверены что хотите удалить карту?</p>
+					</div>
+					<div class="popup-ok__buttons">
+						<button class="popup-ok__button-cancel">Отмена</button>
+						<button class="popup-ok__button-delete">Удалить</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Форма подтверждения (удаление адреса)-->
+	<div id="delete-address" aria-hidden="true" class="popup popup-ok">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close _icon-exet"></button>
+				<div class="popup-ok__title-block popup__title-block">
+					<h1 class="popup-ok__title popup__title">Удалить адрес</h1>
+				</div>
+				<form action="#" class="popup-ok__form">
+					<div class="popup-ok__text">
+						<p>Вы уверены что хотите удалить адрес доставки?</p>
+					</div>
+					<div class="popup-ok__buttons">
+						<button class="popup-ok__button-cancel">Отмена</button>
+						<button class="popup-ok__button-delete">Удалить</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Форма оставить отзыв -->
+	<div id="review" aria-hidden="true" class="popup review">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close _icon-exet"></button>
+				<div class="review__title popup__title">Оставить отзыв о товаре</div>
+				<div class="review__body">
+					<div class="review__product">
+						<article class="product-card">
+							<a href="description-goods.html" class="product-card__image">
+								<span class="product-card__item">
+									<picture><source srcset="img/products/sibAgro/doctorskaya_SA.webp" type="image/webp"><img src="img/products/sibAgro/doctorskaya_SA.png" alt="doctorskaya_SA"></picture>
+								</span>
+							</a>
+							<div class="product-card__body">
+								<div class="product-card__title-review">
+									<a href="description-goods.html" class="product-card__link-title">Колбаса
+										вареная “СибАгро” Докторская 450г</a>
+								</div>
+							</div>
+						</article>
+
+						<div class="horizont-line"><span></span></div>
+
+						<form action="#" class="review__form">
+							<div class="review__rating rating-review">
+								<div class="rating-review__title">
+									<h3>Ваша оценка</h3>
+								</div>
+								<div class="rating rating_set">
+									<div class="rating__body">
+										<div class="rating__active"></div>
+										<div class="rating__items">
+											<input type="radio" class="rating__item" value="1" name="rating">
+											<input type="radio" class="rating__item" value="2" name="rating">
+											<input type="radio" class="rating__item" value="3" name="rating">
+											<input type="radio" class="rating__item" value="4" name="rating">
+											<input type="radio" class="rating__item" value="5" name="rating">
+										</div>
+									</div>
+									<div class="rating__value">0</div>
+								</div>
+							</div>
+
+							<div class="review__description description-review">
+								<div class="description-review__title">
+									<h3>Отзыв о товаре</h3>
+								</div>
+								<div class="description-review__body">
+									<textarea autocomplete="off" name="form[]" data-error="Ошибка" class="input"></textarea>
+								</div>
+							</div>
+
+							<div class="review__anonim anonim-review">
+								<div class="anonim-review__checkbox">
+									<div class="checkbox">
+										<input id="reviewAnonim" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+										<label for="reviewAnonim" class="checkbox__label"><span class="checkbox__text">Оставить отзыв
+												анонимно</span></label>
+									</div>
+								</div>
+							</div>
+
+							<div class="review__info">
+								<p>Администрация сайта не несет ответственности за содержание отзывов.</p>
+							</div>
+
+							<div class="review__button">
+								<button data-popup="#reviewThanks" class="button">Оставить отзыв</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Форма благодарности за отзыв -->
+	<div id="reviewThanks" aria-hidden="true" class="popup reviewThanks">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close _icon-exet"></button>
+				<div class="reviewThanks__text">
+					Спасибо за обратную связь!
+				</div>
+			</div>
+		</div>
+	</div>
+
+
 
 	<!-- <div id="popup" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
@@ -2764,7 +2892,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20230425164213"></script>
+	<script src="js/app.min.js?_v=20230510163941"></script>
 </body>
 
 </html>

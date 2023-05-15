@@ -6,10 +6,10 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230510163941">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230515163103">
 	<link rel="shortcut icon" href="favicon.ico">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js?_v=20230510163941"></script>
-	<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&_v=20230510163941" type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js?_v=20230515163103"></script>
+	<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&_v=20230515163103" type="text/javascript"></script>
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -706,29 +706,33 @@
 						</div>
 
 						<div class="profile__b2b b2b-profile">
-							<nav class="b2b-profile__nav nav-b2b">
-								<div class="nav-b2b__items">
-									<div class="nav-b2b__title">
-										<h3>Личный кабинет</h3>
-									</div>
-									<ul class="nav-b2b__list">
-										<li class="nav-b2b__item"><a href="profile-b2c.html" class="nav-b2b__link _active">Мои
-												заказы</a></li>
-										<li class="nav-b2b__item"><a href="profile-b2c_card.html" class="nav-b2b__link">Мои
-												карты</a></li>
-										<li class="nav-b2b__item"><a href="profile-b2c_address.html" class="nav-b2b__link">Адреса
-												доставки</a></li>
-										<li class="nav-b2b__item"><a href="profile-b2c_edit.html" class="nav-b2b__link">Учетная
-												запись</a></li>
-									</ul>
-									<div class="nav-b2b__exet">
-										<div class="horizont-line"><span></span></div>
-										<button class="nav-b2b__exet-btn">Выйти</button>
+							<div class="b2b-profile__side">
+								<div data-spollers="767.98" class="b2b-profile__spollers">
+									<div class="b2b-profile__block">
+										<button type="button" data-spoller class="nav-b2b__title _icon-arrow">
+											<h3>Личный кабинет</h3>
+										</button>
+										<div class="b2b-profile__body">
+											<nav>
+												<ul class="nav-b2b__list">
+													<li class="nav-b2b__item"><a href="profile-b2c.html" class="nav-b2b__link _active">Мои заказы</a></li>
+													<li class="nav-b2b__item"><a href="profile-b2c_card.html" class="nav-b2b__link">Мои карты</a></li>
+													<li class="nav-b2b__item"><a href="profile-b2c_address.html" class="nav-b2b__link">Адреса доставки</a></li>
+													<li class="nav-b2b__item"><a href="profile-b2c_edit.html" class="nav-b2b__link">Учетная запись</a></li>
+												</ul>
+												<div class="nav-b2b__exet">
+													<div class="horizont-line"><span></span></div>
+													<button class="nav-b2b__exet-btn">Выйти</button>
+												</div>
+											</nav>
+										</div>
 									</div>
 								</div>
-							</nav>
+							</div>
 
-							<div data-da=".side-b2b, 767.98, 2" class="b2с-profile__contant contant-b2с">
+
+
+							<div class="b2с-profile__contant contant-b2с">
 								<div class="contant-b2с__orders orders-b2с b2с">
 									<div class="orders-b2b__title b2b__title">Мои заказы</div>
 									<table class="orders-b2b__table tabel-b2b-orders table-b2b">
@@ -924,7 +928,7 @@
 				<button data-close type="button" class="popup__close popup-ordering__close _icon-exet"></button>
 				<h1 class="popup-ordering__title popup__title">Ваш заказ успешно оформлен!</h1>
 				<div class="popup-ordering__body popup__body">
-					<div class="popup-ordering__item popup__item">Теперь вы можете следить за выполнением заказа в вашем <a href="" class="popup-ordering__link popup__link">личном кабинете</a>.</div>
+					<div class="popup-ordering__item popup__item">Теперь вы можете следить за выполнением заказа в вашем <a href="profile-b2b.html" class="popup-ordering__link popup__link">личном кабинете</a>.</div>
 					<div class="popup-ordering__item popup__item">Если окно с платежной информацией не открылось автоматиески,
 						нажмите на ссылку <a href="" class="popup-ordering__link popup__link">оплатить заказ</a>.</div>
 				</div>
@@ -1342,8 +1346,7 @@
 						<p>Вы уверены что хотите удалить карту?</p>
 					</div>
 					<div class="popup-ok__buttons">
-						<button class="popup-ok__button-cancel">Отмена</button>
-						<button class="popup-ok__button-delete">Удалить</button>
+						<button class="popup-ok__button-delete button">Удалить</button>
 					</div>
 				</form>
 			</div>
@@ -1364,8 +1367,7 @@
 						<p>Вы уверены что хотите удалить адрес доставки?</p>
 					</div>
 					<div class="popup-ok__buttons">
-						<button class="popup-ok__button-cancel">Отмена</button>
-						<button class="popup-ok__button-delete">Удалить</button>
+						<button class="popup-ok__button-delete button">Удалить</button>
 					</div>
 				</form>
 			</div>
@@ -1475,7 +1477,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20230510163941"></script>
+	<script src="js/app.min.js?_v=20230515163103"></script>
 </body>
 
 </html>

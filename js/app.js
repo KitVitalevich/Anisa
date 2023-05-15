@@ -16367,6 +16367,9 @@
             if (targetElement.closest(".catalog-header__parent")) document.documentElement.classList.add("sub-catalog-open");
             if (targetElement.closest(".submenu-page__back")) document.documentElement.classList.remove("sub-catalog-open");
         }
+        $("#showOrganization").click((function() {
+            if ($(this).is(":checked")) $("#organizationName").show(100); else $("#organizationName").hide(100);
+        }));
         $("#privateHouse").click((function() {
             if ($(this).is(":checked")) $("#apartment").hide(100); else $("#apartment").show(100);
         }));
@@ -16408,6 +16411,9 @@
                 $(".choice-delivery").not(targetBox).hide();
                 $(targetBox).show();
             }));
+        }));
+        $('input:radio[name="radios"]').change((function() {
+            if ("delivery" == $(this).val()) $("#selectordropdown").attr("disabled", true); else if ("pickup" == $(this).val()) $("#selectordropdown").attr("disabled", false);
         }));
         ymaps.ready(init);
         function init() {
@@ -16454,10 +16460,10 @@
             };
             mapControls.each((function(item, i) {
                 $(this).bind("click", (function() {
-                    $("#map").offset().top;
-                    window.scrollTo({
-                        top: 600,
-                        behavior: "smooth"
+                    const element = document.getElementById("map");
+                    element.scrollIntoView({
+                        behavior: "smooth",
+                        block: "center"
                     });
                     var destination = destinations[$(this).attr("href")];
                     myMap.panTo(destination.geometry.getCoordinates(), {

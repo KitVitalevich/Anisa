@@ -6,10 +6,10 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230510163941">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230515163103">
 	<link rel="shortcut icon" href="favicon.ico">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js?_v=20230510163941"></script>
-	<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&_v=20230510163941" type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js?_v=20230515163103"></script>
+	<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&_v=20230515163103" type="text/javascript"></script>
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -734,56 +734,45 @@
 											<span class="ordering-form__title-number">2</span>
 											<span class="ordering-form__title-text">Способы доставки</span>
 										</div>
-										<div class="ordering-form__delivery">
-											<div class="ordering-form__delivery-checkbox">
-												<div class="ordering-form__checkbox checkbox">
-													<input id="formPickup" class="checkbox__input" type="checkbox" value="1" name="formPickup">
-													<label for="formPickup" class="ordering-form__checkbox-label checkbox__label">
-														<span class="ordering-form__checkbox-text checkbox__text">Заберу товар
-															самостоятельно</span>
-													</label>
-												</div>
-											</div>
-
-											<div class="ordering-form__delivery-checkbox">
-												<div class="ordering-form__checkbox checkbox">
-													<input id="formDelivery" class="checkbox__input" type="checkbox" value="1" name="formPickup">
-													<label for="formDelivery" class="ordering-form__checkbox-label checkbox__label">
-														<span class="ordering-form__checkbox-text checkbox__text">Доставить по
-															адресу</span>
-													</label>
-												</div>
-											</div>
+										<div class="ordering-form__radio radio">
+											<label class="radio__label">
+												<input class="radio__input" type="radio" name="colorRadio" value="pickup" checked>
+												<div class="radio__design"></div>
+												<div class="radio__text">Заберу товар самостоятельно</div>
+											</label>
+											<label class="radio__label">
+												<input class="radio__input" type="radio" name="colorRadio" value="delivery">
+												<div class="radio__design"></div>
+												<div class="radio__text">Доставить по адресу</div>
+											</label>
 										</div>
 									</div>
 
-									<div id="orderCheckbox" class="ordering-form__item">
+									<div class="ordering-form__item">
 										<div class="ordering-form__title">
 											<span class="ordering-form__title-number">3</span>
 											<span class="ordering-form__title-text">Место получения заказа</span>
 										</div>
-
-
-										<div id="group" class="ordering-form__delivery">
-											<div id="selectPickup" class="ordering-form__delivery_item">
+										<div class="ordering-form__delivery">
+											<div class="pickup choice-delivery">
 												<div class="ordering-form__list">
 													<div class="ordering-form__inputs ordering-form__inputs-address">
-														<select data-required data-error="Выберите адрес" data-validate data-class-modif="orderibg-location" name="formLocation">
+														<select data-required data-error="Выберите пункт выдачи" data-validate data-class-modif="orderibg-location" name="formLocation">
 															<option data-class="option-placeholder" value="" selected>Выберите склад
 																для самовывоза*</option>
 															<option value="1">г. Новосибирск, ул. Выборная 186</option>
-															<option value="2"> г. Куйбышев, ул. Промзона 5а</option>
+															<option value="2">г. Куйбышев, ул. Промзона 5а</option>
 															<option value="3">г. Омск, ул. И. Н. Багнюка 15/2</option>
 															<option value="4">г. Карасук, ул. Калинина 78</option>
 														</select>
 													</div>
 													<div class="ordering-form__delivery-time">
-														<input data-required data-error="Выберите дату" data-validate autocomplete="off" type="date" name="formDate" placeholder="Дата доставки*" class="ordering-form__input input">
+														<input data-required data-error="Выберите дату" data-validate autocomplete="off" type="date" name="formDate" placeholder="Дата доставки" class="ordering-form__input input">
 													</div>
 												</div>
 											</div>
 
-											<div id="selectDelivery" class="ordering-form__delivery_item">
+											<div class="delivery choice-delivery">
 												<div class="ordering-form__list_deliveryYandex">
 													<div class="ordering-form__inputs">
 														<input data-required data-error="Введите адрес доставки" data-validate autocomplete="off" id="formAddress" type="text" name="address" placeholder="Адрес доставки*" class="ordering-form__input input">
@@ -815,7 +804,7 @@
 											<span class="ordering-form__title-text">Способы оплаты</span>
 										</div>
 										<div class="ordering-form__payment">
-											<select data-required data-error="Введите ФИО" data-validate data-class-modif="ordering-sel" name="form[]">
+											<select data-required data-error="Выберите способ оплаты" data-validate data-class-modif="ordering-sel" name="form[]">
 												<option data-class="option-placeholder" value="" selected>Выберите способ оплаты*
 												</option>
 												<option value="2">Оплата на сайте банковской картой</option>
@@ -843,10 +832,6 @@
 													корзине</h2>
 											</div>
 											<div class="side-basket__price">
-												<div class="side-basket__item">
-													<div class="side-basket__label">Общий вес:</div>
-													<div class="side-basket__value">4.9 кг</div>
-												</div>
 												<div class="side-basket__item">
 													<div class="side-basket__label">Цена без скидки:</div>
 													<div class="side-basket__value">
@@ -1047,7 +1032,7 @@
 				<button data-close type="button" class="popup__close popup-ordering__close _icon-exet"></button>
 				<h1 class="popup-ordering__title popup__title">Ваш заказ успешно оформлен!</h1>
 				<div class="popup-ordering__body popup__body">
-					<div class="popup-ordering__item popup__item">Теперь вы можете следить за выполнением заказа в вашем <a href="" class="popup-ordering__link popup__link">личном кабинете</a>.</div>
+					<div class="popup-ordering__item popup__item">Теперь вы можете следить за выполнением заказа в вашем <a href="profile-b2b.html" class="popup-ordering__link popup__link">личном кабинете</a>.</div>
 					<div class="popup-ordering__item popup__item">Если окно с платежной информацией не открылось автоматиески,
 						нажмите на ссылку <a href="" class="popup-ordering__link popup__link">оплатить заказ</a>.</div>
 				</div>
@@ -1465,8 +1450,7 @@
 						<p>Вы уверены что хотите удалить карту?</p>
 					</div>
 					<div class="popup-ok__buttons">
-						<button class="popup-ok__button-cancel">Отмена</button>
-						<button class="popup-ok__button-delete">Удалить</button>
+						<button class="popup-ok__button-delete button">Удалить</button>
 					</div>
 				</form>
 			</div>
@@ -1487,8 +1471,7 @@
 						<p>Вы уверены что хотите удалить адрес доставки?</p>
 					</div>
 					<div class="popup-ok__buttons">
-						<button class="popup-ok__button-cancel">Отмена</button>
-						<button class="popup-ok__button-delete">Удалить</button>
+						<button class="popup-ok__button-delete button">Удалить</button>
 					</div>
 				</form>
 			</div>
@@ -1598,7 +1581,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20230510163941"></script>
+	<script src="js/app.min.js?_v=20230515163103"></script>
 </body>
 
 </html>

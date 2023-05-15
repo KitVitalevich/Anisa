@@ -6,10 +6,10 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230510163941">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230515163103">
 	<link rel="shortcut icon" href="favicon.ico">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js?_v=20230510163941"></script>
-	<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&_v=20230510163941" type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js?_v=20230515163103"></script>
+	<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&_v=20230515163103" type="text/javascript"></script>
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -693,88 +693,95 @@
 			<div class="profile">
 				<div class="profile-edit__container">
 					<div class="profile-edit__wrapper">
-						<nav class="b2b-profile__nav nav-b2b">
-							<div class="nav-b2b__items">
-								<div class="nav-b2b__title">
-									<h3>Личный кабинет</h3>
-								</div>
-								<ul class="nav-b2b__list">
-									<li class="nav-b2b__item"><a href="profile-b2c.html" class="nav-b2b__link">Мои
-											заказы</a></li>
-									<li class="nav-b2b__item"><a href="profile-b2c_card.html" class="nav-b2b__link">Мои карты</a>
-									</li>
-									<li class="nav-b2b__item"><a href="profile-b2c_address.html" class="nav-b2b__link">Адреса
-											доставки</a></li>
-									<li class="nav-b2b__item"><a href="profile-b2c_edit.html" class="nav-b2b__link _active">Учетная запись</a></li>
-								</ul>
-								<div class="nav-b2b__exet">
-									<div class="horizont-line"><span></span></div>
-									<button class="nav-b2b__exet-btn">Выйти</button>
-								</div>
-							</div>
-						</nav>
 
-						<form action="#" class="profile-edit__form">
-							<div class="profile-edit__block">
-								<div class="profile-edit__subtitle subtitle">Контактные данные</div>
-								<div class="profile-edit__items">
-									<div class="profile-edit__list">
-										<div class="profile-edit__item">
-											<div class="profile-edit__inp">
-												<input data-required data-validate autocomplete="off" type="text" name="name" id="formName" data-error="Введите ФИО" placeholder="ФИО" class="profile-edit__input input">
-											</div>
-										</div>
-
-										<div class="profile-edit__item">
-											<div class="profile-edit__inp">
-												<input data-required data-validate data-inputmask="'mask': '+7 (999) 999 - 99 - 99'" autocomplete="off" type="tel" id="formTel" name="tel" data-error="Введен не верный телефон" placeholder="Номер телефона" class="profile-edit__input input">
-											</div>
-										</div>
-
-										<div class="profile-edit__item">
-											<div class="profile-edit__inp">
-												<input data-required data-validate autocomplete="off" type="email" name="formEmail" id="email" data-error="Введите элетронную почту" placeholder="Эл. почта" class="profile-edit__input input">
-											</div>
-										</div>
-									</div>
-
-									<div class="profile-edit__list">
-										<div class="profile-edit__inp">
-											<input autocomplete="off" data-inputmask="'mask': '99.99.9999'" type="text" name="formDate" placeholder="Дата рождения" class="profile-edit__input_data input">
-										</div>
-									</div>
-									<div class="profile-edit__checkbox checkbox">
-										<input id="profileEditNovelty" class="checkbox__input" type="checkbox" value="1" name="formCheckbox">
-										<label for="profileEditNovelty" class="profile-edit__checkbox-label checkbox__label"><span class="profile-edit__checkbox-text checkbox__text">Сообщать о новинках и
-												изменениях</span></label>
-									</div>
-								</div>
-							</div>
-
-							<div class="horizont-line"><span></span></div>
-
-							<div class="profile-edit__block">
-								<div class="profile-edit__subtitle subtitle">Пароль</div>
-								<div class="profile-edit__items">
-									<div class="profile-edit__list">
-										<div class="profile-edit__item">
-											<input data-required data-validate autocomplete="off" type="password" name="formPassword" data-error="Введите старый пароль" placeholder="Старый пароль" class="profile-edit__input input">
-											<button class="profile-edit__viewpass form__viewpass _icon-eye" type="button"></button>
-										</div>
-										<div class="profile-edit__item">
-											<input data-required data-validate autocomplete="off" type="password" name="formNewPassword" data-error="Введите новый пароль" placeholder="Новый пароль" class="profile-edit__input input">
-											<button class="profile-edit__viewpass form__viewpass _icon-eye" type="button"></button>
-										</div>
-										<div class="profile-edit__item">
-											<input data-required data-validate autocomplete="off" type="password" name="formNewPassword" data-error="Повторите новый пароль" placeholder="Повторите пароль" class="profile-edit__input input">
-											<button class="profile-edit__viewpass form__viewpass _icon-eye" type="button"></button>
+						<div class="profile__b2b b2b-profile">
+							<div class="b2b-profile__side">
+								<div data-spollers="767.98" class="b2b-profile__spollers">
+									<div class="b2b-profile__block">
+										<button type="button" data-spoller class="nav-b2b__title _icon-arrow">
+											<h3>Личный кабинет</h3>
+										</button>
+										<div class="b2b-profile__body">
+											<nav>
+												<ul class="nav-b2b__list">
+													<li class="nav-b2b__item"><a href="profile-b2c.html" class="nav-b2b__link">Мои
+															заказы</a></li>
+													<li class="nav-b2b__item"><a href="profile-b2c_card.html" class="nav-b2b__link">Мои карты</a></li>
+													<li class="nav-b2b__item"><a href="profile-b2c_address.html" class="nav-b2b__link">Адреса доставки</a></li>
+													<li class="nav-b2b__item"><a href="profile-b2c_edit.html" class="nav-b2b__link _active">Учетная запись</a></li>
+												</ul>
+												<div class="nav-b2b__exet">
+													<div class="horizont-line"><span></span></div>
+													<button class="nav-b2b__exet-btn">Выйти</button>
+												</div>
+											</nav>
 										</div>
 									</div>
 								</div>
 							</div>
 
-							<button type="submit" class="profile-edit__button button">Обновить данные</button>
-						</form>
+							<form action="#" class="profile-edit__form">
+								<div class="profile-edit__block">
+									<div class="profile-edit__subtitle subtitle">Контактные данные</div>
+									<div class="profile-edit__items">
+										<div class="profile-edit__list">
+											<div class="profile-edit__item">
+												<div class="profile-edit__inp">
+													<input data-required data-validate autocomplete="off" type="text" name="name" id="formName" data-error="Введите ФИО" placeholder="ФИО" class="profile-edit__input input">
+												</div>
+											</div>
+
+											<div class="profile-edit__item">
+												<div class="profile-edit__inp">
+													<input data-required data-validate data-inputmask="'mask': '+7 (999) 999 - 99 - 99'" autocomplete="off" type="tel" id="formTel" name="tel" data-error="Введен не верный телефон" placeholder="Номер телефона" class="profile-edit__input input">
+												</div>
+											</div>
+
+											<div class="profile-edit__item">
+												<div class="profile-edit__inp">
+													<input data-required data-validate autocomplete="off" type="email" name="formEmail" id="email" data-error="Введите элетронную почту" placeholder="Эл. почта" class="profile-edit__input input">
+												</div>
+											</div>
+										</div>
+
+										<div class="profile-edit__list">
+											<div class="profile-edit__inp">
+												<input autocomplete="off" data-inputmask="'mask': '99.99.9999'" type="text" name="formDate" placeholder="Дата рождения" class="profile-edit__input_data input">
+											</div>
+										</div>
+										<div class="profile-edit__checkbox checkbox">
+											<input id="profileEditNovelty" class="checkbox__input" type="checkbox" value="1" name="formCheckbox">
+											<label for="profileEditNovelty" class="profile-edit__checkbox-label checkbox__label"><span class="profile-edit__checkbox-text checkbox__text">Сообщать о новинках и
+													изменениях</span></label>
+										</div>
+									</div>
+								</div>
+
+								<div class="horizont-line"><span></span></div>
+
+								<div class="profile-edit__block">
+									<div class="profile-edit__subtitle subtitle">Пароль</div>
+									<div class="profile-edit__items">
+										<div class="profile-edit__list">
+											<div class="profile-edit__item">
+												<input data-required data-validate autocomplete="off" type="password" name="formPassword" data-error="Введите старый пароль" placeholder="Старый пароль" class="profile-edit__input input">
+												<button class="profile-edit__viewpass form__viewpass _icon-eye" type="button"></button>
+											</div>
+											<div class="profile-edit__item">
+												<input data-required data-validate autocomplete="off" type="password" name="formNewPassword" data-error="Введите новый пароль" placeholder="Новый пароль" class="profile-edit__input input">
+												<button class="profile-edit__viewpass form__viewpass _icon-eye" type="button"></button>
+											</div>
+											<div class="profile-edit__item">
+												<input data-required data-validate autocomplete="off" type="password" name="formNewPassword" data-error="Повторите новый пароль" placeholder="Повторите пароль" class="profile-edit__input input">
+												<button class="profile-edit__viewpass form__viewpass _icon-eye" type="button"></button>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<button type="submit" class="profile-edit__button button">Обновить данные</button>
+							</form>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -912,7 +919,7 @@
 				<button data-close type="button" class="popup__close popup-ordering__close _icon-exet"></button>
 				<h1 class="popup-ordering__title popup__title">Ваш заказ успешно оформлен!</h1>
 				<div class="popup-ordering__body popup__body">
-					<div class="popup-ordering__item popup__item">Теперь вы можете следить за выполнением заказа в вашем <a href="" class="popup-ordering__link popup__link">личном кабинете</a>.</div>
+					<div class="popup-ordering__item popup__item">Теперь вы можете следить за выполнением заказа в вашем <a href="profile-b2b.html" class="popup-ordering__link popup__link">личном кабинете</a>.</div>
 					<div class="popup-ordering__item popup__item">Если окно с платежной информацией не открылось автоматиески,
 						нажмите на ссылку <a href="" class="popup-ordering__link popup__link">оплатить заказ</a>.</div>
 				</div>
@@ -1330,8 +1337,7 @@
 						<p>Вы уверены что хотите удалить карту?</p>
 					</div>
 					<div class="popup-ok__buttons">
-						<button class="popup-ok__button-cancel">Отмена</button>
-						<button class="popup-ok__button-delete">Удалить</button>
+						<button class="popup-ok__button-delete button">Удалить</button>
 					</div>
 				</form>
 			</div>
@@ -1352,8 +1358,7 @@
 						<p>Вы уверены что хотите удалить адрес доставки?</p>
 					</div>
 					<div class="popup-ok__buttons">
-						<button class="popup-ok__button-cancel">Отмена</button>
-						<button class="popup-ok__button-delete">Удалить</button>
+						<button class="popup-ok__button-delete button">Удалить</button>
 					</div>
 				</form>
 			</div>
@@ -1463,7 +1468,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20230510163941"></script>
+	<script src="js/app.min.js?_v=20230515163103"></script>
 </body>
 
 </html>

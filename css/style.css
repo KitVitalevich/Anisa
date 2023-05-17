@@ -6395,6 +6395,12 @@ body::after {
           flex: 1 0 0;
 }
 
+.ordering-form__delivery-time p {
+  display: none;
+  color: #a6a2a2;
+  margin: 0px 0px 0.625rem 0px;
+}
+
 .ordering-form__delivery-time input {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11499,6 +11505,20 @@ body::after {
         -ms-flex: auto;
             flex: auto;
     margin: 0px 0px 0px 0px;
+  }
+
+  .ordering-form__delivery-time p {
+    display: block;
+  }
+
+  .ordering-form__delivery-time {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
   }
 
 @supports (font-size: clamp( 0.875rem , 0.8068181818rem  +  0.3409090909vw , 1.0625rem )) {

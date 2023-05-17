@@ -16415,12 +16415,6 @@
         $('input:radio[name="radios"]').change((function() {
             if ("delivery" == $(this).val()) $("#selectordropdown").attr("disabled", true); else if ("pickup" == $(this).val()) $("#selectordropdown").attr("disabled", false);
         }));
-        document.addEventListener("DOMContentLoaded", (function() {
-            $(window).resize((function(e) {
-                let width = e.target.innerWidth;
-                if (width < 767.98) $("button.product-card__button").text("В корзину");
-            }));
-        }), false);
         ymaps.ready(init);
         function init() {
             var myMap = new ymaps.Map("map", {

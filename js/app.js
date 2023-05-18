@@ -16408,6 +16408,14 @@
             $('input[type="radio"]').click((function() {
                 var inputValue = $(this).attr("value");
                 var targetBox = $("." + inputValue);
+                $(".regorg-entity").not(targetBox).hide();
+                $(targetBox).show();
+            }));
+        }));
+        $(document).ready((function() {
+            $('input[type="radio"]').click((function() {
+                var inputValue = $(this).attr("value");
+                var targetBox = $("." + inputValue);
                 $(".choice-delivery").not(targetBox).hide();
                 $(targetBox).show();
             }));

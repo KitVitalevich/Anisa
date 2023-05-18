@@ -6,10 +6,10 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230517132949">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230518120228">
 	<link rel="shortcut icon" href="favicon.ico">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js?_v=20230517132949"></script>
-	<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&_v=20230517132949" type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js?_v=20230518120228"></script>
+	<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&_v=20230518120228" type="text/javascript"></script>
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -774,28 +774,25 @@
 											</div>
 
 											<div class="delivery choice-delivery">
-												<div class="ordering-form__list_deliveryYandex">
-													<div class="ordering-form__inputs">
-														<input data-required data-error="Введите адрес доставки" data-validate autocomplete="off" id="formAddress" type="text" name="address" placeholder="Адрес доставки*" class="ordering-form__input input">
+												<div class="ordering-form__list">
+													<div class="ordering-form__inputs ordering-form__inputs-address">
+														<select id="selectordropdown" data-required data-error="Адрес доставки не выбран" data-class-modif="orderibg-location" name="choiceDelivery-delivery">
+															<option data-class="option-placeholder" value="" selected>Выберите адрес
+																доставки*</option>
+															<option value="1">г. Новосибирск, Ватутина 93/2, кв. 86</option>
+															<option value="2">г. Новосибирск, Выборная 186, подъезд 1, этаж 3, кв. 37
+															</option>
+															<option value="3">г. Новосибирск, Военная 5, подъезд 2, кв. 141</option>
+														</select>
 													</div>
-													<div class="ordering-form__checkbox checkbox">
-														<input id="privateHouse" class="checkbox__input" type="checkbox" value="1" name="privateHouse">
-														<label for="privateHouse" class="ordering-form__checkbox-label checkbox__label">
-															<span class="ordering-form__checkbox-text checkbox__text">Частный
-																дом</span>
-														</label>
-													</div>
-													<div class="ordering-form__inputs ordering-form__inputs_apartment">
-														<input autocomplete="off" id="formAddress" type="text" name="entrance" placeholder="Подъезд" class="ordering-form__input input">
-														<input autocomplete="off" id="formAddress" type="text" name="Floor" placeholder="Этаж" class="ordering-form__input input">
-														<div id="apartment" class="input_apartment">
-															<input id="apartment" data-required data-error="Укажите квартиру" data-validate autocomplete="off" id="formAddress" type="text" name="apartment" placeholder="Кв./Оф.*" class="ordering-form__input input">
-														</div>
+													<div class="ordering-form__delivery-time">
+														<input data-required data-error="Выберите дату доставки" data-validate autocomplete="off" type="date" name="formDate" placeholder="Дата доставки" class="ordering-form__input input">
 													</div>
 												</div>
-												<div class="ordering-form__value-delivery">Стоимость доставки: <span class="_icon-rub">150</span>
+												<div class="address-b2b__add-address"><a href="#" data-popup="#popup-address" class="_icon-exet">Добавить адрес</a>
 												</div>
 											</div>
+
 										</div>
 									</div>
 
@@ -1054,15 +1051,23 @@
 					<form data-ajax method="POST" action="#" class="popup-address__form form-popup form-popup-address">
 						<div class="form-popup__item form-popup-address__item">
 							<div class="form-popup-address__column-big">
-								<input data-required data-validate autocomplete="off" type="text" name="form[]" placeholder="Страна" class="form-popup-address__input-small input">
-								<input data-required data-validate autocomplete="off" type="text" name="form[]" placeholder="Область" class="form-popup-address__input-small input">
-								<input data-da=".form-popup-address__column-small, 479.98, 1" data-required data-validate autocomplete="off" type="text" name="form[]" placeholder="Улица" class="form-popup-address__input-big input">
+								<input data-required data-validate autocomplete="off" type="text" name="form[]" placeholder="Город*" class="form-popup-address__input-big input">
+								<input data-da=".form-popup-address__column-small, 479.98, 1" data-required data-validate autocomplete="off" type="text" name="form[]" placeholder="Улица*" class="form-popup-address__input-big input">
+								<input data-required data-validate autocomplete="off" type="text" name="form[]" placeholder="Дом*" class="form-popup-address__input-small input">
+							</div>
+
+							<div class="ordering-form__checkbox checkbox">
+								<input id="privateHouse" class="checkbox__input" type="checkbox" value="1" name="privateHouse">
+								<label for="privateHouse" class="ordering-form__checkbox-label checkbox__label">
+									<span class="ordering-form__checkbox-text checkbox__text">Частный
+										дом</span>
+								</label>
 							</div>
 
 							<div class="form-popup-address__column-small">
-								<input data-required data-validate autocomplete="off" type="text" name="form[]" placeholder="Город" class="form-popup-address__input-big input">
-								<input data-required data-validate autocomplete="off" type="text" name="form[]" placeholder="Дом" class="form-popup-address__input-small input">
-								<input data-required data-validate autocomplete="off" type="text" name="form[]" placeholder="Кв/Офис" class="form-popup-address__input-small input">
+								<input autocomplete="off" id="formAddress" type="text" name="entrance" placeholder="Подъезд" class="ordering-form__input input">
+								<input autocomplete="off" id="formAddress" type="text" name="floor" placeholder="Этаж" class="ordering-form__input input">
+								<input id="apartment" data-required data-error="Укажите квартиру" data-validate autocomplete="off" type="text" name="apartment" placeholder="Кв./Оф.*" class="ordering-form__input input">
 							</div>
 						</div>
 						<button type="submit" class="form-popup-address__button button">Добавить</button>
@@ -1085,19 +1090,14 @@
 					<form data-ajax method="POST" action="#" class="popup-address__form form-popup form-popup-address">
 						<div class="form-popup__item form-popup-address__item-organization">
 							<div class="form-popup-address__column-organization">
-								<input data-required data-validate autocomplete="off" type="text" name="form[]" placeholder="Название магазина" class="form-popup-address__input-small input">
-							</div>
-
-							<div class="form-popup-address__column-big">
-								<input data-required data-validate autocomplete="off" type="text" name="form[]" placeholder="Страна" class="form-popup-address__input-small input">
-								<input data-required data-validate autocomplete="off" type="text" name="form[]" placeholder="Область" class="form-popup-address__input-small input">
-								<input data-da=".form-popup-address__column-small, 479.98, 1" data-required data-validate autocomplete="off" type="text" name="form[]" placeholder="Улица" class="form-popup-address__input-big input">
+								<input data-required data-validate autocomplete="off" type="text" name="form[]" placeholder="Название магазина*" class="form-popup-address__input-small input">
 							</div>
 
 							<div class="form-popup-address__column-small">
-								<input data-required data-validate autocomplete="off" type="text" name="form[]" placeholder="Город" class="form-popup-address__input-big input">
-								<input data-required data-validate autocomplete="off" type="text" name="form[]" placeholder="Дом" class="form-popup-address__input-small input">
-								<input data-required data-validate autocomplete="off" type="text" name="form[]" placeholder="Кв/Офис" class="form-popup-address__input-small input">
+								<input data-required data-validate autocomplete="off" type="text" name="form[]" placeholder="Город*" class="form-popup-address__input-big input">
+								<input data-required data-validate autocomplete="off" type="text" name="form[]" placeholder="Улица*" class="form-popup-address__input-big input">
+								<input data-required data-validate autocomplete="off" type="text" name="form[]" placeholder="Дом*" class="form-popup-address__input-small input">
+								<input data-required data-validate autocomplete="off" type="text" name="form[]" placeholder="Кв/Офис*" class="form-popup-address__input-small input">
 							</div>
 						</div>
 						<button type="submit" class="form-popup-address__button button">Добавить</button>
@@ -1582,7 +1582,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20230517132949"></script>
+	<script src="js/app.min.js?_v=20230518120228"></script>
 </body>
 
 </html>

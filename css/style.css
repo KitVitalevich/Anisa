@@ -1619,6 +1619,10 @@ body::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 1.25rem;
   margin-bottom: 1.25rem;
 }
@@ -6440,6 +6444,10 @@ body::after {
           flex-direction: row-reverse;
 }
 
+.ordering-form .address-b2b__add-address {
+  margin: 0.625rem 0px 0px 0px;
+}
+
 .side__debt {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7891,6 +7899,22 @@ body::after {
   width: 100%;
 }
 
+.registration-organization .regorg-entity {
+  display: none;
+  width: 100%;
+}
+
+.registration-organization .regorg-entity__on {
+  display: block;
+}
+
+.registration-organization .regorg-entity__edit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.25rem;
+}
+
 .form-regorg__input {
   position: relative;
 }
@@ -7937,9 +7961,7 @@ body::after {
 }
 
 .form-regorg__input-column {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 17%;
-          flex: 1 1 17%;
+  width: 100%;
 }
 
 .form-regorg__resets {
@@ -12279,6 +12301,13 @@ body::after {
 
   .profile-edit .b2b-profile__nav {
     max-width: 13.75rem;
+  }
+
+  .registration-organization .regorg-entity__edit {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   .form-regorg__inputs-column {

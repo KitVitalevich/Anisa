@@ -9316,6 +9316,10 @@ body::after {
   text-align: center;
 }
 
+.online-payment__image img {
+  width: 100%;
+}
+
 .online-payment__name {
   font-weight: 300;
   line-height: 1.4285714286;
@@ -13127,13 +13131,6 @@ body::after {
   }
 
   .methods-payment__list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-
-  .online-payment__items {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;

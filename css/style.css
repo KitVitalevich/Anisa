@@ -9739,9 +9739,9 @@ body::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   letter-spacing: 0.5px;
   text-align: left;
   width: 100%;
@@ -12782,6 +12782,12 @@ body::after {
 
   .week-delivery__spollers {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+
+  .week-delivery__title {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 
   .week-delivery__title::before {

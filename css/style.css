@@ -7846,6 +7846,10 @@ body::after {
   color: #333;
 }
 
+.address-b2b__add-address-fiz {
+  margin: 0.625rem 0px 0px 0px;
+}
+
 .profile-edit__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;

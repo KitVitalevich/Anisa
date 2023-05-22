@@ -6419,6 +6419,7 @@ body::after {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
+  max-width: 100%;
 }
 
 .ordering-form__inputs-addressfiz {
@@ -11003,11 +11004,6 @@ body::after {
     left: 0;
   }
 
-  .ordering-form__inputs-address {
-    max-width: 31.5625rem;
-    width: 100%;
-  }
-
   .favorite-empty__search-link::after {
     content: "";
     position: absolute;
@@ -11791,6 +11787,11 @@ body::after {
         -ms-flex: auto;
             flex: auto;
     margin: 0px 0px 0px 0px;
+  }
+
+  .ordering-form__inputs-address {
+    max-width: 31.5625rem;
+    width: 100%;
   }
 
   .ordering-form__delivery-time p {

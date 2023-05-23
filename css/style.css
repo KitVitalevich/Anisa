@@ -6419,8 +6419,6 @@ body::after {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
-  max-width: 100%;
-  width: 100%;
 }
 
 .ordering-form__inputs-addressfiz {

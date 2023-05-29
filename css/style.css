@@ -5439,7 +5439,14 @@ body::after {
 .delivery-description__day {
   display: block;
   padding-left: 0.3125rem;
-  color: #a6a2a2;
+  color: #68c72c;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.delivery-description__day:hover {
+  opacity: 0.6;
 }
 
 .text-description__title {

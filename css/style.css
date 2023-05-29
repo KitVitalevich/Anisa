@@ -3227,6 +3227,13 @@ body::after {
   background-color: #c0c98a;
   color: #fff9f9;
   height: 2.375rem;
+  -webkit-transition: all 0.2s ease 0s;
+  -o-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
+}
+
+.catalog-header__wrapper:hover {
+  background-color: #68c72c;
 }
 
 .catalog-header__button {
